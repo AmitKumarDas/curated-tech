@@ -1,5 +1,9 @@
 ```go
 
+import (
+	"fmt"
+)
+
 func (c *Config) SetAddr(address string, tlsEnabled bool) *Config {
 	scheme := "http"
 	if tlsEnabled {
