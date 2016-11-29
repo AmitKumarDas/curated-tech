@@ -1,7 +1,11 @@
+
+### Scenario
+
+- If your code or CLI accepts stdin as its args.
+- You can unit test that.
+- Check this piece of code.
+
 ```go
-// If your code or CLI accepts stdin as its args.
-// You can unit test that.
-// Check this piece of code.
 func TestVolCommand_From_STDIN(t *testing.T) {
 	stdinR, stdinW, err := os.Pipe()
 	if err != nil {
