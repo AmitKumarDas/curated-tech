@@ -1,8 +1,9 @@
 
-### References
+#### References
 
-- Have a look at nomad/client/driver/driver.go
-- https://github.com/containernetworking/cni
+- Have a look at below source code(s):
+  - https://github.com/hashicorp/nomad/tree/master/client/driver
+  - https://github.com/containernetworking/cni
 
 #### NOTE
 
