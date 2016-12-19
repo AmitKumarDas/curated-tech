@@ -1,4 +1,4 @@
-### Create network interface on mac that does not have a physical NIC
+### Create network interface on mac that does not have a physical NIC adapter
 
 - gist from [stackexchange-152331](http://unix.stackexchange.com/questions/152331/how-can-i-create-a-virtual-ethernet-interface-on-a-machine-without-a-physical-ad)
 
