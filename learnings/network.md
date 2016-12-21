@@ -29,4 +29,4 @@
   If the packet size is greater than the Path MTU, the packet is fragmented in the encapsulator, 
   as the outer header should be included. The decapsulator will reassemble the packet.
 
-> TODO - https://www.flockport.com/simplify-container-networking-with-ubuntu-fan-project/
+- TODO - https://www.flockport.com/simplify-container-networking-with-ubuntu-fan-project/
