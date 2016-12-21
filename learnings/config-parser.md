@@ -1,13 +1,19 @@
 #### References
 
-- https://github.com/coreos/container-linux-config-transpiler
+- https://github.com/coreos/coreos-baremetal/
 - https://github.com/coreos/container-linux-config-transpiler
 
-- bootcfg
+- **bootcfg**
 
 > ...can be installed on any Linux distribution.
 
 - [bootcfg group & profile](https://github.com/coreos/coreos-baremetal/blob/master/Documentation/bootcfg.md)
+  - the config files participate in the order mentioned below:
+    - group file to profile file to ignition file
+    - metadata is defined at group file & used at ignition file
+    - ignition file can be used for setting up systemd units
+    - ignition file can be used to create complex scripting logic
+      - e.g. [bootkube-controller.yaml](https://github.com/coreos/coreos-baremetal/blob/master/examples/ignition/bootkube-controller.yaml#L148)
   - profile points to a ignition file or a cloud-config file
   - profile can also point to generic config files (i.e. non-ignition or non-cloud-config file)
   - group consists of nodeX.json files
@@ -20,7 +26,7 @@
   - bootcfg can serve static assets (*i.e. artifacts*) locally
     - e.g. profile can refer to these local artifact than downloading
   
-- Other Notes
+- **Other Notes**
 
 > ...bootcfg does not implement or exec a DHCP/TFTP server. Read network setup or use the 
   coreos/dnsmasq image if you need a quick DHCP, proxyDHCP, TFTP, or DNS setup.
