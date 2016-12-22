@@ -1,7 +1,10 @@
 #### Snippets
 
 - restart if already running, else start
-  - `initctl status etcd && initctl restart etcd || initctl start etcd`
+
+  ```bash
+  initctl status etcd && initctl restart etcd || initctl start etcd
+  ```
 - install if needed
 
   ```bash
