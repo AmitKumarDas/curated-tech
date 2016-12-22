@@ -14,9 +14,9 @@
   - [etcd-v2.0.9-linux-amd64.tar.gz](https://github.com/coreos/etcd/releases/download/v2.0.9/etcd-v2.0.9-linux-amd64.tar.gz)
 - binaries:
   - etcd & etcdctl
-- provisioning
+- provisioning script i.e. logic
   - [provision](https://github.com/lowescott/learning-tools/blob/master/etcd-2.0/provision.sh)
-- systemd unit
+- systemd file
 
   ```bash
   [Unit]
@@ -49,6 +49,14 @@
   ExecStart=/usr/bin/etcd
   Restart=always
   ```
+- systemd commands
+  
+  ```bash
+  systemctl daemon-reload
+  systemctl enable etcd.service
+  systemctl restart etcd.service
+  ```
+
 
 #### References
 
