@@ -1,9 +1,4 @@
-#### References
-
-- https://github.com/coreos/coreos-baremetal/
-- https://github.com/coreos/container-linux-config-transpiler
-
-- **bootcfg**
+#### bootcfg
 
 > ...can be installed on any Linux distribution.
 
@@ -37,3 +32,10 @@
 
 > See [examples/ignition](https://github.com/coreos/coreos-baremetal/tree/master/examples/ignition)
   for numerous Fuze template examples.
+
+
+#### References
+
+- https://github.com/coreos/coreos-baremetal/
+- https://github.com/coreos/container-linux-config-transpiler
+- https://gist.github.com/jamesbuckett/c3a98276648eded4cc09a06d457f8f24
