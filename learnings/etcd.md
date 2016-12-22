@@ -56,7 +56,11 @@
   systemctl enable etcd.service
   systemctl restart etcd.service
   ```
-
+- setting up etcdctl
+  - create /etc/profile.d/etcd.sh
+  ```bash
+  export ETCDCTL_PEERS=https://$ETCD_IP1:2379,https://$ETCD_IP2:2379,https://$ETCD_IP3:2379
+  ```
 
 #### References
 
