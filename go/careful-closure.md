@@ -10,7 +10,11 @@ import (
 	"fmt"
 )
 
-// Showing how you correct https://play.golang.org/p/ZgsqYqcrid
+// Showing how you correct below:
+// Value wise
+// https://play.golang.org/p/ZgsqYqcrid
+// Address wise
+// https://play.golang.org/p/6z4cKBC8FO
 
 func main() {
 	m := map[string]interface{}{
