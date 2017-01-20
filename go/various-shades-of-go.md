@@ -8,4 +8,5 @@ composed & try to spend some time among these links.
 
 ### Links
 
-- http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/
+- [gotchas-and-common-mistakes-in-go-golang](http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/)
+- [you probably dont know these about go](https://talks.golang.org/2012/10things.slide#1)
