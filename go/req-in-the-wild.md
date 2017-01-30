@@ -12,3 +12,5 @@ code snips.
   - Ref nomad agent startup
 - Merging two configs & returning a new config (a new mem location)
   - Ref nomad config
+- BDD without BDD frameworks
+  - Ref coreos/ignition @ config/types/filesystem_test.go
