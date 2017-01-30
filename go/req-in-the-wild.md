@@ -14,3 +14,5 @@ code snips.
   - Ref nomad config
 - BDD without BDD frameworks
   - Ref coreos/ignition @ config/types/filesystem_test.go
+- Versioning with types
+  - Ref coreos/ignition @ config/v1/
