@@ -16,3 +16,6 @@ code snips.
   - Ref coreos/ignition @ config/types/filesystem_test.go
 - Versioning with types
   - Ref coreos/ignition @ config/v1/
+- Config parsing, deep copy, comparison, testing
+  - Ref nomad
+  - Ref ignition
