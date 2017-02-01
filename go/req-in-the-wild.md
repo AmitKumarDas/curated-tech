@@ -12,7 +12,7 @@ code snips.
   - Ref nomad agent startup
 - Merging two configs & returning a new config (a new mem location)
   - Ref nomad config
-- BDD without BDD frameworks
+- Data Driven Testing minus frameworks
   - Ref coreos/ignition @ config/types/filesystem_test.go
 - Versioning with types
   - Ref coreos/ignition @ config/v1/
@@ -21,5 +21,7 @@ code snips.
   - Ref ignition
 - Polymorphism - Coding to Interfaces
   - Ref https://github.com/aws/aws-sdk-go/tree/master/aws/credentials
-- Code to AWS - DIY In 5 minutes
+- Code to AWS - DIY in 5 minutes
+  - Ref https://github.com/aws/aws-sdk-go/blob/master/aws/credentials/endpointcreds/provider.go
+- Http Client coding - DIY in 5 minutes
   - Ref https://github.com/aws/aws-sdk-go/blob/master/aws/credentials/endpointcreds/provider.go
