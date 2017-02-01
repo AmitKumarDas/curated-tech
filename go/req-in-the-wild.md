@@ -25,3 +25,5 @@ code snips.
   - Ref https://github.com/aws/aws-sdk-go/blob/master/aws/credentials/endpointcreds/provider.go
 - Http Client coding - DIY in 5 minutes
   - Ref https://github.com/aws/aws-sdk-go/blob/master/aws/credentials/endpointcreds/provider.go
+- Chain providers - if-elif-else in a better way - exclusive provider - run only valid
+  - Ref https://github.com/aws/aws-sdk-go/blob/master/aws/credentials/chain_provider.go
