@@ -21,3 +21,5 @@ code snips.
   - Ref ignition
 - Polymorphism - Coding to Interfaces
   - Ref https://github.com/aws/aws-sdk-go/tree/master/aws/credentials
+- Code to AWS - DIY In 5 minutes
+  - Ref https://github.com/aws/aws-sdk-go/blob/master/aws/credentials/endpointcreds/provider.go
