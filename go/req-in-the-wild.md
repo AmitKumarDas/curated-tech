@@ -19,3 +19,5 @@ code snips.
 - Config parsing, deep copy, comparison, testing
   - Ref nomad
   - Ref ignition
+- Polymorphism - Coding to Interfaces
+  - Ref https://github.com/aws/aws-sdk-go/tree/master/aws/credentials
