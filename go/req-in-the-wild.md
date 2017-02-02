@@ -27,3 +27,5 @@ code snips.
   - Ref https://github.com/aws/aws-sdk-go/blob/master/aws/credentials/endpointcreds/provider.go
 - Chain providers - if-elif-else in a better way - exclusive provider - run only valid
   - Ref https://github.com/aws/aws-sdk-go/blob/master/aws/credentials/chain_provider.go
+- A deep pretty printer for Go data structures to aid in debugging
+  - Ref https://github.com/davecgh/go-spew/
