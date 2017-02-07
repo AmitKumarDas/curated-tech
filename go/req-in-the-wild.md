@@ -29,6 +29,8 @@ code snips.
   - Ref https://github.com/aws/aws-sdk-go/blob/master/aws/credentials/chain_provider.go
 - A deep pretty printer for Go data structures to aid in debugging
   - Ref https://github.com/davecgh/go-spew/
+- Which design to use ?
+  - Ref https://appliedgo.net/generics/
 
 ### Yet to understand the requirements !!!
 
