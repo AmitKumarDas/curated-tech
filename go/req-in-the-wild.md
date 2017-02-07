@@ -1,8 +1,8 @@
 ### Requirements in the wild
 
-> This is a curated list of technical requirements. You may not
-find them directly in stack overflow. These are a bit better than
-code snips.
+This is a curated list of technical requirements. You may be able to find 
+these in stack overflow or Google it. However, an active curated content
+helps me always.
 
 ```
 # Handling metadata or kv pairs or unknown in CLI. 
