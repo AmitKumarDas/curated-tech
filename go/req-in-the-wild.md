@@ -5,13 +5,14 @@ these in stack overflow or Google it. However, an active curated content
 helps me always.
 
 ```
-# The day I got stuck in make()
+# The day I got stumped with init()
+  - Need to understand the initialization order of .go files
+  - The .go files are initialized in alphabetical order
+  - CAREFUL: 
+    - init function of A.go depends on init function of C.go
+    - init of C.go has not yet happened when init of A.go is invoked
   
-  > I used arrOfT = make(map[string]T) 
-  & used arrOfT["new"] = someNewT more than 6 times
-
-  - Need to understand the defaults len & cap of an array
-  - Why should you use append with make ?
+# slices internals
   - Ref - https://blog.golang.org/go-slices-usage-and-internals
 
 # Handling metadata or kv pairs or unknown in CLI. 
