@@ -8,9 +8,10 @@ helps me always.
 # The day I got stumped with init()
   - Need to understand the initialization order of .go files
   - The .go files are initialized in alphabetical order
-  - CAREFUL: 
-    - init function of A.go depends on init function of C.go
-    - init of C.go has not yet happened when init of A.go is invoked
+  - GOOGLY: 
+    - There are two files a.go & c.go in the same package
+    - init() function of a.go depends on init() function of c.go
+    - However, init of c.go has not yet happened when init() of a.go is invoked
   
 # slices internals
   - Ref - https://blog.golang.org/go-slices-usage-and-internals
