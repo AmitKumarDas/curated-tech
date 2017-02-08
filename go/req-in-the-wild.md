@@ -5,6 +5,15 @@ these in stack overflow or Google it. However, an active curated content
 helps me always.
 
 ```
+# The day I got stuck in make()
+  
+  > I used arrOfT = make(map[string]T) 
+  & used arrOfT["new"] = someNewT more than 6 times
+
+  - Need to understand the defaults len & cap of an array
+  - Why should you use append with make ?
+  - Ref - https://blog.golang.org/go-slices-usage-and-internals
+
 # Handling metadata or kv pairs or unknown in CLI. 
   - Ref - nomad client & agent startup
 
