@@ -19,6 +19,12 @@ helps me always.
   - https://www.goinggo.net/2014/11/error-handling-in-go-part-ii.html
   - https://github.com/ardanlabs/gotraining/tree/master/topics/api/error_handling
 
+# Interactive CLI
+  - https://github.com/asciimoo/wuzz
+
+# HTTP Introspection
+  - https://github.com/asciimoo/wuzz
+
 # slices internals
   - Ref - https://blog.golang.org/go-slices-usage-and-internals
 
