@@ -12,7 +12,13 @@ helps me always.
     - There are two files a.go & c.go in the same package
     - init() function of a.go depends on init() function of c.go
     - However, init of c.go has not yet happened when init() of a.go is invoked
-  
+
+# Get your error handling right
+  - https://www.goinggo.net/2017/02/design-philosophy-on-integrity.html
+  - https://www.goinggo.net/2014/10/error-handling-in-go-part-i.html
+  - https://www.goinggo.net/2014/11/error-handling-in-go-part-ii.html
+  - https://github.com/ardanlabs/gotraining/tree/master/topics/api/error_handling
+
 # slices internals
   - Ref - https://blog.golang.org/go-slices-usage-and-internals
 
