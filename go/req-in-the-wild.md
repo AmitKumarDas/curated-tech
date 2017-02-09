@@ -60,6 +60,28 @@ helps me always.
   - Case for **empty interface** i.e. interface{}
   - Every go type implements empty interface
   - Ref https://blog.golang.org/json-and-go
+
+# Network Programming - Did you understand this in your college ?
+  - https://jannewmarch.gitbooks.io/network-programming-with-go-golang-/content/
+  - https://blog.packagecloud.io/eng/2017/02/06/monitoring-tuning-linux-networking-stack-sending-data/
+
+# Query language for JSON
+  - http://jmespath.org/
+  - https://github.com/jmespath/go-jmespath
+
+# Monitoring
+  - http://www.brendangregg.com/blog/2017-02-05/file-system-flame-graph.html
+  - https://news.ycombinator.com/item?id=13574825
+
+# Low Level OS Interfacing
+  - golang.org/x/sys/unix
+
+# Security
+  - https://github.com/cloudflare/gokeyless
+
+# Load testing
+  - https://github.com/tsenart/vegeta
+  - reports, histogram, metrics
 ```
 
 ### Yet to understand the requirements !!!
