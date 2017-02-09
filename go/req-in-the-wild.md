@@ -25,6 +25,9 @@ helps me always.
 # HTTP Introspection
   - https://github.com/asciimoo/wuzz
 
+# Build dynamic DNS service
+  - http://mkaczanowski.com/golang-build-dynamic-dns-service-go/
+
 # slices internals
   - Ref - https://blog.golang.org/go-slices-usage-and-internals
 
