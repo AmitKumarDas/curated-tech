@@ -20,6 +20,9 @@ helps me always.
   - https://www.goinggo.net/2014/11/error-handling-in-go-part-ii.html
   - https://github.com/ardanlabs/gotraining/tree/master/topics/api/error_handling
 
+# Why select & channel go hand-in-hand ?
+  - https://blog.quickmediasolutions.com/2015/09/13/non-blocking-channels-in-go.html
+
 # Interactive CLI
   - https://github.com/asciimoo/wuzz
 
