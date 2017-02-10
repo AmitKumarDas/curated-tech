@@ -13,7 +13,8 @@ helps me always.
     - init() function of a.go depends on init() function of c.go
     - However, init of c.go has not yet happened when init() of a.go is invoked
 
-# Get your error handling right
+# Get your coding right
+  - https://blog.skyliner.io/ship-small-diffs-741308bec0d1#.8zz7zx26f
   - https://www.goinggo.net/2017/02/design-philosophy-on-integrity.html
   - https://www.goinggo.net/2014/10/error-handling-in-go-part-i.html
   - https://www.goinggo.net/2014/11/error-handling-in-go-part-ii.html
