@@ -20,10 +20,16 @@ helps me always.
   - https://www.goinggo.net/2014/10/error-handling-in-go-part-i.html
   - https://www.goinggo.net/2014/11/error-handling-in-go-part-ii.html
   - https://github.com/ardanlabs/gotraining/tree/master/topics/api/error_handling
+  - https://dave.cheney.net/2013/06/09/writing-table-driven-tests-in-go
+  - https://nathanleclaire.com/blog/2015/10/10/interfaces-and-composition-for-effective-unit-testing-in-golang/
 
 ### Learn you some unit testing
   
   - https://nathanleclaire.com/blog/2015/10/10/interfaces-and-composition-for-effective-unit-testing-in-golang/
+  - Scenario: When a struct exposes method to consumers & also relies on these methods internally
+    - How do you unit test above ?
+    - Hint: Compose large interfaces from smaller ones by embedding
+  - Conclusion: Simple modularization is not enough for effective unit testing  
 
 ### Why select & channel go hand-in-hand ?
   
@@ -64,6 +70,7 @@ helps me always.
 ### Data Driven Testing minus frameworks
   
   - Ref coreos/ignition @ config/types/filesystem_test.go
+  - [Table Driven Testing](https://dave.cheney.net/2013/06/09/writing-table-driven-tests-in-go)
 
 ### Versioning with types
   
