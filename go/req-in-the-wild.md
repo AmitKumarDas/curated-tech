@@ -39,6 +39,10 @@ helps me always.
   
   - https://github.com/asciimoo/wuzz
 
+### Event & Agent
+
+  - https://github.com/muesli/beehive
+
 ### HTTP Introspection
   
   - https://github.com/asciimoo/wuzz
