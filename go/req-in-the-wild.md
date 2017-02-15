@@ -35,6 +35,11 @@ helps me always.
   
   - https://blog.quickmediasolutions.com/2015/09/13/non-blocking-channels-in-go.html
 
+### Why json in struct ?
+
+  - Printing a golang struct with fields & values
+  - http://stackoverflow.com/questions/24512112/golang-how-to-print-struct-variables-in-console
+
 ### Interactive CLI
   
   - https://github.com/asciimoo/wuzz
