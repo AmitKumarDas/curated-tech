@@ -31,6 +31,10 @@ helps me always.
     - Hint: Compose large interfaces from smaller ones by embedding
   - Conclusion: Simple modularization is not enough for effective unit testing  
 
+### Iteration, Chain Of Execution, Handlers, Injection
+  
+  - https://github.com/aws/aws-sdk-go/blob/master/aws/request/handlers.go
+
 ### Why select & channel go hand-in-hand ?
   
   - https://blog.quickmediasolutions.com/2015/09/13/non-blocking-channels-in-go.html
