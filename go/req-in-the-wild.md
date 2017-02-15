@@ -31,9 +31,10 @@ helps me always.
     - Hint: Compose large interfaces from smaller ones by embedding
   - Conclusion: Simple modularization is not enough for effective unit testing  
 
-### Iteration, Chain Of Execution, Handlers, Injection
+### Iteration, Chain Of Execution, Handlers, Injection / Hooks at various points
   
-  - https://github.com/aws/aws-sdk-go/blob/master/aws/request/handlers.go
+  - definition - https://github.com/aws/aws-sdk-go/blob/master/aws/request/handlers.go
+  - usage - https://github.com/aws/aws-sdk-go/blob/master/aws/request/request.go
 
 ### Have you ever come across a pkg that needs to do dual stuff ?
   
