@@ -35,6 +35,13 @@ helps me always.
   
   - https://github.com/aws/aws-sdk-go/blob/master/aws/request/handlers.go
 
+### Have you ever come across a pkg that needs to do dual stuff ?
+  
+  - e.g. service & api
+    - service will be used by the callers or clients or this pkg
+    - api is something that this pkg uses to achieve its objective
+  - ref - https://github.com/aws/aws-sdk-go/tree/master/aws/ec2metadata
+
 ### Why select & channel go hand-in-hand ?
   
   - https://blog.quickmediasolutions.com/2015/09/13/non-blocking-channels-in-go.html
