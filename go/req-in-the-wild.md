@@ -52,7 +52,11 @@ helps me always.
   - Printing a golang struct with fields & values
   - http://stackoverflow.com/questions/24512112/golang-how-to-print-struct-variables-in-console
 
-#### Serialization Snippet
+### Provider snippet
+	
+	- https://github.com/kubernetes/kubernetes/tree/master/pkg/cloudprovider/providers
+
+### Serialization Snippet
 
 ```go
   b := &bytes.Buffer{}
