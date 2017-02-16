@@ -30,11 +30,17 @@ helps me always.
     - How do you unit test above ?
     - Hint: Compose large interfaces from smaller ones by embedding
   - Conclusion: Simple modularization is not enough for effective unit testing  
+  - https://github.com/kubernetes/kubernetes/blob/master/pkg/cloudprovider/cloud.go
 
 ### Iteration, Chain Of Execution, Handlers, Injection / Hooks at various points
   
   - definition - https://github.com/aws/aws-sdk-go/blob/master/aws/request/handlers.go
   - usage - https://github.com/aws/aws-sdk-go/blob/master/aws/request/request.go
+
+### Living with interfaces
+
+  - Interfaces all the way down
+  - https://github.com/kubernetes/kubernetes/blob/master/pkg/cloudprovider/cloud.go
 
 ### Plugins, Providers & Factory concept
 
