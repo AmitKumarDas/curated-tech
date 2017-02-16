@@ -56,6 +56,10 @@ helps me always.
 	
 	- https://github.com/kubernetes/kubernetes/tree/master/pkg/cloudprovider/providers
 
+### IO customization via std golang io interfaces
+
+	- https://github.com/aws/aws-sdk-go/blob/master/aws/types.go
+
 ### Serialization Snippet
 
 ```go
