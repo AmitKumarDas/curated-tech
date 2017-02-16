@@ -36,6 +36,10 @@ helps me always.
   - definition - https://github.com/aws/aws-sdk-go/blob/master/aws/request/handlers.go
   - usage - https://github.com/aws/aws-sdk-go/blob/master/aws/request/request.go
 
+### Plugins, Providers & Factory concept
+
+  - https://github.com/kubernetes/kubernetes/blob/master/pkg/cloudprovider/plugins.go
+
 ### Have you ever come across a pkg that needs to do dual stuff ?
   
   - e.g. service & api
