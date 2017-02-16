@@ -52,13 +52,17 @@ helps me always.
   - Printing a golang struct with fields & values
   - http://stackoverflow.com/questions/24512112/golang-how-to-print-struct-variables-in-console
 
+### Pointer to Value, Pointers to Values & vice-versa
+  
+  - https://github.com/aws/aws-sdk-go/blob/master/aws/convert_types.go
+
 ### Provider snippet
 	
-	- https://github.com/kubernetes/kubernetes/tree/master/pkg/cloudprovider/providers
+  - https://github.com/kubernetes/kubernetes/tree/master/pkg/cloudprovider/providers
 
 ### IO customization via std golang io interfaces
 
-	- https://github.com/aws/aws-sdk-go/blob/master/aws/types.go
+  - https://github.com/aws/aws-sdk-go/blob/master/aws/types.go
 
 ### Serialization Snippet
 
@@ -121,6 +125,7 @@ helps me always.
   - Ref ignition
 
 ### Polymorphism - Coding to Interfaces
+
   - Ref https://github.com/aws/aws-sdk-go/tree/master/aws/credentials
 
 ### Code to AWS - DIY in 5 minutes
