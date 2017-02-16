@@ -29,8 +29,9 @@ helps me always.
   - Scenario: When a struct exposes method to consumers & also relies on these methods internally
     - How do you unit test above ?
     - Hint: Compose large interfaces from smaller ones by embedding
-  - Conclusion: Simple modularization is not enough for effective unit testing  
-  - https://github.com/kubernetes/kubernetes/blob/master/pkg/cloudprovider/cloud.go
+  - Conclusion: Simple modularization is not enough for effective unit testing
+  - Designing Interfaces - https://github.com/kubernetes/kubernetes/blob/master/pkg/cloudprovider/cloud.go
+  - Design Mocks - https://github.com/kubernetes/kubernetes/tree/master/pkg/cloudprovider/providers/fake
 
 ### Iteration, Chain Of Execution, Handlers, Injection / Hooks at various points
   
