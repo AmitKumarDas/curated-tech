@@ -52,6 +52,16 @@ helps me always.
   - Printing a golang struct with fields & values
   - http://stackoverflow.com/questions/24512112/golang-how-to-print-struct-variables-in-console
 
+#### Serialization Snippet
+
+```go
+  b := &bytes.Buffer{}
+	_, err := io.Copy(b, r.HTTPResponse.Body)
+	if err != nil {
+    return fmt.Errorf("Serialization error: %s", err.Error())
+  }
+```
+
 ### Interactive CLI
   
   - https://github.com/asciimoo/wuzz
