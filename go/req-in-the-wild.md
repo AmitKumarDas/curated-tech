@@ -201,7 +201,8 @@ helps me always.
 
   - https://github.com/wallix/awless
   - AWS, 
-  - **CLI** (auto-completion), 
+  - **CLI** (auto-completion), tabular format, etc
+    - If you loved OpenStack CLI then you will feel at home here as well
   - Scriptable Templates,  **DSL**
   - Since a RDF model of the infrastructure (stored locally) is implemented, can answer many advanced queries easily
     - RDF is used to sync & model the cloud/remote resources locally
