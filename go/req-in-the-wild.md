@@ -197,6 +197,19 @@ helps me always.
 
   - Distributed Private Networking - https://github.com/meshbird/meshbird
 
+### A Reference Library 
+
+  - https://github.com/wallix/awless
+  - AWS, 
+  - **CLI** (auto-completion), 
+  - Scriptable Templates,  **DSL**
+  - Since a RDF model of the infrastructure (stored locally) is implemented, can answer many advanced queries easily
+    - RDF is used to sync & model the cloud/remote resources locally
+  - Local **history** & **versioning** of changes
+  - SSH support
+  - Inspection
+  - **SUPPORTABILITY** - A big YEAH !!!
+
 ## Yet to understand the requirements !!!
 
 ### Tough Nut - Reflect, byte, string & interface
