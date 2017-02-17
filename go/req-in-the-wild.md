@@ -218,6 +218,12 @@ helps me always.
 ### A Reference Library - meshbird
 
   - https://github.com/meshbird/meshbird
+  - Distributed private networking
+
+### A Reference Library - wuzz
+
+  - https://github.com/asciimoo/wuzz
+  - A CLI for http inspection
 
 ## Yet to understand the requirements !!!
 
