@@ -197,7 +197,7 @@ helps me always.
 
   - Distributed Private Networking - https://github.com/meshbird/meshbird
 
-### A Reference Library 
+### A Reference Library - awless
 
   - https://github.com/wallix/awless
   - AWS, 
@@ -209,6 +209,10 @@ helps me always.
   - SSH support
   - Inspection
   - **SUPPORTABILITY** - A big YEAH !!!
+
+### A Reference Library - K8s
+
+  - use apimachinery packages instead of client-go packages
 
 ## Yet to understand the requirements !!!
 
