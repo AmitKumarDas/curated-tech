@@ -13,6 +13,7 @@
   - Was the volume plugin installed ?
   - How to install the volume plugin ?
   - kubelet logs ?
+  - kube-controller-manager logs ?
 
 ## Theory
 
