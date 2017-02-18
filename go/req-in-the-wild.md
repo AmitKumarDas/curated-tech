@@ -233,6 +233,12 @@ helps me always.
   - Build from some foundation than thinking all over from scratch
   - This is JavaScript based & no golang based
 
+### A Reference Library - K8s
+
+  - Fitting version when exposed as services
+  - Fitting namespacing when exposed as services
+  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/persistent-storage.md#persistentvolume-api
+
 ## Yet to understand the requirements !!!
 
 ### Tough Nut - Reflect, byte, string & interface
