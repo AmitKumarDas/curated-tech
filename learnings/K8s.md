@@ -44,6 +44,9 @@
   - Is used to mount a PersistentVolume into a pod
   - Used to claim durable storage without knowing the details of a particular environment
 
-### Good overview on K8s dynamic storage provisioning
+### Dynamic storage provisioning
 
-- https://docs.openshift.org/latest/install_config/persistent_storage/dynamically_provisioning_pvs.html
+- Terms used
+  - https://docs.openshift.org/latest/install_config/persistent_storage/dynamically_provisioning_pvs.html
+- Operator usage - via - oc
+  - https://docs.openshift.org/latest/install_config/storage_examples/storage_classes_dynamic_provisioning.html#install-config-storage-examples-storage-classes-dynamic-provisioning
