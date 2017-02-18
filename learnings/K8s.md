@@ -56,3 +56,6 @@
 
 - Operator commands - via- kubectl
   - https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
+
+- Access Control - via - GID
+  - https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
