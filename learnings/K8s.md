@@ -14,6 +14,7 @@
   - How to install the volume plugin ?
   - kubelet logs ?
   - kube-controller-manager logs ?
+  - What is the verbose mode you are operating at e.g. -v 5 ?
 
 ## Theory
 
