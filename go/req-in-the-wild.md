@@ -225,6 +225,14 @@ helps me always.
   - https://github.com/asciimoo/wuzz
   - A CLI for http inspection
 
+### A Reference Library - botpress
+
+  - https://github.com/botpress/botpress
+  - I want a UI
+  - Modularization, Composition, Extensibility
+  - Build from some foundation than thinking all over from scratch
+  - This is JavaScript based & no golang based
+
 ## Yet to understand the requirements !!!
 
 ### Tough Nut - Reflect, byte, string & interface
