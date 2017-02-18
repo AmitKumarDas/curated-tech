@@ -1,6 +1,8 @@
 
 > My thoughts on K8s
 
+### K8s Persistent Volumes
+
 - K8s **emptyDir** Volume
   - An emptyDir volume is **first created** when a Pod is assigned to a Node, and exists as long as that Pod is running on that node. 
   - It is initially empty
@@ -44,9 +46,13 @@
   - Is used to mount a PersistentVolume into a pod
   - Used to claim durable storage without knowing the details of a particular environment
 
-### Dynamic storage provisioning
+### Dynamic storage provisioning via StorageClass & PVC
 
-- Terms used
+- Intent, Yaml or Config file references:
   - https://docs.openshift.org/latest/install_config/persistent_storage/dynamically_provisioning_pvs.html
-- Operator usage - via - oc
+
+- Operator commands - via - oc
   - https://docs.openshift.org/latest/install_config/storage_examples/storage_classes_dynamic_provisioning.html#install-config-storage-examples-storage-classes-dynamic-provisioning
+
+- Operator commands - via- kubectl
+  - https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
