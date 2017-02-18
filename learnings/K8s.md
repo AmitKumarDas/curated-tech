@@ -43,3 +43,7 @@
 - K8s **persistentVolumeClaim** Volume
   - Is used to mount a PersistentVolume into a pod
   - Used to claim durable storage without knowing the details of a particular environment
+
+### Good overview on K8s dynamic storage provisioning
+
+- https://docs.openshift.org/latest/install_config/persistent_storage/dynamically_provisioning_pvs.html
