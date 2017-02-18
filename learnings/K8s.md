@@ -1,6 +1,10 @@
 
 > My thoughts on K8s
 
+### Design Doc
+
+- https://github.com/kubernetes/community/blob/master/contributors/design-proposals/persistent-storage.md
+
 ### K8s Persistent Volumes
 
 - K8s **emptyDir** Volume
@@ -59,3 +63,4 @@
 
 - Access Control - via - GID
   - https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
+
