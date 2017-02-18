@@ -1,9 +1,20 @@
 
 > My thoughts on K8s
 
-### Design Doc
+## Design Doc
 
 - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/persistent-storage.md
+
+## Troubleshoot
+
+### Volume Plugin Error
+
+- https://github.com/kubernetes/kubernetes/issues/16585
+  - Was the volume plugin installed ?
+  - How to install the volume plugin ?
+  - kubelet logs ?
+
+## Theory
 
 ### K8s Persistent Volumes
 
