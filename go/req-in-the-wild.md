@@ -248,6 +248,10 @@ helps me always.
 
   - A good tutorial on just appropriate usage of shell scripting
 
+### Installer Reference - matchbox
+
+  - https://github.com/coreos/matchbox/blob/master/Documentation/deployment.md
+
 ## Yet to understand the requirements !!!
 
 ### Tough Nut - Reflect, byte, string & interface
