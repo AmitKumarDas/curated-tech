@@ -89,6 +89,10 @@ helps me always.
   
   - https://github.com/asciimoo/wuzz
 
+### CLI - Look Good
+
+  - https://github.com/renstrom/dedent
+
 ### Event & Agent
 
   - https://github.com/muesli/beehive
