@@ -232,23 +232,29 @@ helps me always.
   - Build from some foundation than thinking all over from scratch
   - This is JavaScript based & no golang based
 
-### A Reference Library - K8s
+### Versioning Reference Library - K8s
 
   - Fitting version when exposed as services
   - Fitting namespacing when exposed as services
   - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/persistent-storage.md#persistentvolume-api
 
-### Makefile Reference Library - K8s's makefile
+### Makefile Reference - K8s's makefile
 
   - Good CLI with various options
   - Help / Usage
   - A good tutorial on just appropriate usage of shell scripting
 
-### Vagrant Reference Library - K8s's cluster provider - vagrant
+### Vagrant Provider Library - K8s's cluster provider
 
   - A good tutorial on just appropriate usage of shell scripting
+  - How a Vagrant provider can be scripted in bash
 
-### Installer Reference - matchbox
+### QEMU/KVM Provider Library - CoreOS's matchbox
+
+  - https://github.com/coreos/matchbox/tree/master/scripts
+  - How a KVM provider can be scripted in bash
+
+### Installer Reference Library - CoreOS's matchbox
 
   - https://github.com/coreos/matchbox/blob/master/Documentation/deployment.md
 
