@@ -197,11 +197,7 @@ helps me always.
   - https://github.com/tsenart/vegeta
   - reports, histogram, metrics
 
-### Networking Links
-
-  - Distributed Private Networking - https://github.com/meshbird/meshbird
-
-### A Reference Library - awless
+### CLI & Ease of Use Reference Library - awless
 
   - https://github.com/wallix/awless
   - AWS, 
@@ -215,24 +211,23 @@ helps me always.
   - Inspection
   - **SUPPORTABILITY** - A big YEAH !!!
 
-### A Reference Library - K8s
+### w.r.t K8s
 
   - use apimachinery packages instead of client-go packages
 
-### A Reference Library - meshbird
+### Networking Library Reference - meshbird
 
   - https://github.com/meshbird/meshbird
   - Distributed private networking
 
-### A Reference Library - wuzz
+### Http Inspection Library - wuzz
 
   - https://github.com/asciimoo/wuzz
   - A CLI for http inspection
 
-### A Reference Library - botpress
+### UI Reference Library - botpress
 
   - https://github.com/botpress/botpress
-  - I want a UI
   - Modularization, Composition, Extensibility
   - Build from some foundation than thinking all over from scratch
   - This is JavaScript based & no golang based
@@ -243,9 +238,15 @@ helps me always.
   - Fitting namespacing when exposed as services
   - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/persistent-storage.md#persistentvolume-api
 
-### A Reference Librayr - K8s
+### Makefile Reference Library - K8s's makefile
 
-  - A make based cli - K8s's makefile
+  - Good CLI with various options
+  - Help / Usage
+  - A good tutorial on just appropriate usage of shell scripting
+
+### Vagrant Reference Library - K8s's cluster provider - vagrant
+
+  - A good tutorial on just appropriate usage of shell scripting
 
 ## Yet to understand the requirements !!!
 
