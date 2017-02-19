@@ -257,6 +257,7 @@ helps me always.
 ### Installer Reference Library - CoreOS's matchbox
 
   - https://github.com/coreos/matchbox/blob/master/Documentation/deployment.md
+  - You need to read the internal used libraries of CoreOS to make it fit for other usages
 
 ## Yet to understand the requirements !!!
 
