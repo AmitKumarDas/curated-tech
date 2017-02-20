@@ -81,3 +81,11 @@
 ### Config Map
 
 Many applications require configuration via some combination of config files, command line arguments, and environment variables. These configuration artifacts should be decoupled from image content in order to keep containerized applications portable. The ConfigMap API resource provides mechanisms to inject containers with configuration data while keeping containers agnostic of Kubernetes.
+
+### Flexvolume
+
+Flexvolume enables users to mount vendor volumes into kubernetes. It expects vendor drivers are installed in the volume plugin path on every kubelet node. It allows for vendors to develop their own drivers to mount volumes on nodes.
+
+Have a look at lvm driver in below repo:
+
+Ref - https://github.com/fabric8io/gitcontroller/tree/master/vendor/k8s.io/kubernetes/examples/flexvolume
