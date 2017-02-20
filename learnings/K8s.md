@@ -78,3 +78,6 @@
 - Access Control - via - GID
   - https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
 
+### Config Map
+
+Many applications require configuration via some combination of config files, command line arguments, and environment variables. These configuration artifacts should be decoupled from image content in order to keep containerized applications portable. The ConfigMap API resource provides mechanisms to inject containers with configuration data while keeping containers agnostic of Kubernetes.
