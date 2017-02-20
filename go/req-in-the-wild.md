@@ -259,6 +259,11 @@ helps me always.
   - https://github.com/coreos/matchbox/blob/master/Documentation/deployment.md
   - You need to read the internal used libraries of CoreOS to make it fit for other usages
 
+### gopkg.in/gcfg.v1
+
+  - Package gcfg reads "INI-style" text-based configuration files with "name=value" pairs 
+  - These pairs are grouped into sections.
+
 ## Yet to understand the requirements !!!
 
 ### Tough Nut - Reflect, byte, string & interface
