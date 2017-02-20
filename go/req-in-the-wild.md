@@ -264,6 +264,10 @@ helps me always.
   - Package gcfg reads "INI-style" text-based configuration files with "name=value" pairs 
   - These pairs are grouped into sections.
 
+### Supportability Commands - Reckoner
+
+  - http://ablagoev.github.io/linux/adventures/commands/2017/02/19/adventures-in-usr-bin.html
+
 ## Yet to understand the requirements !!!
 
 ### Tough Nut - Reflect, byte, string & interface
