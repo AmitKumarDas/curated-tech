@@ -14,6 +14,14 @@ helps me always.
   - Each action is an Interface too
   - Most action Interfaces composes the base Interface
   - Input & output parameters are left out of brevity
+    - Will it be good to have standard types for input & output parameters ?
+    - Else mocking or new implementations will need to import external types !!!
+    - However, sometimes it makes sense to define custom types & use them here.
+      - e.g. types.NodeName than string,
+      - e.g. resource.Quantity than int
+    - Sometimes versioning may be required as types in these parameters.
+      - e.g. v1.NodeAddress
+      - e.g. v1.PersistentVolume
   - Some structs represent generic entity e.g. Metrics
     - Will `MetricOptions` be a better name ?
   - Some structs are aggregation of common properties e.g. Attributes
