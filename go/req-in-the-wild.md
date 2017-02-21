@@ -4,17 +4,83 @@ This is a curated list of technical requirements. You may be able to find
 these in stack overflow or Google it. However, an active curated content
 helps me always.
 
+### Reference Design
+
+- Points to note
+  - Differentiate the method vs. composed interfaces within an interface
+  - Reflect over the naming
+  - A base entity is referred to as Interface
+  - The base Interface just have bare minimal & common stuff
+  - Each action is an Interface too
+  - Most action Interfaces composes the base Interface
+  - Input & output parameters are left out of brevity
+  - Some structs represent generic entity e.g. Metrics
+    - Will `MetricOptions` be a better name ?
+  - Some structs are aggregation of common properties e.g. Attributes
+
+```yaml
+Folder: pkg/volume/volume
+Interfaces:
+  - Volume:
+    - GetPath()
+    - MetricsProvider
+  - MetricsProvider:
+    - GetMetrics()
+  - Mounter:
+    - Volume
+    - CanMount()
+    - SetUp()
+    - SetUpAt()
+    - GetAttributes()
+  - Unmounter:
+    - Volume
+    - TearDown()
+    - TearDownAt()
+  - Recycler:
+    - Volume
+    - Recycle()
+  - Provisioner:
+    - Provision()
+  - Deleter:
+    - Volume
+    - Delete()
+  - Attacher:
+    - Attach()
+    - VolumesAreAttached()
+    - WaitForAttach()
+    - GetDeviceMountPath()
+    - MountDevice()
+  - Detacher:
+    - Detach()
+    - UnmountDevice()
+Structs:
+  - Metrics
+    - Used
+    - Capacity
+    - Available
+    - InodesUsed
+    - Inodes
+    - InodesFree
+  - Attributes:
+    - ReadOnly
+    - Managed
+    - SupportsSELinux
+```
+
 ### The day I got stumped with init()
 
+```
   - Need to understand the initialization order of .go files
   - The .go files are initialized in alphabetical order
   - **GOOGLY**: 
     - There are two files a.go & c.go in the same package
     - init() function of a.go depends on init() function of c.go
     - However, init of c.go has not yet happened when init() of a.go is invoked
+```
 
 ### Get your coding right
 
+```
   - https://blog.skyliner.io/ship-small-diffs-741308bec0d1#.8zz7zx26f
   - https://www.goinggo.net/2017/02/design-philosophy-on-integrity.html
   - https://www.goinggo.net/2014/10/error-handling-in-go-part-i.html
@@ -22,9 +88,11 @@ helps me always.
   - https://github.com/ardanlabs/gotraining/tree/master/topics/api/error_handling
   - https://dave.cheney.net/2013/06/09/writing-table-driven-tests-in-go
   - https://nathanleclaire.com/blog/2015/10/10/interfaces-and-composition-for-effective-unit-testing-in-golang/
+```
 
 ### Learn you some unit testing
-  
+
+```
   - https://nathanleclaire.com/blog/2015/10/10/interfaces-and-composition-for-effective-unit-testing-in-golang/
   - Scenario: When a struct exposes method to consumers & also relies on these methods internally
     - How do you unit test above ?
@@ -32,40 +100,55 @@ helps me always.
   - Conclusion: Simple modularization is not enough for effective unit testing
   - Designing Interfaces - https://github.com/kubernetes/kubernetes/blob/master/pkg/cloudprovider/cloud.go
   - Design Mocks - https://github.com/kubernetes/kubernetes/tree/master/pkg/cloudprovider/providers/fake
+```
 
 ### Iteration, Chain Of Execution, Handlers, Injection / Hooks at various points
-  
+
+```
   - definition - https://github.com/aws/aws-sdk-go/blob/master/aws/request/handlers.go
   - usage - https://github.com/aws/aws-sdk-go/blob/master/aws/request/request.go
+```
 
 ### Living with interfaces
 
+```
   - Interfaces all the way down
   - https://github.com/kubernetes/kubernetes/blob/master/pkg/cloudprovider/cloud.go
+```
 
 ### Plugins, Providers & Factory concept
 
+```
   - https://github.com/kubernetes/kubernetes/blob/master/pkg/cloudprovider/plugins.go
+```
 
 ### Have you ever come across a pkg that needs to do dual stuff ?
-  
+
+```
   - e.g. service & api
     - service will be used by the callers or clients or this pkg
     - api is something that this pkg uses to achieve its objective
   - ref - https://github.com/aws/aws-sdk-go/tree/master/aws/ec2metadata
+```
 
 ### Why select & channel go hand-in-hand ?
-  
+
+```
   - https://blog.quickmediasolutions.com/2015/09/13/non-blocking-channels-in-go.html
+```
 
 ### Why json in struct ?
 
+```
   - Printing a golang struct with fields & values
   - http://stackoverflow.com/questions/24512112/golang-how-to-print-struct-variables-in-console
+```
 
 ### Pointer to Value, Pointers to Values & vice-versa
-  
+
+```
   - https://github.com/aws/aws-sdk-go/blob/master/aws/convert_types.go
+```
 
 ### Provider snippet
 	
