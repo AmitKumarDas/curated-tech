@@ -13,7 +13,8 @@ helps me always.
   - The base Interface just have bare minimal & common stuff
   - Each action is an Interface too
   - Most action Interfaces composes the base Interface
-  - Input & output parameters are left out of brevity
+  - Input & output parameters 
+    - Have been left out of brevity
     - Will it be good to have standard types for input & output parameters ?
     - Else mocking or new implementations will need to import external types !!!
     - However, sometimes it makes sense to define custom types & use them here.
@@ -22,6 +23,8 @@ helps me always.
     - Sometimes versioning may be required as types in these parameters.
       - e.g. v1.NodeAddress
       - e.g. v1.PersistentVolume
+    - Does all these mean sacrificing simplicity ?
+      - How have the language designers implemented the same ?
   - Some structs represent generic entity e.g. Metrics
     - Will `MetricOptions` be a better name ?
   - Some structs are aggregation of common properties e.g. Attributes
