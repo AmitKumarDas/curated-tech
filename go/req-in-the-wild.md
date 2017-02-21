@@ -54,7 +54,7 @@ Interfaces:
     - Detach()
     - UnmountDevice()
 Structs:
-  - Metrics
+  - Metrics:
     - Used
     - Capacity
     - Available
