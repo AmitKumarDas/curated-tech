@@ -62,9 +62,6 @@ Structs:
   - An interface has
     - method signature & 
     - composes other interface(s)
-  - Reflect over the naming
-    - Does the name provides ample evidence of differentiating an 
-    	- `interface` from a `struct` ?
   - A `base entity` can be an `interface`
     - What is a **`base interface`** ?
       - It has a bare minimal property
@@ -86,10 +83,17 @@ Structs:
         - e.g. v1.PersistentVolume
       - Does all these mean sacrificing simplicity ?
         - How have the language designers implemented the same ?
+  - Reflect over the naming
+    - Does the name provides ample evidence of differentiating an 
+    	- `interface` from a `struct` ?
   - How do you diff a Metrics (`struct`) vs. a Volume (`interface`)
-    - Will `MetricOptions` be a better name ?
+    - Will `MetricProperties` or `MetricOptions` be a better name ?
+    - This was not `Metrics vs. Volumes` rather `Metrics vs. Volume`
+    - The suffix `s` plays a key role
+    - Does this mean `Volumes` should be a struct ?
   - Structs can be aggregation of common properties 
     - e.g. Attributes
+    - Will it be good to name it as `AttributeProps` ?
 
 ### The day I got stumped with init()
 
