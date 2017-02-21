@@ -2,32 +2,12 @@
 
 This is a curated list of technical requirements. You may be able to find 
 these in stack overflow or Google it. However, an active curated content
-helps me always.
+helps me always. Objective of writing it down is improving my productivity
+while implementing these requirements.
 
-### Reference Design
+### I want a programming language's design reference ?
 
-- Points to note
-  - Differentiate the method vs. composed interfaces within an interface
-  - Reflect over the naming
-  - A base entity is referred to as Interface
-  - The base Interface just have bare minimal & common stuff
-  - Each action is an Interface too
-  - Most action Interfaces composes the base Interface
-  - Input & output parameters 
-    - Have been left out of brevity
-    - Will it be good to have standard types for input & output parameters ?
-    - Else mocking or new implementations will need to import external types !!!
-    - However, sometimes it makes sense to define custom types & use them here.
-      - e.g. types.NodeName than string,
-      - e.g. resource.Quantity than int
-    - Sometimes versioning may be required as types in these parameters.
-      - e.g. v1.NodeAddress
-      - e.g. v1.PersistentVolume
-    - Does all these mean sacrificing simplicity ?
-      - How have the language designers implemented the same ?
-  - Some structs represent generic entity e.g. Metrics
-    - Will `MetricOptions` be a better name ?
-  - Some structs are aggregation of common properties e.g. Attributes
+- Lifted from k8s/pkg/volume/volume.go file
 
 ```yaml
 Folder: pkg/volume/volume
@@ -77,6 +57,39 @@ Structs:
     - Managed
     - SupportsSELinux
 ```
+
+- Points to note
+  - An interface has
+    - method signature & 
+    - composes other interface(s)
+  - Reflect over the naming
+    - Does the name provides ample evidence of differentiating an 
+    	- `interface` from a `struct` ?
+  - A `base entity` can be an `interface`
+    - What is a **`base interface`** ?
+      - It has a bare minimal property
+      - It may represents common stuff
+      - e.g. Volume
+  - An action can represent an `interface` too
+    - e.g. Mounter
+    - These action interface(s) may compose its base interface
+  - Input & output parameters 
+    - NOTE: Have been left out of brevity
+    - These are some of the questions we shoud ask ?
+      - Will it be good to have standard types for input & output parameters ?
+      - Else mocking or new implementations will need to import external types !!!
+      - However, sometimes it makes sense to define custom types & use them here.
+        - e.g. types.NodeName than string,
+        - e.g. resource.Quantity than int
+      - Sometimes versioning may be required as types in these parameters.
+        - e.g. v1.NodeAddress
+        - e.g. v1.PersistentVolume
+      - Does all these mean sacrificing simplicity ?
+        - How have the language designers implemented the same ?
+  - How do you diff a Metrics (`struct`) vs. a Volume (`interface`)
+    - Will `MetricOptions` be a better name ?
+  - Structs can be aggregation of common properties 
+    - e.g. Attributes
 
 ### The day I got stumped with init()
 
