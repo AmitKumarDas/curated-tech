@@ -10,7 +10,7 @@ while implementing these requirements.
 - Lifted from k8s/pkg/volume/volume.go file
 
 ```yaml
-Folder: pkg/volume/volume
+File: pkg/volume/volume
 Interfaces:
   - Volume:
     - GetPath()
@@ -83,17 +83,38 @@ Structs:
         - e.g. v1.PersistentVolume
       - Does all these mean sacrificing simplicity ?
         - How have the language designers implemented the same ?
-  - Reflect over the naming
+  - Reflect over the naming conventions
     - Does the name provides ample evidence of differentiating an 
     	- `interface` from a `struct` ?
-  - How do you diff a Metrics (`struct`) vs. a Volume (`interface`)
+    - Can it be carried as a standard practice without being orthodox ?
+  - How do you differentiate a Metrics (`struct`) vs. a Volume (`interface`)
     - Will `MetricProperties` or `MetricOptions` be a better name ?
     - This was not `Metrics vs. Volumes` rather `Metrics vs. Volume`
-    - The suffix `s` plays a key role
+    - Does the suffix `s` play any role ?
     - Does this mean `Volumes` should be a struct ?
+    - Will `VolumeProps` be a better choice as a struct ?
+  - Can we downplay the `xxxs` & `xxxProps` ?
+      - How about `JivaVolume` as a choice for struct ?
+      - Similarly, `JivaMetrics` as a struct
+      - We downplay the rule of `Opts`, `Props` or `s` as suffix
+      - We vote for specialized entity as prefix
   - Structs can be aggregation of common properties 
     - e.g. Attributes
+    - Should these kind of structs be used in `interface` methods ?
+    - Should we remember these as `common structs`
+      - i.e. structs that are at same level as an interface
     - Will it be good to name it as `AttributeProps` ?
+      - Nah...
+
+- Lifted from k8s/pkg/cloudprovider/cloud.go file
+
+```yaml
+File: pkg/cloudprovider/cloud
+Interfaces:
+  - Interface:
+    - LoadBalancer() (LoadBalancer, bool)
+    - Instance() (Instances, bool)
+```
 
 ### The day I got stumped with init()
 
