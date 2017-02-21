@@ -58,15 +58,20 @@ Structs:
     - SupportsSELinux
 ```
 
-- Points to note
-  - An interface has
-    - method signature & 
-    - composes other interface(s)
+- Observations
+  - We find an `interface` to have
+    - method signature(s) & 
+    - composes other interface(s) and hence their signatures
   - A `base entity` can be an `interface`
-    - What is a **`base interface`** ?
-      - It has a bare minimal property
-      - It may represents common stuff
-      - e.g. Volume
+    - Can we remember it as a **`base interface`** ?
+      - It has one or couple of properties
+        - e.g. Volume interface
+      - It should be minimalistic
+      - It may be injected with external concerns
+        - Concerns are otherwise known as aspects
+        - e.g. Volume injects MetricsProvider
+	- Is injecting here a good approach ?
+	- Further Study: `Aspect Oriented Programming` & `Dependency Injection`
   - An action can represent an `interface` too
     - e.g. Mounter
     - These action interface(s) may compose its base interface
