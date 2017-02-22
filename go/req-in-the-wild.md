@@ -164,6 +164,16 @@ Interfaces:
 ```yaml
 ```
 
+#### [E] Lifted from aws/aws-sdk-go/aws/config.go
+
+```yaml
+```
+
+#### Observations w.r.t [E]
+
+```yaml
+```
+
 ### The day I got stumped with init()
 
 ```
