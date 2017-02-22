@@ -19,6 +19,13 @@
 
 ## Theory
 
+### Build docker image
+
+```yaml
+File:
+  - build/make-build-image.sh
+```
+
 ### cluster ubuntu essentials
 
 ```yaml
