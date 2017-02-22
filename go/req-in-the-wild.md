@@ -7,7 +7,7 @@ while implementing these requirements.
 
 ### I want a programming language's design reference ?
 
-#### Lifted from k8s/pkg/volume/volume.go file
+#### [A] Lifted from k8s/pkg/volume/volume.go file
 
 ```yaml
 File: pkg/volume/volume
@@ -58,7 +58,7 @@ Structs:
     - SupportsSELinux
 ```
 
-#### Observations
+#### Observations w.r.t [A]
 
 ```yaml
  An `interface` can have:
@@ -129,7 +129,7 @@ Structs can be aggregation of common properties:
     - Nah...
 ```
 
-#### Lifted from k8s/pkg/cloudprovider/cloud.go file
+#### [B] Lifted from k8s/pkg/cloudprovider/cloud.go file
 
 ```yaml
 File: pkg/cloudprovider/cloud
@@ -139,12 +139,19 @@ Interfaces:
     - Instance() (Instances, bool)
 ```
 
-#### Lifted from aws-sdk-go/aws/credentials
+
+
+#### Observations w.r.t [B]
 
 ```yaml
 ```
 
-#### Observations
+#### [C] Lifted from aws-sdk-go/aws/credentials
+
+```yaml
+```
+
+#### Observations w.r.t [C]
 
 ```yaml
 ```
