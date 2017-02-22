@@ -7,7 +7,7 @@ while implementing these requirements.
 
 ### I want a programming language's design reference ?
 
-- Lifted from k8s/pkg/volume/volume.go file
+#### Lifted from k8s/pkg/volume/volume.go file
 
 ```yaml
 File: pkg/volume/volume
@@ -58,60 +58,78 @@ Structs:
     - SupportsSELinux
 ```
 
-- Observations
-  - We find an `interface` to have
-    - method signature(s) & 
-    - composes other interface(s) and hence their signatures
-  - A `base entity` can be an `interface`
-    - Can we remember it as a **`base interface`** ?
-      - It has one or couple of properties
+#### Observations
+
+```yaml
+ An `interface` can have:
+   - method signature(s) & 
+   - composes other interface(s) and hence their signatures
+```
+
+```yaml
+A `base entity` can be an `interface`:
+  - Should we call it as a **`base interface`**:
+    - It has one or couple of properties:
         - e.g. Volume interface
-      - It should be minimalistic
-      - It may be injected with external concerns
-        - Concerns are otherwise known as aspects
+    - It should be minimalistic
+    - It may be injected with external `concerns`:
+      - Concerns are otherwise known as aspects
         - e.g. Volume injects MetricsProvider
-	- Is injecting here a good approach ?
+	- Is `injecting` here a good approach ?
 	- Further Study: `Aspect Oriented Programming` & `Dependency Injection`
-  - An action can represent an `interface` too
-    - e.g. Mounter
-    - These action interface(s) may compose its base interface
-  - Input & output parameters 
-    - NOTE: Have been left out of brevity
-    - These are some of the questions we shoud ask ?
-      - Will it be good to have standard types for input & output parameters ?
-      - Else mocking or new implementations will need to import external types !!!
-      - However, sometimes it makes sense to define custom types & use them here.
-        - e.g. types.NodeName than string,
-        - e.g. resource.Quantity than int
-      - Sometimes versioning may be required as types in these parameters.
-        - e.g. v1.NodeAddress
-        - e.g. v1.PersistentVolume
-      - Does all these mean sacrificing simplicity ?
-        - How have the language designers implemented the same ?
-  - Reflect over the naming conventions
-    - Does the name provides ample evidence of differentiating an 
-    	- `interface` from a `struct` ?
+```
+
+```yaml
+An action can represent an `interface` too:
+  - e.g. Mounter
+  - These action interface(s) may compose its own base interface
+```
+
+```yaml
+Input & output parameters :
+  - Have been left out of brevity
+  - Some of the questions we shoud ask:
+    - Will it be good to have `standard types` for input & output parameters ?
+    - Else mocking or new implementations will need to import external types !!!
+    - However, sometimes it makes sense to define custom types & use them here.
+      - e.g. types.NodeName than string,
+      - e.g. resource.Quantity than int
+    - Sometimes versioning may be required as types in these parameters.
+      - e.g. v1.NodeAddress
+      - e.g. v1.PersistentVolume
+    - Does all these mean sacrificing simplicity ?
+      - How have the language designers implemented the same ?
+```
+
+```yaml
+Reflect over the naming conventions:
+  - Does the name provides ample evidence of differentiating: 
+    - `interface` from a `struct` ?
     - Can it be carried as a standard practice without being orthodox ?
-  - How do you differentiate a Metrics (`struct`) vs. a Volume (`interface`)
+  - How do you differentiate a Metrics (`struct`) vs. a Volume (`interface`):
     - Will `MetricProperties` or `MetricOptions` be a better name ?
     - This was not `Metrics vs. Volumes` rather `Metrics vs. Volume`
     - Does the suffix `s` play any role ?
     - Does this mean `Volumes` should be a struct ?
     - Will `VolumeProps` be a better choice as a struct ?
-  - Can we downplay the `xxxs` & `xxxProps` ?
-      - How about `JivaVolume` as a choice for struct ?
-      - Similarly, `JivaMetrics` as a struct
-      - We downplay the rule of `Opts`, `Props` or `s` as suffix
-      - We vote for specialized entity as prefix
-  - Structs can be aggregation of common properties 
-    - e.g. Attributes
-    - Should these kind of structs be used in `interface` methods ?
-    - Should we remember these as `common structs`
-      - i.e. structs that are at same level as an interface
-    - Will it be good to name it as `AttributeProps` ?
-      - Nah...
+  - Can we downplay the `xxxs` & `xxxProps` ?:
+    - How about `JivaVolume` as a choice for struct ?
+    - Similarly, `JivaMetrics` as a struct
+    - We downplay the rule of `Opts`, `Props` or `s` as suffix
+    - We vote for specialized entity as prefix
+```
 
-- Lifted from k8s/pkg/cloudprovider/cloud.go file
+```yaml
+Structs can be aggregation of common properties:
+  - e.g. Attributes
+  - Should these kind of structs be used in `interface` methods ?
+  - Should we remember these as `common structs`
+    - i.e. structs that are at same level as an interface
+  - Will it be good to name it as `AttributeProps` ?
+    - Nah...
+```
+
+#### Lifted from k8s/pkg/cloudprovider/cloud.go file
 
 ```yaml
 File: pkg/cloudprovider/cloud
