@@ -164,12 +164,22 @@ Interfaces:
 ```yaml
 ```
 
-#### [E] Lifted from aws/aws-sdk-go/aws/config.go
+#### [E] Lifted from aws-sdk-go/aws/config.go
 
 ```yaml
 ```
 
 #### Observations w.r.t [E]
+
+```yaml
+```
+
+#### [F] Lifted from aws-sdk-go/aws/convert_types.go
+
+```yaml
+```
+
+#### Observations from [F]
 
 ```yaml
 ```
