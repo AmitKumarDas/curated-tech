@@ -68,7 +68,7 @@ Structs:
 
 ```yaml
 A `base entity` can be an `interface`:
-  - Should we call it as a **`base interface`**:
+  - Should we call it as a **BASE INTERFACE**:
     - It has one or couple of properties:
         - e.g. Volume interface
     - It should be minimalistic
@@ -123,7 +123,7 @@ Reflect over the naming conventions:
 Structs can be aggregation of common properties:
   - e.g. Attributes
   - Should these kind of structs be used in `interface` methods ?
-  - Should we remember these as `common structs`
+  - Should we remember these as **COMMON STRUCTS**
     - i.e. structs that are at same level as an interface
   - Will it be good to name it as `AttributeProps` ?
     - Nah...
@@ -147,11 +147,59 @@ Interfaces:
 #### [C] Lifted from aws-sdk-go/aws/credentials
 
 ```yaml
+File: credentials/credentials.go
+Interfaces:
+  - Provider:
+    - Retrieve() 	(Value, error)
+    - IsExpired() 	bool
+Structs:
+  - Expiry:
+    - expiration 	time.Time
+    - CurrentTime 	func() time.Time
+  - Value:
+    - AccessKeyID 	string
+    - SecretAccessKey	string
+    - SessionToken 	string
+    - ProviderName 	string
+  - Credentials:
+    - creds		Value
+    - forceRefresh	bool
+    - m			sync.Mutex
+    - provider		Provider
 ```
 
 #### Observations w.r.t [C]
 
 ```yaml
+Aggregated properties in a struct:
+  - e.g. **Value** represents the `sought after properties`
+  - Can `Attributes` be a better naming choice ?
+    - Value is better as credential is better understood with its value.
+```
+
+```yaml
+Shared struct:
+  - e.g. **Expiry** can be be embedded anonymously within any other struct
+  - It can provide shared logic
+```
+
+```yaml
+Mock properties of a struct:
+  - e.g. CurrentTime property of Expiry can be mocked
+  - Suitable for unit test coverage
+  - Is set as a public property
+```
+
+```yaml
+A `manager entity` tied to its provider:
+  - Here the manager entity is a struct i.e. Credentials
+  - Can we think of it as a **MANAGER ENTITY** ?
+  - It embeds Provider interface:
+  - Typical Instantion:
+    - NewCredentials(provider *Provider) *Credentials
+  - Will expose methods that are wrappers over Provider
+  - Usage of mutex implies safety across multiple goroutines
+    - Each provider need not manage synchronous state  
 ```
 
 #### [D] Lifted from aws/aws-sdk-go/aws/types.go
