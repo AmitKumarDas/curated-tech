@@ -26,15 +26,13 @@ File: cluster/lib/util.sh
 File: cluster/lib/logging.sh
 File: cluster/kubectl.sh
 File: cluster/common.sh
-  - 
+File: cluster/clientbin.sh
 File: ubuntu/util.sh
   - ssh:
     - -oStrictHostKeyChecking=no
     - -oUserKnownHostsFile=/dev/null
     - -oLogLevel=ERROR 
-    - -C
-  - release:
-    - ${KUBE_ROOT}/build/release.sh
+    - -C  
   - $nodes:
     - ai:
     - a:
