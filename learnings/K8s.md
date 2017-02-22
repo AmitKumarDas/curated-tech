@@ -19,6 +19,13 @@
 
 ## Theory
 
+### kubeadm essentials
+
+```yaml
+Configs:
+  - /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+```
+
 ### K8s Persistent Volumes
 
 - K8s **emptyDir** Volume
