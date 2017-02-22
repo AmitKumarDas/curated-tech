@@ -5,7 +5,7 @@ these in stack overflow or Google it. However, an active curated content
 helps me always. Objective of writing it down is improving my productivity
 while implementing these requirements.
 
-### I want a programming language's design reference ?
+### I want some golang's design references before starting to code ?
 
 #### [A] Lifted from k8s/pkg/volume/volume.go file
 
@@ -230,6 +230,17 @@ A `manager entity` tied to its provider:
 #### Observations from [F]
 
 ```yaml
+```
+
+### Various requirements' technical implementations
+
+```yaml
+Requirements:
+  - templating    
+      - import text/template    
+      - strtmpl string, obj interface{}
+      - tmpl, err := template.New("template").Parse(strtmpl)
+      - err = tmpl.Execute(&buf, obj)
 ```
 
 ### The day I got stumped with init()
