@@ -139,8 +139,6 @@ Interfaces:
     - Instance() (Instances, bool)
 ```
 
-
-
 #### Observations w.r.t [B]
 
 ```yaml
@@ -152,6 +150,16 @@ Interfaces:
 ```
 
 #### Observations w.r.t [C]
+
+```yaml
+```
+
+#### [D] Lifted from aws/aws-sdk-go/aws/types.go
+
+```yaml
+```
+
+#### Observations w.r.t [D]
 
 ```yaml
 ```
