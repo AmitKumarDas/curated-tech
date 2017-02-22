@@ -27,6 +27,8 @@ Configs:
 Notes:
   - cloudprovider integrations:
     - --cloud-provider must be set for all kubelets in the cluster
+  - kubeReleaseBucketURL:
+    - https://storage.googleapis.com/kubernetes-release/release
 ```
 
 ### K8s Persistent Volumes
