@@ -139,6 +139,16 @@ Interfaces:
     - Instance() (Instances, bool)
 ```
 
+#### Lifted from aws-sdk-go/aws/credentials
+
+```yaml
+```
+
+#### Observations
+
+```yaml
+```
+
 ### The day I got stumped with init()
 
 ```
