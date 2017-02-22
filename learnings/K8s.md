@@ -29,6 +29,12 @@ Notes:
     - --cloud-provider must be set for all kubelets in the cluster
   - kubeReleaseBucketURL:
     - https://storage.googleapis.com/kubernetes-release/release
+  - clientcmd pkg
+    - builds a working client from:
+      - a fixed config,
+      - a .kubeconfig file,
+      - command line flags, or
+      - from any merged combination
 ```
 
 ### K8s Persistent Volumes
