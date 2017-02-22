@@ -24,6 +24,9 @@
 ```yaml
 Configs:
   - /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+Notes:
+  - cloudprovider integrations:
+    - --cloud-provider must be set for all kubelets in the cluster
 ```
 
 ### K8s Persistent Volumes
