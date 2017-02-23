@@ -324,8 +324,10 @@ Interfaces:
     - AddSSHKeyToAllInstances(user string, keyData []byte) error
     - CurrentNodeName(hostname string) (types.NodeName, error)
   - LoadBalancer:
-    - GetLoadBalancer(clusterName string, service *v1.Service) (status *v1.LoadBalancerStatus, exists bool, err error)
-    - EnsureLoadBalancer(clusterName string, service *v1.Service, nodes []*v1.Node) (*v1.LoadBalancerStatus, error)
+    - GetLoadBalancer(clusterName string, service *v1.Service) 
+      - returns (status *v1.LoadBalancerStatus, exists bool, err error)
+    - EnsureLoadBalancer(clusterName string, service *v1.Service, nodes []*v1.Node) 
+      - returns (*v1.LoadBalancerStatus, error)
     - UpdateLoadBalancer(clusterName string, service *v1.Service, nodes []*v1.Node) error
     - EnsureLoadBalancerDeleted(clusterName string, service *v1.Service) error
   - Clusters:
@@ -392,6 +394,26 @@ Interfaces:
     - DescribeVolumes(request *ec2.DescribeVolumesInput) ([]*ec2.Volume, error)
     - CreateVolume(request *ec2.CreateVolumeInput) (resp *ec2.Volume, err error)
     - DeleteVolume(*ec2.DeleteVolumeInput) (*ec2.DeleteVolumeOutput, error)
+  - EC2Metadata
+    - GetMetadata(path string) (string, error)
+Structs:
+  - CloudConfig
+  - awsSdkEC2
+    - ec2 *ec2.EC2
+  - awsSDKProvider
+    - creds *credentials.Credentials
+    - mutex sync.Mutex
+    - regionDelayers map[string]*CrossRequestRetryDelay
+  - Cloud
+    - ec2 		EC2
+    - metadata 		EC2Metadata
+    - cfg 		*CloudConfig
+    - region 		string
+    - filterTags 	map[string]string
+    - mutex 		sync.Mutex
+    - attachingMutex 	sync.Mutex
+    - attaching		map[types.NodeName]map[mountDevice]awsVolumeID
+    - deviceAllocators 	map[types.NodeName]DeviceAllocator
 ```
 
 #### Observations w.r.t k8s/pkg/cloudprovider/aws/aws.go
@@ -400,17 +422,25 @@ Interfaces:
 Notes:
   - Interfaces provide more & more control over logic
     - Provide testability
+  - awsSdkEC2 is struct for EC2
+  - awsSDKProvider is struct for Services
+  - Cloud is the implementation of Interface
 ```
 
 ```yaml
 Ideas:
   File: lib/orchprovider/nomad/nomad.go
   Interfaces:
-    - Services
+    - Services vs. Services
       - Storage(region string) (Nomad, error)
-    - Nomad
+    - Nomad vs. EC2
       - CreateJobSpec(nomad type) (nomad type, error)
       - DeleteJobSpec(nomad type) (nomad type, error)
+  Structs:
+    - NomadConfig vs. CloudConfig
+    - nomadClient vs. awsSdkEC2
+    - nomadServices vs. awsSDKProvider
+    - NomadOrchestrator vs. Cloud
 ```
 
 #### Lifted from aws-sdk-go/aws/credentials
