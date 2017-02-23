@@ -313,11 +313,104 @@ Interfaces:
   - Interface:
     - LoadBalancer() (LoadBalancer, bool)
     - Instance() (Instances, bool)
+    - Zones() (Zones, bool)
+    - ProviderName() string
+    - ScrubDNS(nameservers, searches []string) (nsOut, srchOut []string)
+  - Instances:
+    - NodeAddresses(name types.NodeName) ([]v1.NodeAddress, error)
+    - ExternalID(nodeName types.NodeName) (string, error)
+    - InstanceID(nodeName types.NodeName) (string, error)
+    - InstanceType(name types.NodeName) (string, error)
+    - AddSSHKeyToAllInstances(user string, keyData []byte) error
+    - CurrentNodeName(hostname string) (types.NodeName, error)
+  - LoadBalancer:
+    - GetLoadBalancer(clusterName string, service *v1.Service) (status *v1.LoadBalancerStatus, exists bool, err error)
+    - EnsureLoadBalancer(clusterName string, service *v1.Service, nodes []*v1.Node) (*v1.LoadBalancerStatus, error)
+    - UpdateLoadBalancer(clusterName string, service *v1.Service, nodes []*v1.Node) error
+    - EnsureLoadBalancerDeleted(clusterName string, service *v1.Service) error
+  - Clusters:
+    - ListClusters() ([]string, error)
+    - Master(clusterName string) (string, error)
 ```
 
 #### Observations w.r.t k8s/pkg/cloudprovider/cloud.go
 
 ```yaml
+Notes:
+  - EnsureXXX implies create or updates the existing one
+  - Usage of version types as parameters
+```
+
+```yaml
+Ideas:
+  - Operations vs Interface
+    - Networks
+    - Zones
+    - Storages:
+      - CreateStoragePod
+      - DeleteStoragePod
+```
+
+#### Lifted from k8s/pkg/cloudprovider/plugins.go
+
+```yaml
+Custom Type:
+  - type Factory func(config io.Reader) (Interface, error)
+Global Var:
+  - providersMutex sync.Mutex
+  - providers      = make(map[string]Factory)
+Public Functions:
+  - RegisterCloudProvider(name string, cloud Factory)
+  - IsCloudProvider(name string) bool
+  - CloudProviders() []string
+  - GetCloudProvider(name string, config io.Reader) (Interface, error)
+  - InitCloudProvider(name string, configFilePath string) (Interface, error)
+```
+
+#### Observations w.r.t k8s/pkg/cloudprovider/plugins.go
+
+```yaml
+Notes:
+  - No need of a structure to use mutex
+  - No need of a structure to manage a list safely
+```
+
+#### Lifted from k8s/pkg/cloudprovider/aws/aws.go
+
+```yaml
+File: cloudprovider/aws/aws.go
+Interfaces:
+  - Services
+    - Compute(region string) (EC2, error)
+    - LoadBalancing(region string) (ELB, error)
+    - Autoscaling(region string) (ASG, error)
+    - Metadata() (EC2Metadata, error)
+  - EC2
+    - DescribeInstances(request *ec2.DescribeInstancesInput) ([]*ec2.Instance, error)
+    - AttachVolume(*ec2.AttachVolumeInput) (*ec2.VolumeAttachment, error)
+    - DetachVolume(request *ec2.DetachVolumeInput) (resp *ec2.VolumeAttachment, err error)
+    - DescribeVolumes(request *ec2.DescribeVolumesInput) ([]*ec2.Volume, error)
+    - CreateVolume(request *ec2.CreateVolumeInput) (resp *ec2.Volume, err error)
+    - DeleteVolume(*ec2.DeleteVolumeInput) (*ec2.DeleteVolumeOutput, error)
+```
+
+#### Observations w.r.t k8s/pkg/cloudprovider/aws/aws.go
+
+```yaml
+Notes:
+  - Interfaces provide more & more control over logic
+    - Provide testability
+```
+
+```yaml
+Ideas:
+  File: lib/orchprovider/nomad/nomad.go
+  Interfaces:
+    - Services
+      - Storage(region string) (Nomad, error)
+    - Nomad
+      - CreateJobSpec(nomad type) (nomad type, error)
+      - DeleteJobSpec(nomad type) (nomad type, error)
 ```
 
 #### Lifted from aws-sdk-go/aws/credentials
