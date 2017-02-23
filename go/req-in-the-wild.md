@@ -5,7 +5,10 @@ these in stack overflow or Google it. However, an active curated content
 helps me always. Objective of writing it down is improving my productivity
 while implementing these requirements.
 
-### I want some golang's design references before starting to code ?
+### Requirement 1
+
+> I am a programmer. Can I have some golang's design references before starting 
+to code in golang.
 
 #### Lifted from k8s/pkg/volume/volume.go file
 
@@ -405,7 +408,10 @@ A `manager entity` tied to its provider:
 ```yaml
 ```
 
-### Generic Requirements in the wild - Technical Implementations
+### Requirement 2
+
+> Alright I learnt the design stuff. Any cookbook recipes or snippets that helps
+me program faster. I should be golang technical Implementations.
 
 ```yaml
 Requirements:
@@ -415,6 +421,8 @@ Requirements:
       - tmpl, err := template.New("template").Parse(strtmpl)
       - err = tmpl.Execute(&buf, obj)
 ```
+
+## Below needs to be fit somewhere else !!
 
 ### The day I got stumped with init()
 
