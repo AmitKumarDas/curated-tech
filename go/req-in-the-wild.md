@@ -58,7 +58,7 @@ Structs:
     - SupportsSELinux
 ```
 
-#### Observations w.r.t [A]
+#### Observations w.r.t k8s/pkg/volume/volume.go file
 
 ```yaml
  An `interface` can have:
@@ -102,34 +102,117 @@ Input & output parameters :
 ```
 
 ```yaml
-Reflect over the naming conventions:
+Naming:
   - Does the name provides ample evidence of differentiating: 
     - `interface` from a `struct` ?
     - Can it be carried as a standard practice without being orthodox ?
-  - How do you differentiate a Metrics (`struct`) vs. a Volume (`interface`):
-    - Will `MetricProperties` or `MetricOptions` be a better name ?
-    - This was not `Metrics vs. Volumes` rather `Metrics vs. Volume`
+  - How do you differentiate a Metrics (`struct`) vs. a Volume (`interface`):    
     - Does the suffix `s` play any role ?
     - Does this mean `Volumes` should be a struct ?
-    - Will `VolumeProps` be a better choice as a struct ?
-  - Can we downplay the `xxxs` & `xxxProps` ?:
-    - How about `JivaVolume` as a choice for struct ?
-    - Similarly, `JivaMetrics` as a struct
+  - Is there any solution to `struct` vs `interface` naming ?
+    - How about **JivaVolume** as a choice for struct ?
+    - Similarly, **JivaMetrics** as a struct
+    - We can have **StdMetrics**, **StdVolume** too.
     - We downplay the rule of `Opts`, `Props` or `s` as suffix
     - We vote for specialized entity as prefix
+```
+
+```yaml
+Ideas:
+  - Mostly same as above
+  - Changes:
+    - Metrics as interface
+    - StdMetrics as struct
+    - StdVolume as struct
+    - JivaVolume as struct
+    - JivaMetrics as struct
 ```
 
 ```yaml
 Structs can be aggregation of common properties:
   - e.g. Attributes
   - Should these kind of structs be used in `interface` methods ?
-  - Should we remember these as **COMMON STRUCTS**
+  - Should we remember these as **STANDARD STRUCTS**
     - i.e. structs that are at same level as an interface
+    - i.e. structs which are understood by operators & admins
+    - i.e. structs which are used in communication between different stakeholders
   - Will it be good to name it as `AttributeProps` ?
     - Nah...
 ```
 
-#### [B] Lifted from k8s/pkg/cloudprovider/cloud.go file
+#### Contd.. from k8s/pkg/volume/plugins.go
+
+```yaml
+File: pkg/volume/plugins.go
+Interfaces:
+  - VolumePlugin:
+    - Init(host VolumeHost) error
+    - GetPluginName() string
+    - GetVolumeName(spec *Spec) (string, error)
+    - CanSupport(spec *Spec) bool
+    - RequiresRemount() bool
+    - NewMounter(spec *Spec, podRef *v1.Pod, opts VolumeOptions) (Mounter, error)
+    - NewUnmounter(name string, podUID types.UID) (Unmounter, error)
+    - ConstructVolumeSpec(volumeName, mountPath string) (*Spec, error)
+  - PersistentVolumePlugin:
+    - VolumePlugin
+    - GetAccessModes() []v1.PersistentVolumeAccessMode
+  - RecyclableVolumePlugin:
+    - VolumePlugin
+    - Recycle(pvName string, spec *Spec, eventRecorder RecycleEventRecorder) error
+  - DeletableVolumePlugin:
+    - VolumePlugin
+    - NewDeleter(spec *Spec) (Deleter, error)
+  - ProvisionableVolumePlugin:
+    - VolumePlugin
+    - NewProvisioner(options VolumeOptions) (Provisioner, error)
+  - AttachableVolumePlugin:
+    - VolumePlugin
+    - NewAttacher() (Attacher, error)
+    - NewDetacher() (Detacher, error)
+    - GetDeviceMountRefs(deviceMountPath string) ([]string, error)
+  - VolumeHost:
+    - GetPluginDir(pluginName string) string
+Structs:
+  - VolumeOptions:
+    - PersistentVolumeReclaimPolicy v1.PersistentVolumeReclaimPolicy
+    - PVName string
+    - PVC *v1.PersistentVolumeClaim
+    - ClusterName string
+    - CloudTags *map[string]string
+    - Parameters map[string]string
+```
+
+#### Observations w.r.t k8s/pkg/volume/plugins.go
+
+```yaml
+Notes:
+  - All definitions to build the bridge
+  - Some of the types are from volume/volume
+  - Some of the types are from v1
+  - VolumeHost bridges plugins to access the kubelet
+  - VolumeHost is an aspect
+Naming:
+  - VolumePlugin vs. VolumeAdaptor
+  - VolumeOptions vs. VolumePluginOptions
+  - VolumeHost vs. VolumePluginHost
+```
+
+```yaml
+Ideas:
+  - OrchProviderPlugin
+  - OrchProviderPluginOptions
+```
+
+
+#### Contd.. from k8s/pkg/volume/aws_ebs/aws_ebs.go
+
+```yaml
+File: volume/aws_ebs/aws_ebs.go
+
+```
+
+#### Lifted from k8s/pkg/cloudprovider/cloud.go file
 
 ```yaml
 File: pkg/cloudprovider/cloud
@@ -139,12 +222,12 @@ Interfaces:
     - Instance() (Instances, bool)
 ```
 
-#### Observations w.r.t [B]
+#### Observations w.r.t k8s/pkg/cloudprovider/cloud.go
 
 ```yaml
 ```
 
-#### [C] Lifted from aws-sdk-go/aws/credentials
+#### Lifted from aws-sdk-go/aws/credentials
 
 ```yaml
 File: credentials/credentials.go
@@ -168,7 +251,7 @@ Structs:
     - provider		Provider
 ```
 
-#### Observations w.r.t [C]
+#### Observations w.r.t aws-sdk-go/aws/credentials
 
 ```yaml
 Aggregated properties in a struct:
@@ -202,37 +285,37 @@ A `manager entity` tied to its provider:
     - Each provider need not manage synchronous state  
 ```
 
-#### [D] Lifted from aws/aws-sdk-go/aws/types.go
+#### Lifted from aws/aws-sdk-go/aws/types.go
 
 ```yaml
 ```
 
-#### Observations w.r.t [D]
+#### Observations w.r.t aws/aws-sdk-go/aws/types.go
 
 ```yaml
 ```
 
-#### [E] Lifted from aws-sdk-go/aws/config.go
+#### Lifted from aws-sdk-go/aws/config.go
 
 ```yaml
 ```
 
-#### Observations w.r.t [E]
+#### Observations w.r.t aws-sdk-go/aws/config.go
 
 ```yaml
 ```
 
-#### [F] Lifted from aws-sdk-go/aws/convert_types.go
+#### Lifted from aws-sdk-go/aws/convert_types.go
 
 ```yaml
 ```
 
-#### Observations from [F]
+#### Observations from aws-sdk-go/aws/convert_types.go
 
 ```yaml
 ```
 
-### Various requirements' technical implementations
+### Generic Requirements in the wild - Technical Implementations
 
 ```yaml
 Requirements:
