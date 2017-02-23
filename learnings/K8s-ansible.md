@@ -22,10 +22,13 @@ Set Up:
       - When we need to configure each host exclusivley
       - mkdir /etc/ansible/host_vars
       - touch /etc/ansible/host_vars/some_name
-    - SSH using root user
+    - Enable SSH using root user
       - mkdir /etc/ansible/group_vars
       - touch /etc/ansible/group_vars/host_group_name:
         - i.e. name of the host group defined in /etc/ansible/hosts
+        - Contents:
+          - ---
+          - ansible_ssh_user: root
   - Kubernetes:
     - Do nothing
     - You will learn it once you read this template
@@ -52,4 +55,12 @@ Verify:
     - ansible -m ping particular_host
     - ansible -m ping host_group_name
     - ansible -m ping host1:host2
+Ansible Quick Tips:
+  - Folders:
+    - /etc/ansible/host_vars
+    - /etc/ansible/group_vars
+  - Files:
+    - /etc/ansible/hosts
+  - Options:
+    - ansible_ssh_user: root
 ```
