@@ -5,6 +5,15 @@ I will try to make you LEARN both i.e. Kubernetes through Ansible or vice-versa.
 I was forced to learn Ansible to manage K8s deployments. 
 ```
 
+### Is there any specific K8s deployment to learn ? 
+
+```
+I shall try to make all readers understand the kargo project
+from https://github.com/kubernetes-incubator/.
+```
+
+#### Tutorial starts ...
+
 ```yaml
 Set Up:
   - Ansible:
