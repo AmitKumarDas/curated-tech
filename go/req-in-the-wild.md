@@ -124,8 +124,8 @@ Ideas:
     - Metrics as interface
     - StdMetrics as struct
     - StdVolume as struct
-    - JivaVolume as struct
-    - JivaMetrics as struct
+    - JivaVolume as struct in specific volume
+    - JivaMetrics as struct in specific volume
 ```
 
 ```yaml
@@ -241,12 +241,65 @@ Ideas:
   - OrchProviderPluginOptions
 ```
 
-
 #### Contd.. from k8s/pkg/volume/aws_ebs/aws_ebs.go
 
 ```yaml
 File: volume/aws_ebs/aws_ebs.go
+Interfaces:
+  - ebsManager
+    - CreateVolume(provisioner *awsElasticBlockStoreProvisioner) 
+      - returns (volumeID aws.KubernetesVolumeID, volumeSizeGB int, labels map[string]string, err error)
+    - DeleteVolume(deleter *awsElasticBlockStoreDeleter) error
+Structs:
+  - awsElasticBlockStorePlugin:
+    - host volume.VolumeHost
+  - awsElasticBlockStore:
+    - volName string
+    - podUID  types.UID
+    - volumeID aws.KubernetesVolumeID
+    - partition string
+    - manager ebsManager
+    - mounter mount.Interface
+    - plugin  *awsElasticBlockStorePlugin
+    - volume.MetricsProvider
+  - awsElasticBlockStoreMounter:
+    - *awsElasticBlockStore
+    - fsType string
+    - readOnly bool
+    - diskMounter *mount.SafeFormatAndMount
+  - awsElasticBlockStoreUnmounter:
+    - *awsElasticBlockStore
+  - awsElasticBlockStoreDeleter:
+    - *awsElasticBlockStore
+  - awsElasticBlockStoreProvisioner:
+    - *awsElasticBlockStore
+    - options   volume.VolumeOptions
+    - namespace string
+```
 
+#### Observations from k8s/pkg/volume/aws_ebs/aws_ebs.go
+
+```yaml
+Notes:
+  - awsElastiBlockStorePlugin struct will implement VolumePlugin methods
+    - is private
+  - ebsManager interface implies further granularity in control
+    - is private
+    - is implemented as &AWSDiskUtil{}
+      - a separate file that binds to particular cloud provider & its method
+  - Interface contract methods can be further implemented in unit testable manner
+    - e.g. call up `contractMethod`Internal with additional parameters
+    - these additional parameters can be derived from struct properties
+    - or these parameters can be injected with default instantiations
+    - this is just for **unit testing** convenience
+```
+
+```yaml
+Ideas:
+  - jivaVolumePlugin
+  - jivaManager
+  - jivaVolume
+  - JivaStorageUtil from AWSDiskUtil
 ```
 
 #### Lifted from k8s/pkg/cloudprovider/cloud.go file
