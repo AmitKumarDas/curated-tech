@@ -7,7 +7,7 @@ while implementing these requirements.
 
 ### I want some golang's design references before starting to code ?
 
-#### [A] Lifted from k8s/pkg/volume/volume.go file
+#### Lifted from k8s/pkg/volume/volume.go file
 
 ```yaml
 File: pkg/volume/volume
@@ -173,6 +173,18 @@ Interfaces:
     - GetDeviceMountRefs(deviceMountPath string) ([]string, error)
   - VolumeHost:
     - GetPluginDir(pluginName string) string
+    - GetPodVolumeDir(podUID types.UID, pluginName string, volumeName string) string
+    - GetPodPluginDir(podUID types.UID, pluginName string) string
+    - GetKubeClient() clientset.Interface
+    - NewWrapperMounter(volName string, spec Spec, pod *v1.Pod, opts VolumeOptions) (Mounter, error)
+    - NewWrapperUnmounter(volName string, spec Spec, podUID types.UID) (Unmounter, error)
+    - GetCloudProvider() cloudprovider.Interface
+    - GetMounter() mount.Interface
+    - GetWriter() io.Writer
+    - GetHostName() string
+    - GetHostIP() (net.IP, error)
+    - GetNodeAllocatable() (v1.ResourceList, error)
+    - GetSecretFunc() func(namespace, name string) (*v1.Secret, error)
 Structs:
   - VolumeOptions:
     - PersistentVolumeReclaimPolicy v1.PersistentVolumeReclaimPolicy
@@ -181,6 +193,20 @@ Structs:
     - ClusterName string
     - CloudTags *map[string]string
     - Parameters map[string]string
+  - VolumePluginMgr:
+    - mutex   sync.Mutex
+    - plugins map[string]VolumePlugin
+  - Spec:
+    - Volume           *v1.Volume
+    - PersistentVolume *v1.PersistentVolume
+    - ReadOnly         bool
+  - VolumeConfig:
+    - RecyclerPodTemplate *v1.Pod
+    - RecyclerMinimumTimeout int
+    - RecyclerTimeoutIncrement int
+    - PVName string
+    - OtherAttributes map[string]string
+    - ProvisioningEnabled bool
 ```
 
 #### Observations w.r.t k8s/pkg/volume/plugins.go
@@ -192,10 +218,21 @@ Notes:
   - Some of the types are from v1
   - VolumeHost bridges plugins to access the kubelet
   - VolumeHost is an aspect
+  - The placement of structs & interfaces in respective .go files seems good
+  - All **API volume types translate** to Spec
+Important Notes:
+  - VolumeConfig & initialization of plugin go hand-in-hand  
+  - RecyclerPodTemplate is a *v1.Pod struct that determines the logic branch
+    - template to logic
+  - OtherAttributes map[string]string is opaque to the system
+    - stores config as strings
+    - is understood only by the plugin binary
 Naming:
   - VolumePlugin vs. VolumeAdaptor
   - VolumeOptions vs. VolumePluginOptions
   - VolumeHost vs. VolumePluginHost
+  - VolumePluginMgr vs. DefaultVolumePluginMgr
+  - VolumeConfig vs. VolumePluginConfig
 ```
 
 ```yaml
