@@ -17,7 +17,17 @@
   - What is the verbose mode you are operating at ?
     - --v=4 for any kube-* component
 
-## Theory
+## In the Wild
+
+### Kargo
+
+```yaml
+Ansible Variables:
+  - Inventory:
+    - kube-node group
+    - kube-master group
+    - etcd group
+```
 
 ### Build docker image
 
