@@ -10,6 +10,69 @@ while implementing these requirements.
 > I am a programmer. Can I have some golang's design references before starting 
 to code in golang.
 
+#### Lifted from nomad/nomad/structs/structs.go
+
+```yaml
+File: nomad/structs/structs
+Types:
+  - type MessageType uint8
+Constants:
+  - NodeRegisterRequestType MessageType = iota:
+    - NodeDeregisterRequestType
+    - NodeUpdateStatusRequestType
+    - NodeUpdateDrainRequestType
+    - JobRegisterRequestType
+    - JobDeregisterRequestType
+  - IgnoreUnknownTypeFlag MessageType = 128
+  - ApiMajorVersion = 1:
+    - ApiMinorVersion = 1
+  - ProtocolVersion = "protocol":
+    - APIMajorVersion = "api.major"
+    - APIMinorVersion = "api.minor"
+  - JobTypeCore    = "_core":
+    - JobTypeService = "service"
+    - JobTypeBatch   = "batch"
+    - JobTypeSystem  = "system"
+  - JobStatusPending = "pending":
+    - JobStatusRunning = "running"
+    - JobStatusDead    = "dead"
+   - JobMinPriority = 1:
+     - JobDefaultPriority = 50
+     - JobMaxPriority = 100
+     - CoreJobPriority = JobMaxPriority * 2
+```
+
+#### Observations w.r.t nomad/structs/structs.go
+
+```yaml
+Notes:
+  - ApiMajorVersion is returned as part of Status.Version request
+  - RPCInfo represents the common info about query
+  - It is all about grouping of attributes
+  - You get a strong sense of Domain Driven Development (DDD) programming.
+  - Not sure of the versioning strategy helps ?
+```
+
+```yaml
+Ideas:
+  - Good reference on use of constants
+  - Reference structs:
+    - Job:
+      - Task Group
+      - Parallel
+      - Meta
+      - Token
+      - Constraints
+      - Priority
+      - Parent
+      - Raft:
+        - CreateIndex
+	- ModifyIndex
+    - Node
+    - Resource
+    - NetworkResource
+```
+
 #### Lifted from k8s/pkg/volume/volume.go file
 
 ```yaml
