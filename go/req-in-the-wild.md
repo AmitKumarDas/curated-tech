@@ -16,14 +16,25 @@ to code in golang.
 File: nomad/structs/structs
 Types:
   - type MessageType uint8
+Vars:
+  - defaultServiceJobRestartPolicy = RestartPolicy:
+    - Delay:    15 * time.Second
+    - Attempts: 2
+    - Interval: 1 * time.Minute
+    - Mode:     RestartPolicyModeDelay
+  - defaultBatchJobRestartPolicy = RestartPolicy:
+    - Delay:    15 * time.Second
+    - Attempts: 15
+    - Interval: 7 * 24 * time.Hour
+    - Mode:     RestartPolicyModeDelay
 Constants:
-  - NodeRegisterRequestType MessageType = iota:
-    - NodeDeregisterRequestType
-    - NodeUpdateStatusRequestType
-    - NodeUpdateDrainRequestType
+  - NodeRegisterRequestType MessageType = iota:    
     - JobRegisterRequestType
     - JobDeregisterRequestType
   - IgnoreUnknownTypeFlag MessageType = 128
+  - RestartPolicyModeDelay = "delay":
+    - RestartPolicyModeFail = "fail"
+    - RestartPolicyMinInterval = 5 * time.Second
   - ApiMajorVersion = 1:
     - ApiMinorVersion = 1
   - ProtocolVersion = "protocol":
@@ -40,6 +51,11 @@ Constants:
      - JobDefaultPriority = 50
      - JobMaxPriority = 100
      - CoreJobPriority = JobMaxPriority * 2
+   - ServiceCheckHTTP   = "http":
+     - ServiceCheckTCP    = "tcp"
+     - ServiceCheckScript = "script"
+     - minCheckInterval = 1 * time.Second
+     - minCheckTimeout = 1 * time.Second
 ```
 
 #### Observations w.r.t nomad/structs/structs.go
@@ -49,14 +65,49 @@ Notes:
   - ApiMajorVersion is returned as part of Status.Version request
   - RPCInfo represents the common info about query
   - It is all about grouping of attributes
-  - You get a strong sense of Domain Driven Development (DDD) programming.
-  - Not sure of the versioning strategy helps ?
+  - As the name of the file suggests, it is all about structs
+  - Not sure if the versioning strategy helps ?
 ```
 
 ```yaml
 Ideas:
+  - Good to import this file & have the entire Nomad specs
+  - Standard golang types:
+    - Solid focus on standard types
+    - Validation
+    - Hence DDD
+  - Naming:
+    - Type
+    - Status
+    - Mode
+    - State
+  - Template:
+    - Modeling in struct
+    - Rendering it for a given task
+    - Re-Render:
+      - ChangeSignal
+      - ChangeMode
+  - Customized hashing for equals checking
+  - Data modeling of **service** check
+  - Policy coded as golang structs
+  - Grouping of related constants 
+  - You get a strong sense of Domain Driven Development (DDD) programming.
+  - You get to see lot of typical **GOLANG CODE**:
+    - validation
+    - error handling
+    - operators
+    - copy
+    - slice
+    - mapping & associations
   - Good reference on use of constants
-  - Reference structs:
+  - Good idea on the attributes to use for entities:
+    - Allocation
+      - Placement
+    - Evaluation
+      - Applying business logic
+    - Operand
+    - Template
+    - Artifact
     - Job:
       - Task Group
       - Parallel
