@@ -659,7 +659,16 @@ Requirements:
       - err = tmpl.Execute(&buf, obj)
 ```
 
+
+
 ## Below needs to be fit somewhere else !!
+
+### Can I ever understand a filesystem ?
+
+```yaml
+Ref: https://github.com/spf13/afero
+```
+
 
 ### The day I got stumped with init()
 
