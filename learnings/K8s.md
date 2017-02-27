@@ -19,47 +19,11 @@
 
 ## In the Wild
 
-### Kargo
-
 ```yaml
-Ansible Variables:
-  - Inventory:
-    - kube-node group
-    - kube-master group
-    - etcd group
-```
-
-### Build docker image
-
-```yaml
-File:
-  - build/make-build-image.sh
-```
-
-### cluster ubuntu essentials
-
-```yaml
-Config:
-  - ubuntu/config-default.sh
- 
-```
-
-### kubeadm essentials
-
-```yaml
-Configs:
-  - /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 Notes:
-  - cloudprovider integrations:
-    - --cloud-provider must be set for all kubelets in the cluster
-  - kubeReleaseBucketURL:
-    - https://storage.googleapis.com/kubernetes-release/release
-  - clientcmd pkg
-    - builds a working client from:
-      - a fixed config,
-      - a .kubeconfig file,
-      - command line flags, or
-      - from any merged combination
+  - kubelet:
+    - Is responsible for node level pod management
+    - Runs on each worker in the cluster
 ```
 
 ### K8s Persistent Volumes
