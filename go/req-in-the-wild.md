@@ -653,10 +653,13 @@ me program faster. I should be golang technical Implementations.
 ```yaml
 Requirements:
   - templating    
-      - import text/template    
-      - strtmpl string, obj interface{}
-      - tmpl, err := template.New("template").Parse(strtmpl)
-      - err = tmpl.Execute(&buf, obj)
+    - import text/template    
+    - strtmpl string, obj interface{}
+    - tmpl, err := template.New("template").Parse(strtmpl)
+    - err = tmpl.Execute(&buf, obj)
+  - forced compilation check
+    - // ensure kubeletVolumeHost implements VolumeHost interface
+    - var _ volume.VolumeHost = &kubeletVolumeHost{}
 ```
 
 
