@@ -10,54 +10,6 @@ while implementing these requirements.
 > I am a programmer. Can I have some golang's design references before starting 
 to code in golang.
 
-#### Lifted from nomad/nomad/structs/structs.go
-
-```yaml
-File: nomad/structs/structs
-Types:
-  - type MessageType uint8
-Vars:
-  - defaultServiceJobRestartPolicy = RestartPolicy:
-    - Delay:    15 * time.Second
-    - Attempts: 2
-    - Interval: 1 * time.Minute
-    - Mode:     RestartPolicyModeDelay
-  - defaultBatchJobRestartPolicy = RestartPolicy:
-    - Delay:    15 * time.Second
-    - Attempts: 15
-    - Interval: 7 * 24 * time.Hour
-    - Mode:     RestartPolicyModeDelay
-Constants:
-  - NodeRegisterRequestType MessageType = iota:    
-    - JobRegisterRequestType
-    - JobDeregisterRequestType
-  - IgnoreUnknownTypeFlag MessageType = 128
-  - RestartPolicyModeDelay = "delay":
-    - RestartPolicyModeFail = "fail"
-    - RestartPolicyMinInterval = 5 * time.Second
-  - ApiMajorVersion = 1:
-    - ApiMinorVersion = 1
-  - ProtocolVersion = "protocol":
-    - APIMajorVersion = "api.major"
-    - APIMinorVersion = "api.minor"
-  - JobTypeCore    = "_core":
-    - JobTypeService = "service"
-    - JobTypeBatch   = "batch"
-    - JobTypeSystem  = "system"
-  - JobStatusPending = "pending":
-    - JobStatusRunning = "running"
-    - JobStatusDead    = "dead"
-   - JobMinPriority = 1:
-     - JobDefaultPriority = 50
-     - JobMaxPriority = 100
-     - CoreJobPriority = JobMaxPriority * 2
-   - ServiceCheckHTTP   = "http":
-     - ServiceCheckTCP    = "tcp"
-     - ServiceCheckScript = "script"
-     - minCheckInterval = 1 * time.Second
-     - minCheckTimeout = 1 * time.Second
-```
-
 #### Observations w.r.t nomad/structs/structs.go
 
 ```yaml
@@ -175,89 +127,7 @@ Structs:
     - SupportsSELinux
 ```
 
-#### Observations w.r.t k8s/pkg/volume/volume.go file
-
-```yaml
- An `interface` can have:
-   - method signature(s) & 
-   - composes other interface(s) and hence their signatures
-```
-
-```yaml
-A `base entity` can be an `interface`:
-  - Should we call it as a **BASE INTERFACE**:
-    - It has one or couple of properties:
-        - e.g. Volume interface
-    - It should be minimalistic
-    - It may be injected with external `concerns`:
-      - Concerns are otherwise known as aspects
-        - e.g. Volume injects MetricsProvider
-	- Is `injecting` here a good approach ?
-	- Further Study: `Aspect Oriented Programming` & `Dependency Injection`
-```
-
-```yaml
-An action can represent an `interface` too:
-  - e.g. Mounter
-  - These action interface(s) may compose its own base interface
-```
-
-```yaml
-Input & output parameters :
-  - Have been left out of brevity
-  - Some of the questions we shoud ask:
-    - Will it be good to have `standard types` for input & output parameters ?
-    - Else mocking or new implementations will need to import external types !!!
-    - However, sometimes it makes sense to define custom types & use them here.
-      - e.g. types.NodeName than string,
-      - e.g. resource.Quantity than int
-    - Sometimes versioning may be required as types in these parameters.
-      - e.g. v1.NodeAddress
-      - e.g. v1.PersistentVolume
-    - Does all these mean sacrificing simplicity ?
-      - How have the language designers implemented the same ?
-```
-
-```yaml
-Naming:
-  - Does the name provides ample evidence of differentiating: 
-    - `interface` from a `struct` ?
-    - Can it be carried as a standard practice without being orthodox ?
-  - How do you differentiate a Metrics (`struct`) vs. a Volume (`interface`):    
-    - Does the suffix `s` play any role ?
-    - Does this mean `Volumes` should be a struct ?
-  - Is there any solution to `struct` vs `interface` naming ?
-    - How about **JivaVolume** as a choice for struct ?
-    - Similarly, **JivaMetrics** as a struct
-    - We can have **StdMetrics**, **StdVolume** too.
-    - We downplay the rule of `Opts`, `Props` or `s` as suffix
-    - We vote for specialized entity as prefix
-```
-
-```yaml
-Ideas:
-  - Mostly same as above
-  - Changes:
-    - Metrics as interface
-    - StdMetrics as struct
-    - StdVolume as struct
-    - JivaVolume as struct in specific volume
-    - JivaMetrics as struct in specific volume
-```
-
-```yaml
-Structs can be aggregation of common properties:
-  - e.g. Attributes
-  - Should these kind of structs be used in `interface` methods ?
-  - Should we remember these as **STANDARD STRUCTS**
-    - i.e. structs that are at same level as an interface
-    - i.e. structs which are understood by operators & admins
-    - i.e. structs which are used in communication between different stakeholders
-  - Will it be good to name it as `AttributeProps` ?
-    - Nah...
-```
-
-#### Contd.. from k8s/pkg/volume/plugins.go
+#### Lifted from k8s/pkg/volume/plugins.go
 
 ```yaml
 File: pkg/volume/plugins.go
@@ -326,39 +196,7 @@ Structs:
     - ProvisioningEnabled bool
 ```
 
-#### Observations w.r.t k8s/pkg/volume/plugins.go
-
-```yaml
-Notes:
-  - All definitions to build the bridge
-  - Some of the types are from volume/volume
-  - Some of the types are from v1
-  - VolumeHost bridges plugins to access the kubelet
-  - VolumeHost is an aspect
-  - The placement of structs & interfaces in respective .go files seems good
-  - All **API volume types translate** to Spec
-Important Notes:
-  - VolumeConfig & initialization of plugin go hand-in-hand  
-  - RecyclerPodTemplate is a *v1.Pod struct that determines the logic branch
-    - template to logic
-  - OtherAttributes map[string]string is opaque to the system
-    - stores config as strings
-    - is understood only by the plugin binary
-Naming:
-  - VolumePlugin vs. VolumeAdaptor
-  - VolumeOptions vs. VolumePluginOptions
-  - VolumeHost vs. VolumePluginHost
-  - VolumePluginMgr vs. DefaultVolumePluginMgr
-  - VolumeConfig vs. VolumePluginConfig
-```
-
-```yaml
-Ideas:
-  - OrchProviderPlugin
-  - OrchProviderPluginOptions
-```
-
-#### Contd.. from k8s/pkg/volume/aws_ebs/aws_ebs.go
+#### Lifted from k8s/pkg/volume/aws_ebs/aws_ebs.go
 
 ```yaml
 File: volume/aws_ebs/aws_ebs.go
@@ -394,31 +232,6 @@ Structs:
     - namespace string
 ```
 
-#### Observations from k8s/pkg/volume/aws_ebs/aws_ebs.go
-
-```yaml
-Notes:
-  - awsElastiBlockStorePlugin struct will implement VolumePlugin methods
-    - is private
-  - ebsManager interface implies further granularity in control
-    - is private
-    - is implemented as &AWSDiskUtil{}
-      - a separate file that binds to particular cloud provider & its method
-  - Interface contract methods can be further implemented in unit testable manner
-    - e.g. call up `contractMethod`Internal with additional parameters
-    - these additional parameters can be derived from struct properties
-    - or these parameters can be injected with default instantiations
-    - this is just for **unit testing** convenience
-```
-
-```yaml
-Ideas:
-  - jivaVolumePlugin
-  - jivaManager
-  - jivaVolume
-  - JivaStorageUtil from AWSDiskUtil
-```
-
 #### Lifted from k8s/pkg/cloudprovider/cloud.go file
 
 ```yaml
@@ -449,24 +262,6 @@ Interfaces:
     - Master(clusterName string) (string, error)
 ```
 
-#### Observations w.r.t k8s/pkg/cloudprovider/cloud.go
-
-```yaml
-Notes:
-  - EnsureXXX implies create or updates the existing one
-  - Usage of version types as parameters
-```
-
-```yaml
-Ideas:
-  - Operations vs Interface
-    - Networks
-    - Zones
-    - Storages:
-      - CreateStoragePod
-      - DeleteStoragePod
-```
-
 #### Lifted from k8s/pkg/cloudprovider/plugins.go
 
 ```yaml
@@ -481,14 +276,6 @@ Public Functions:
   - CloudProviders() []string
   - GetCloudProvider(name string, config io.Reader) (Interface, error)
   - InitCloudProvider(name string, configFilePath string) (Interface, error)
-```
-
-#### Observations w.r.t k8s/pkg/cloudprovider/plugins.go
-
-```yaml
-Notes:
-  - No need of a structure to use mutex
-  - No need of a structure to manage a list safely
 ```
 
 #### Lifted from k8s/pkg/cloudprovider/aws/aws.go
@@ -530,33 +317,6 @@ Structs:
     - deviceAllocators 	map[types.NodeName]DeviceAllocator
 ```
 
-#### Observations w.r.t k8s/pkg/cloudprovider/aws/aws.go
-
-```yaml
-Notes:
-  - Interfaces provide more & more control over logic
-    - Provide testability
-  - awsSdkEC2 is struct for EC2
-  - awsSDKProvider is struct for Services
-  - Cloud is the implementation of Interface
-```
-
-```yaml
-Ideas:
-  File: lib/orchprovider/nomad/nomad.go
-  Interfaces:
-    - Services vs. Services
-      - Storage(region string) (Nomad, error)
-    - Nomad vs. EC2
-      - CreateJobSpec(nomad type) (nomad type, error)
-      - DeleteJobSpec(nomad type) (nomad type, error)
-  Structs:
-    - NomadConfig vs. CloudConfig
-    - nomadClient vs. awsSdkEC2
-    - nomadServices vs. awsSDKProvider
-    - NomadOrchestrator vs. Cloud
-```
-
 #### Lifted from aws-sdk-go/aws/credentials
 
 ```yaml
@@ -584,13 +344,6 @@ Structs:
 #### Observations w.r.t aws-sdk-go/aws/credentials
 
 ```yaml
-Aggregated properties in a struct:
-  - e.g. **Value** represents the `sought after properties`
-  - Can `Attributes` be a better naming choice ?
-    - Value is better as credential is better understood with its value.
-```
-
-```yaml
 Shared struct:
   - e.g. **Expiry** can be be embedded anonymously within any other struct
   - It can provide shared logic
@@ -601,18 +354,6 @@ Mock properties of a struct:
   - e.g. CurrentTime property of Expiry can be mocked
   - Suitable for unit test coverage
   - Is set as a public property
-```
-
-```yaml
-A `manager entity` tied to its provider:
-  - Here the manager entity is a struct i.e. Credentials
-  - Can we think of it as a **MANAGER ENTITY** ?
-  - It embeds Provider interface:
-  - Typical Instantion:
-    - NewCredentials(provider *Provider) *Credentials
-  - Will expose methods that are wrappers over Provider
-  - Usage of mutex implies safety across multiple goroutines
-    - Each provider need not manage synchronous state  
 ```
 
 #### Lifted from aws/aws-sdk-go/aws/types.go
@@ -641,6 +382,11 @@ A `manager entity` tied to its provider:
 ```
 
 #### Observations from aws-sdk-go/aws/convert_types.go
+
+```yaml
+```
+
+#### Lifted from hashicorp/nomad/jobspec
 
 ```yaml
 ```
