@@ -391,6 +391,11 @@ Mock properties of a struct:
 ```yaml
 ```
 
+#### Lifted from K8s/pkg/api/validation
+
+```yaml
+```
+
 ### Requirement 2
 
 > Alright I learnt the design stuff. Any cookbook recipes or snippets that helps
