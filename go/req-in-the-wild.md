@@ -415,6 +415,9 @@ Requirements:
     - https://github.com/go-warnings/warnings/commit/8a331561fe74dadba6edfc59f3be66c22c3b065d
   - export metrics
     - github.com/armon/go-metrics
+  - fuzzy testing
+    - random values
+    - github.com/google/gofuzz
 ```
 
 
