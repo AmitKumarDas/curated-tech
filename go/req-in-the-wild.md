@@ -418,6 +418,8 @@ Requirements:
   - fuzzy testing
     - random values
     - github.com/google/gofuzz
+  - marshall & unmarshall minus reflection
+    - github.com/mailru/easyjson
 ```
 
 
