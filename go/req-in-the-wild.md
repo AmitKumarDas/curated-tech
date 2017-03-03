@@ -422,6 +422,7 @@ Requirements:
     - github.com/mailru/easyjson
   - Json, Hcl & golang Structs - compatibility
     - hashicorp/nomad/api/compose_test.go
+    - hashicorp/nomad/api/jobs_testing.go
 ```
 
 
