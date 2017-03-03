@@ -403,23 +403,25 @@ me program faster. I should be golang technical Implementations.
 
 ```yaml
 Requirements:
-  - templating    
+  - Templating    
     - import text/template    
     - strtmpl string, obj interface{}
     - tmpl, err := template.New("template").Parse(strtmpl)
     - err = tmpl.Execute(&buf, obj)
-  - forced compilation check
+  - Forced Compilation Check
     - // ensure kubeletVolumeHost implements VolumeHost interface
     - var _ volume.VolumeHost = &kubeletVolumeHost{}
-  - collecting warnings
+  - Collecting Warnings
     - https://github.com/go-warnings/warnings/commit/8a331561fe74dadba6edfc59f3be66c22c3b065d
-  - export metrics
+  - Export Metrics
     - github.com/armon/go-metrics
-  - fuzzy testing
+  - Fuzzy Testing
     - random values
     - github.com/google/gofuzz
-  - marshall & unmarshall minus reflection
+  - Marshall & UnMarshall minus Reflection
     - github.com/mailru/easyjson
+  - Json, Hcl & golang Structs - compatibility
+    - hashicorp/nomad/api/compose_test.go
 ```
 
 
