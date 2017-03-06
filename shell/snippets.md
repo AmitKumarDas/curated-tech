@@ -62,3 +62,12 @@
     # head -1 refers to first line
     # cut with rest of its syntax is more coupled with field placements than awk style
   ```
+- Set hostname & primary IP Address
+
+  ```bash
+  # In nomad/demo/Vagrantfile
+  # hostname is set as nomad
+  # primary ip address is evaluated
+  # /etc/hosts has below in the first line
+    primary_ip_address nomad
+  ```
