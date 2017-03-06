@@ -72,3 +72,26 @@
     primary_ip_address nomad
   # this ensures the advertisement code of nomad to work
   ```
+- Get PID details
+
+  ```bash
+  # use netstat command
+  $ netstat -tnlp
+
+  (Not all processes could be identified, non-owned process info
+   will not be shown, you would have to be root to see it all.)
+  Active Internet connections (only servers)
+  Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+  tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+  tcp        0      0 127.0.0.1:5656          0.0.0.0:*               LISTEN      -
+  tcp6       0      0 :::22                   :::*                    LISTEN      -
+
+  # sudo will display the PID details
+  $ sudo netstat -tnlp
+
+  Active Internet connections (only servers)
+  Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+  tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1258/sshd
+  tcp        0      0 127.0.0.1:5656          0.0.0.0:*               LISTEN      3078/mayaserver 
+  tcp6       0      0 :::22                   :::*                    LISTEN      1258/sshd
+  ```
