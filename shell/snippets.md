@@ -1,11 +1,11 @@
 #### Snippets
 
-- restart if already running, else start
+- Restart if already running, else start
 
   ```bash
   initctl status etcd && initctl restart etcd || initctl start etcd
   ```
-- install if needed
+- Install if needed
 
   ```bash
   if [[ ! -e /usr/bin/curl ]]; then
@@ -13,7 +13,7 @@
     apt-get -yqq install curl
   fi
   ```
-  - Add a new IP on an existing NIC adapter
+- Add a new IP on an existing NIC adapter
 
   ```bash
   # gist of superuser-153415
