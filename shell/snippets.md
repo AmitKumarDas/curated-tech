@@ -44,3 +44,15 @@
   # Or restart networking entirely
   $ sudo service network restart
   ```
+- What is the primary IP of local machine
+
+  ```bash
+  # This doesn't rely on DNS, 
+  # & works even if /etc/hosts is not set correctly (1 is shorthand for 1.0.0.0):
+  ip route get 1 | awk '{print $NF;exit}'
+  
+  # exit will exit after the evaluation of 1st line itself
+  
+  # or avoiding awk and using Google's public DNS at 8.8.8.8 for obviousness:
+  ip route get 8.8.8.8 | head -1 | cut -d' ' -f8
+  ```
