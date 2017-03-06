@@ -51,8 +51,14 @@
   # & works even if /etc/hosts is not set correctly (1 is shorthand for 1.0.0.0):
   ip route get 1 | awk '{print $NF;exit}'
   
-  # exit will exit after the evaluation of 1st line itself
+  # Explanation:
+    # exit will exit after the evaluation of 1st line itself
+    # NF - No of Fields, NR - No. of Records
   
   # or avoiding awk and using Google's public DNS at 8.8.8.8 for obviousness:
   ip route get 8.8.8.8 | head -1 | cut -d' ' -f8
+  
+  # Explanation:
+    # head -1 refers to first line
+    # cut with rest of its syntax is more coupled with field placements than awk style
   ```
