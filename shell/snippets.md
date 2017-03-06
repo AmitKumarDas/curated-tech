@@ -70,4 +70,5 @@
   # primary ip address is evaluated
   # /etc/hosts has below in the first line
     primary_ip_address nomad
+  # this ensures the advertisement code of nomad to work
   ```
