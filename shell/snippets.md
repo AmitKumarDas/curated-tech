@@ -95,3 +95,9 @@
   tcp        0      0 127.0.0.1:5656          0.0.0.0:*               LISTEN      3078/mayaserver 
   tcp6       0      0 :::22                   :::*                    LISTEN      1258/sshd
   ```
+- Which signal to send to a running process ?
+
+  ```bash
+  # run below command to learn which numeral belongs to which signal
+  kill -l
+  ```
