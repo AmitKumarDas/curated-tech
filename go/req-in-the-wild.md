@@ -403,6 +403,17 @@ me program faster. I should be golang technical Implementations.
 
 ```yaml
 Requirements:
+  - Naming, Composition, Function vs. Method
+    - func Dump(data []byte) string
+      - var buf bytes.Buffer
+      - dumper := Dumper(&buf)
+      - dumper.Write(data)
+      - dumper.Close()
+      - return buf.String()
+    - func Dumper(w io.Writer) io.WriteCloser
+      - return &dumper{w: w}   
+    - type dumper struct
+      - w       io.Writer
   - Templating    
     - import text/template    
     - strtmpl string, obj interface{}
