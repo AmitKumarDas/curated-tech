@@ -403,16 +403,20 @@ me program faster. I should be golang technical Implementations.
 
 ```yaml
 Requirements:
-  - My Formatting
-    - func (f *myFormatter) Format(writer io.Writer, data []byte) error
-      - fmt.Fprint(writer, hex.Dump(data))
-  - Learnings:
+  - new vs make:
+    - Code:
+      - fmt.Printf("%T  %v\n", new([10]int), new([10]int))
+      - fmt.Printf("%T  %v\n", make([]int, 10), make([]int, 10))
+    - O/P:
+      - *[10]int  &[0 0 0 0 0 0 0 0 0 0]
+      - []int  [0 0 0 0 0 0 0 0 0 0]
+  - What do you learn from follwing :
     - func (d *dumper) Dump(xyz) abc
-    - type dumper struct
+    - type dumper struct:
       - w       io.Writer
-    - func Dumper(w io.Writer) io.WriteCloser
+    - func Dumper(w io.Writer) io.WriteCloser:
       - return &dumper{w: w}
-    - My Learnings:
+    - Learnings:
       - Composition of interface
       - Private struct
       - Public initializer
