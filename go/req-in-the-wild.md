@@ -278,44 +278,7 @@ Public Functions:
   - InitCloudProvider(name string, configFilePath string) (Interface, error)
 ```
 
-#### Lifted from k8s/pkg/cloudprovider/aws/aws.go
 
-```yaml
-File: cloudprovider/aws/aws.go
-Interfaces:
-  - Services
-    - Compute(region string) (EC2, error)
-    - LoadBalancing(region string) (ELB, error)
-    - Autoscaling(region string) (ASG, error)
-    - Metadata() (EC2Metadata, error)
-  - EC2
-    - DescribeInstances(request *ec2.DescribeInstancesInput) ([]*ec2.Instance, error)
-    - AttachVolume(*ec2.AttachVolumeInput) (*ec2.VolumeAttachment, error)
-    - DetachVolume(request *ec2.DetachVolumeInput) (resp *ec2.VolumeAttachment, err error)
-    - DescribeVolumes(request *ec2.DescribeVolumesInput) ([]*ec2.Volume, error)
-    - CreateVolume(request *ec2.CreateVolumeInput) (resp *ec2.Volume, err error)
-    - DeleteVolume(*ec2.DeleteVolumeInput) (*ec2.DeleteVolumeOutput, error)
-  - EC2Metadata
-    - GetMetadata(path string) (string, error)
-Structs:
-  - CloudConfig
-  - awsSdkEC2
-    - ec2 *ec2.EC2
-  - awsSDKProvider
-    - creds *credentials.Credentials
-    - mutex sync.Mutex
-    - regionDelayers map[string]*CrossRequestRetryDelay
-  - Cloud
-    - ec2 		EC2
-    - metadata 		EC2Metadata
-    - cfg 		*CloudConfig
-    - region 		string
-    - filterTags 	map[string]string
-    - mutex 		sync.Mutex
-    - attachingMutex 	sync.Mutex
-    - attaching		map[types.NodeName]map[mountDevice]awsVolumeID
-    - deviceAllocators 	map[types.NodeName]DeviceAllocator
-```
 
 #### Lifted from aws-sdk-go/aws/credentials
 
@@ -403,6 +366,13 @@ me program faster. I should be golang technical Implementations.
 
 ```yaml
 Requirements:
+  - 
+    - https://github.com/containous/traefik
+    - Traefik can listen to your service registry/orchestrator API, 
+    - & knows each time a microservice is added, removed, killed or upgraded, 
+    - & can generate its configuration automatically. 
+    - Routes to your services will be created instantly.
+    - TWIST: Can this be made as a Metrics & Admin Console UI
   - new vs make:
     - Code:
       - fmt.Printf("%T  %v\n", new([10]int), new([10]int))
