@@ -92,6 +92,8 @@ me program faster. It should be golang technical implementations.
 
 ```yaml
 Requirements:
+  - All about CD & CI
+    - https://news.ycombinator.com/item?id=11253321
   - Systemd & Watching logs
     - journalctl -u $unitname
   - Reverse Proxy, Load balancer, Metrics, Admin Console
