@@ -366,7 +366,9 @@ me program faster. I should be golang technical Implementations.
 
 ```yaml
 Requirements:
-  - 
+  - Systemd & Watching logs
+    - journalctl -u $unitname
+  - Reverse Proxy, Load balancer, Metrics, Admin Console
     - https://github.com/containous/traefik
     - Traefik can listen to your service registry/orchestrator API, 
     - & knows each time a microservice is added, removed, killed or upgraded, 
