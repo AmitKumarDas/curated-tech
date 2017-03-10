@@ -1,24 +1,13 @@
 ## Requirements in the wild
 
-This is a curated list of technical requirements. You may be able to find 
-these in stack overflow or Google it. However, an active curated content
-helps me always. Objective of writing it down is improving my productivity
-while implementing these requirements.
+This is a curated list of technical `golang programming` requirements. You may be able to find 
+these in stack overflow or Google it. However, this personally curated content helps me in 
+focusing without sacrificing my time bound metrics. This should improve my productivity while 
+implementing these or similar requirements.
 
 ### Requirement 1
 
-> I am a programmer. Can I have some golang's design references before starting 
-to code in golang.
-
-#### Observations w.r.t nomad/structs/structs.go
-
-```yaml
-
-```
-
-### Requirement 1
-
-> Alright I learnt the basics stuff in golang. Any cookbook recipes or snippets that helps
+> I learnt the basics stuff in golang. Any cookbook recipes or snippets that helps
 me program faster. It should be golang technical implementations.
 
 ```yaml
