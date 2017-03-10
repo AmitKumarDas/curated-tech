@@ -8,8 +8,9 @@ I was forced to learn Ansible to manage K8s deployments.
 ### Is there any specific K8s deployment to learn ? 
 
 ```
-I shall try to make all readers understand the kargo project
-from https://github.com/kubernetes-incubator/.
+I shall try to make all readers understand the below K8s installations:
+- https://github.com/kubernetes-incubator/kargo
+- https://github.com/weaveworks/ansible-kubernetes
 ```
 
 #### Tutorial starts ...
