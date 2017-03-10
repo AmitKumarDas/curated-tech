@@ -13,89 +13,60 @@ to code in golang.
 #### Observations w.r.t nomad/structs/structs.go
 
 ```yaml
-- Basics from nomad/structs/structs:
-  - Good to import this file & have the entire Nomad specs
-  - Standard golang types:
-    - Solid focus on standard types
-    - Validation
-    - Hence DDD
-  - Naming:
-    - Type
-    - Status
-    - Mode
-    - State
-  - Template:
-    - Modeling in struct
-    - Rendering it for a given task
-    - Re-Render:
-      - ChangeSignal
-      - ChangeMode
-  - Customized hashing for equals checking
-  - Data modeling of **service** check
-  - Policy coded as golang structs
-  - Grouping of related constants 
-  - You get a strong sense of Domain Driven Development (DDD) programming.
-  - You get to see lot of typical **GOLANG CODE**:
-    - validation
-    - error handling
-    - operators
-    - copy
-    - slice
-    - mapping & associations
-  - Good reference on use of constants
+
 ```
 
-#### Lifted from aws/aws-sdk-go/aws/types.go
+### Requirement 1
 
-```yaml
-```
-
-#### Observations w.r.t aws/aws-sdk-go/aws/types.go
-
-```yaml
-```
-
-#### Lifted from aws-sdk-go/aws/config.go
-
-```yaml
-```
-
-#### Observations w.r.t aws-sdk-go/aws/config.go
-
-```yaml
-```
-
-#### Lifted from aws-sdk-go/aws/convert_types.go
-
-```yaml
-```
-
-#### Observations from aws-sdk-go/aws/convert_types.go
-
-```yaml
-```
-
-#### Lifted from hashicorp/nomad/jobspec
-
-```yaml
-```
-
-#### Lifted from K8s/pkg/api/validation
-
-```yaml
-```
-
-### Requirement 2
-
-> Alright I learnt the basics stuff. Any cookbook recipes or snippets that helps
+> Alright I learnt the basics stuff in golang. Any cookbook recipes or snippets that helps
 me program faster. It should be golang technical implementations.
 
 ```yaml
 Requirements:
-  - All about CD & CI
-    - https://news.ycombinator.com/item?id=11253321
-  - Systemd & Watching logs
-    - journalctl -u $unitname
+  - I want a gossip implementation:
+    - https://github.com/weaveworks/mesh
+    - provides:
+      - membership
+      - unicast
+      - broadcast
+      - eventually consistent semantics
+    - works in:
+      - NAT
+      - firewalls
+      - across clouds
+      - across DCs
+      - can hop when there is no direct connection between peers
+    - authentication:
+      - shared secret auth & encryption
+    - scale:
+      - 1 till 100 peers
+    - bootstraping:
+      - easily done by providing a single existing peer
+  - Learnings from nomad/structs/structs:
+    - Standard golang types:
+      - Solid focus on standard types
+      - Validation
+      - Hence DDD
+    - Good Naming Conventions:
+      - Type vs. Status vs. Mode vs. State
+    - Solid Templating:
+      - Modeling in struct
+      - Rendering it for a given task
+      - Re-Render:
+        - ChangeSignal
+        - ChangeMode
+      - Policy coded as golang structs
+    - You get to see lot of typical **GOLANG CODE**:
+      - strong sense of Domain Driven Development (DDD) programming
+      - validation
+      - error handling
+      - operators
+      - copy
+      - slice
+      - mapping & associations
+      - good reference on use of constants
+      - grouping of related constants 
+      - customized hashing for equals checking
   - Reverse Proxy, Load balancer, Metrics, Admin Console
     - https://github.com/containous/traefik
     - Traefik can listen to your service registry/orchestrator API, 
