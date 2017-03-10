@@ -6,6 +6,7 @@ Overview of real-time metrics for multiple containers:
 Learn Ansible:
   - https://github.com/leucos/ansible-tuto
 Open Source Alternative to Ansible Tower:
+  - UI & GoLang & Anisble & CD
   - https://github.com/ansible-semaphore/semaphore
 Monitor your system:
   - https://nicolargo.github.io/glances/
