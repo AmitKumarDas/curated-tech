@@ -1,4 +1,6 @@
 ```yaml
+Multi-Pod or Multi-Container-Within-A-Pod log tailing:
+  - https://github.com/wercker/stern
 Vagrant & OpenStack:
   - https://github.com/ggiamarchi/vagrant-openstack-provider
 Transform CLI commands to HTTP endpoints:
