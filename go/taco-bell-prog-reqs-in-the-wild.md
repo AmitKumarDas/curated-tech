@@ -1,4 +1,6 @@
 ```yaml
+Vagrant & OpenStack:
+  - https://github.com/ggiamarchi/vagrant-openstack-provider
 Transform CLI commands to HTTP endpoints:
   - https://github.com/adnanh/webhook
 Compliment Ansible:
