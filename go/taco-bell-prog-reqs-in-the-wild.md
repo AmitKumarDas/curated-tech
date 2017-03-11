@@ -1,4 +1,6 @@
 ```yaml
+Transform CLI commands to HTTP endpoints:
+  - https://github.com/adnanh/webhook
 Compliment Ansible:
   - Ansible Tower, or
   - https://github.com/purpleidea/mgmt
