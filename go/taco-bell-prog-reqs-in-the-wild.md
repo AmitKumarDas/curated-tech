@@ -1,4 +1,6 @@
 ```yaml
+Install, Upgrade & Manage Clusters of OpenShift:
+  - https://github.com/openshift/openshift-ansible
 Launch K8s on AWS via AMI & CLoudFormation:
   - https://github.com/weaveworks/kubernetes-ami
 Overview of real-time metrics for multiple containers:
