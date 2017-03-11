@@ -1,4 +1,6 @@
 ```yaml
+Vagrant is too heavy
+  - https://github.com/lxdock/lxdock
 Collect, Display & Report system metrics:
   - https://github.com/ostrost/ostent
 Multi-Pod or Multi-Container-Within-A-Pod log tailing:
