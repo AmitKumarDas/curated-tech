@@ -1,4 +1,6 @@
 ```yaml
+UseCases on Vagrant & Ansible:
+  - https://github.com/geerlingguy/ansible-vagrant-examples
 Install, Upgrade & Manage Clusters of OpenShift:
   - https://github.com/openshift/openshift-ansible
 Launch K8s on AWS via AMI & CLoudFormation:
