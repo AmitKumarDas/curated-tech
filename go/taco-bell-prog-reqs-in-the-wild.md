@@ -1,4 +1,6 @@
 ```yaml
+Go & Concurrency
+  - https://www.infoq.com/presentations/go-race-detector
 Vagrant is too heavy
   - https://github.com/lxdock/lxdock
 Collect, Display & Report system metrics:
