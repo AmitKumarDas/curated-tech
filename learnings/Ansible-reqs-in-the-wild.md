@@ -5,30 +5,27 @@ References:
   - https://www.digitalocean.com/community/tutorials/
 Set Up:
   - Ansible:
-    - Usual downloads
+    - Get the usual downloads
     - SSH Keys:
       - Create RSA key pair via ssh-keygen
       - Keys will be at user's .ssh i.e. ~/.ssh folder
       - Add the contents of ~/.ssh/id_rsa.pub in other hosts
     - Ansible Hosts:
-      - touch /etc/ansible/hosts
-      - you can group the hosts 
-      - each host will have an alias & ip address
-      - a host can be on multiple groups
+      - touch /etc/ansible/hosts:
+        - you can group the hosts 
+        - each host will have an alias & ip address
+        - a host can be on multiple groups
     - Specific Ansible Host:
-      - When we need to configure each host exclusivley
-      - mkdir /etc/ansible/host_vars
-      - touch /etc/ansible/host_vars/some_name
-    - Enable SSH using root user
+      - When we need to configure each host exclusivley:
+        - mkdir /etc/ansible/host_vars
+        - touch /etc/ansible/host_vars/some_name
+    - Enable SSH using root user:
       - mkdir /etc/ansible/group_vars
       - touch /etc/ansible/group_vars/host_group_name:
-        - i.e. name of the host group defined in /etc/ansible/hosts
+          - i.e. name of the host group defined in /etc/ansible/hosts
         - Contents:
           - ---
           - ansible_ssh_user: root
-  - Kubernetes:
-    - Do nothing
-    - You will learn it once you read this template
 Modular Approach:
   - Ansible:
     - Is the way of life
