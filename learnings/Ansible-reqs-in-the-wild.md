@@ -43,13 +43,25 @@ Ansible CLI:
     - e.g. -m ping
   - -a option refers to arguments
     - e.g. ansible -m shell -a 'free -m' host1
-Verify:
-  - Ansible:
+Snips:
+  - ansible cli basics:
     - ansible -m ping all
     - ansible -m ping particular_host
     - ansible -m ping host_group_name
     - ansible -m ping host1:host2
-Ansible Quick Tips:
+  - just hosts:
+    - host0.example.org ansible_host=192.168.33.10 ansible_user=root
+    - host1.example.org ansible_host=192.168.33.11 ansible_user=root
+    - host2.example.org ansible_host=192.168.33.12 ansible_user=root
+  - grouping hosts basics:
+    - [debian]
+    - host[0:2].example.org
+    - [ubuntu]
+    - host0.example.org
+    - [linux:children]
+    - ubuntu
+    - debian
+Quick Tips:
   - Modules:
     - setup:
       - gathers node's facts e.g. IP, architecture, bios, etc
@@ -59,11 +71,16 @@ Ansible Quick Tips:
   - Files:
     - /etc/ansible/hosts
     - ~/.ansible.cfg
+  - CLI:
+    - ansible-playbook
+    - ansible
   - CLI Options
     - -i provides the inventory path
+    - --extra-vars or -e
   - Environment Variables:
     - ANSIBLE_HOSTS
   -Special Variables:
     - ansible_host
+    - ansible_port
     - ansible_user / ansible_ssh_user
 ```
