@@ -28,9 +28,9 @@ Set Up:
           - ansible_ssh_user: root
 Modular Approach:
   - Ansible:
-    - Is the way of life
-    - Write module in any language
-    - Communicate with standard json
+    - Lots of modules available
+  - Writing a new module is pretty easy:
+    - It doesn't even have to be Python, it just needs to speak JSON
 Config:
   - Ansible: 
     - YAML files
