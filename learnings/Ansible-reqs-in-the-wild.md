@@ -36,6 +36,8 @@ Config:
   - Ansible: 
     - YAML files
     - starts with ---
+Playbook Approach:
+  - set of tasks targeted to specific hosts
 Ansible interacts with clients:
   - via client CLI
   - via its playbook i.e. configuration scripts
@@ -55,13 +57,22 @@ Snips:
     - host1.example.org ansible_host=192.168.33.11 ansible_user=root
     - host2.example.org ansible_host=192.168.33.12 ansible_user=root
   - grouping hosts basics:
-    - [debian]
-    - host[0:2].example.org
-    - [ubuntu]
-    - host0.example.org
-    - [linux:children]
-    - ubuntu
-    - debian
+    ```ini
+    [debian]
+    host[0:2].example.org
+    [ubuntu]
+    host0.example.org
+    [linux:children]
+    ubuntu
+    debian
+    ```
+  - playbook basics:
+    ```yaml
+    - hosts: web
+      tasks:
+        - name: Installs apache web server
+          apt: pkg=apache2 state=installed update_cache=true
+    ```
 Quick Tips:
   - Modules:
     - setup:
