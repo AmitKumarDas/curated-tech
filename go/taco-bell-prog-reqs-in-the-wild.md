@@ -1,4 +1,6 @@
 ```yaml
+Kubernetes APIs
+  - http://k8s.uk/kubectl-vs-http-api.html
 Go & Concurrency
   - https://www.infoq.com/presentations/go-race-detector
 Vagrant is too heavy
