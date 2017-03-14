@@ -1,21 +1,8 @@
-### What is this K8s Ansible all about ?
-
-```
-I will try to make you LEARN both i.e. Kubernetes through Ansible or vice-versa.
-I was forced to learn Ansible to manage K8s deployments. 
-```
-
-### Is there any specific K8s deployment to learn ? 
-
-```
-I shall try to make all readers understand the below K8s installations:
-- https://github.com/kubernetes-incubator/kargo
-- https://github.com/weaveworks/ansible-kubernetes
-```
-
-#### Tutorial starts ...
+### Tutorial starts ...
 
 ```yaml
+References:
+  - https://www.digitalocean.com/community/tutorials/
 Set Up:
   - Ansible:
     - Usual downloads
