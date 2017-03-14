@@ -50,6 +50,9 @@ Verify:
     - ansible -m ping host_group_name
     - ansible -m ping host1:host2
 Ansible Quick Tips:
+  - Modules:
+    - setup:
+      - gathers node's facts e.g. IP, architecture, bios, etc
   - Folders:
     - /etc/ansible/host_vars
     - /etc/ansible/group_vars
