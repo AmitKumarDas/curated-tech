@@ -1,4 +1,4 @@
-### Tutorial starts ...
+- Tutorial starts ...
 
 ```yaml
 References:
@@ -27,36 +27,37 @@ Set Up:
         - Contents:
           - ---
           - ansible_ssh_user: root
-Modular Approach:
-  - Ansible:
-    - Lots of modules available
+```
+
+- Modular Approach:
+
+```
+  - Lots of modules available
   - Writing a new module is pretty easy:
     - It doesn't even have to be Python, it just needs to speak JSON
-Config:
-  - Ansible: 
-    - YAML files
-    - starts with ---
-Playbook Approach:
-  - set of tasks targeted to specific hosts
-Ansible interacts with clients:
-  - via client CLI
-  - via its playbook i.e. configuration scripts
-Ansible CLI:
-  - -m option refers to module
-    - e.g. -m ping
-  - -a option refers to arguments
-    - e.g. ansible -m shell -a 'free -m' host1
-Snips:
-  - ansible cli basics:
-    - ansible -m ping all
-    - ansible -m ping particular_host
-    - ansible -m ping host_group_name
-    - ansible -m ping host1:host2
-  - just hosts:
-    - host0.example.org ansible_host=192.168.33.10 ansible_user=root
-    - host1.example.org ansible_host=192.168.33.11 ansible_user=root
-    - host2.example.org ansible_host=192.168.33.12 ansible_user=root
-  - grouping hosts basics:
+```
+
+- ansible cli basics:
+
+```bash
+  ansible -m ping all
+  ansible -m ping particular_host
+  ansible -m ping host_group_name
+  ansible -m ping host1:host2
+  ansible -m shell -a 'free -m' host1
+```
+
+- just hosts:
+
+```txt
+  host0.example.org ansible_host=192.168.33.10 ansible_user=root
+  host1.example.org ansible_host=192.168.33.11 ansible_user=root
+  host2.example.org ansible_host=192.168.33.12 ansible_user=root
+```
+
+- grouping hosts basics:
+
+```ini
     [debian]
     host[0:2].example.org
     [ubuntu]
@@ -64,31 +65,39 @@ Snips:
     [linux:children]
     ubuntu
     debian
-  - playbook basics:
-    - hosts: web
+```
+
+- playbook basics:
+
+```yaml
+- hosts: web
       tasks:
         - name: Installs apache web server
           apt: pkg=apache2 state=installed update_cache=true
-Quick Tips:
-  - Modules:
-    - setup:
-      - gathers node's facts e.g. IP, architecture, bios, etc
-  - Folders:
-    - /etc/ansible/host_vars
-    - /etc/ansible/group_vars
-  - Files:
-    - /etc/ansible/hosts
-    - ~/.ansible.cfg
-  - CLI:
-    - ansible-playbook
-    - ansible
-  - CLI Options
-    - -i provides the inventory path
-    - --extra-vars or -e
-  - Environment Variables:
-    - ANSIBLE_HOSTS
-  -Special Variables:
-    - ansible_host
-    - ansible_port
-    - ansible_user / ansible_ssh_user
+```
+
+- Quick Tips:
+
+```yaml
+- Modules:
+  - setup:
+    - gathers node's facts e.g. IP, architecture, bios, etc
+- Folders:
+  - /etc/ansible/host_vars
+  - /etc/ansible/group_vars
+- Files:
+  - /etc/ansible/hosts
+  - ~/.ansible.cfg
+- CLI:
+  - ansible-playbook
+  - ansible
+- CLI Options
+  - -i provides the inventory path
+  - --extra-vars or -e
+- Environment Variables:
+  - ANSIBLE_HOSTS
+-Special Variables:
+  - ansible_host
+  - ansible_port
+  - ansible_user / ansible_ssh_user
 ```
