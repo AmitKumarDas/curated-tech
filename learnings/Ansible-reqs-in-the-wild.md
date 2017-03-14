@@ -3,6 +3,7 @@
 ```yaml
 References:
   - https://www.digitalocean.com/community/tutorials/
+  - https://github.com/leucos/ansible-tuto/
 Set Up:
   - Ansible:
     - Get the usual downloads
