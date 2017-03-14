@@ -57,22 +57,18 @@ Snips:
     - host1.example.org ansible_host=192.168.33.11 ansible_user=root
     - host2.example.org ansible_host=192.168.33.12 ansible_user=root
   - grouping hosts basics:
-    ```ini
-      [debian]
-      host[0:2].example.org
-      [ubuntu]
-      host0.example.org
-      [linux:children]
-      ubuntu
-      debian
-    ```
+    [debian]
+    host[0:2].example.org
+    [ubuntu]
+    host0.example.org
+    [linux:children]
+    ubuntu
+    debian
   - playbook basics:
-    ```yaml
-      - hosts: web
-        tasks:
-          - name: Installs apache web server
-            apt: pkg=apache2 state=installed update_cache=true
-    ```
+    - hosts: web
+      tasks:
+        - name: Installs apache web server
+          apt: pkg=apache2 state=installed update_cache=true
 Quick Tips:
   - Modules:
     - setup:
