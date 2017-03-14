@@ -70,6 +70,11 @@ Requirements:
     - O/P:
       - *[10]int  &[0 0 0 0 0 0 0 0 0 0]
       - []int  [0 0 0 0 0 0 0 0 0 0]
+  - Type printing:
+    - i := 10
+    - s := strconv.Itoa(i)
+    - fmt.Printf("%T, %v\n", s, s)
+    - // string, 10
   - What do you learn from follwing :
     - func (d *dumper) Dump(xyz) abc
     - type dumper struct:
