@@ -55,6 +55,12 @@ Ansible Quick Tips:
     - /etc/ansible/group_vars
   - Files:
     - /etc/ansible/hosts
-  - Options:
-    - ansible_ssh_user: root
+    - ~/.ansible.cfg
+  - CLI Options
+    - -i provides the inventory path
+  - Environment Variables:
+    - ANSIBLE_HOSTS
+  -Special Variables:
+    - ansible_host
+    - ansible_user / ansible_ssh_user
 ```
