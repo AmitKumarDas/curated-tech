@@ -1,4 +1,6 @@
 ```yaml
+Consensus Algorithms
+  - http://rystsov.info/2017/02/15/simple-consensus.html
 Kubernetes APIs
   - http://k8s.uk/kubectl-vs-http-api.html
 Go & Concurrency
