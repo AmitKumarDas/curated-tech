@@ -1,4 +1,6 @@
 ```yaml
+Crash course in Docker Networking:
+  - https://medium.com/@loginoff/debugging-a-docker-heisenbug-in-production-586ccb265f7c
 Consensus Algorithms
   - http://rystsov.info/2017/02/15/simple-consensus.html
 Kubernetes APIs
