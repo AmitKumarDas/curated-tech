@@ -12,6 +12,8 @@ me program faster. It should be golang technical implementations.
 
 ```yaml
 Requirements:
+  - IP Utility & CNI:
+    - https://github.com/containernetworking/cni/
   - IP Utility:
     - https://github.com/ziutek/utils/tree/master/netaddr
   - Get all IP address from CIDR in golang:
