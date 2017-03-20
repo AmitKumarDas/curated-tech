@@ -17,7 +17,7 @@ Requirements:
   - IP Utility:
     - https://github.com/ziutek/utils/tree/master/netaddr
   - Get all IP address from CIDR in golang:
-    - https://gist.github.com/kotakanbe/d3059af990252ba89a82	
+    - https://gist.github.com/kotakanbe/d3059af990252ba89a82
   - I want a gossip implementation:
     - https://github.com/weaveworks/mesh
     - provides:
