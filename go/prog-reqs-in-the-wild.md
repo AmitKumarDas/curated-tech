@@ -12,6 +12,8 @@ me program faster. It should be golang technical implementations.
 
 ```yaml
 Requirements:
+  - io.Reader to line-by-line reader
+    - https://github.com/msoap/byline
   - Vagrant vs K8s:
   - Dev to QA to Prod:
     - https://blog.branch.io/beta-architecture-scaling-developer-environments-with-kubernetes/
