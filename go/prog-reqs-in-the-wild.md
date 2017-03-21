@@ -12,6 +12,9 @@ me program faster. It should be golang technical implementations.
 
 ```yaml
 Requirements:
+  - Vagrant vs K8s:
+  - Dev to QA to Prod:
+    - https://blog.branch.io/beta-architecture-scaling-developer-environments-with-kubernetes/
   - IP Utility & CNI:
     - https://github.com/containernetworking/cni/
   - IP Utility:
