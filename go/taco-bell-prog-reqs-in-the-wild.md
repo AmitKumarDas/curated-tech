@@ -1,7 +1,6 @@
 ```yaml
-Starting with GO:
-  - hello world to concurrent REST-ish server with std go libs:
-  - less is exponentially more
+Starting with GO: 
+  - hello world -to- concurrent REST-ish server & self contained binary with std go libs:
     - http://howistart.org/posts/go/1/
     - https://github.com/peterbourgon/how-i-start-go
 Git Currying:
