@@ -1,6 +1,9 @@
 ```yaml
 Starting with GO:
-  - http://howistart.org/posts/go/1/
+  - hello world to concurrent REST-ish server with std go libs:
+  - less is exponentially more
+    - http://howistart.org/posts/go/1/
+    - https://github.com/peterbourgon/how-i-start-go
 Git Currying:
   - https://github.com/kamranahmedse/git-standup
 Crash course in Docker Networking:
