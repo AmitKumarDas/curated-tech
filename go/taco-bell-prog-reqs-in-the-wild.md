@@ -1,4 +1,6 @@
 ```yaml
+Starting with GO:
+  - http://howistart.org/posts/go/1/
 Git Currying:
   - https://github.com/kamranahmedse/git-standup
 Crash course in Docker Networking:
