@@ -25,7 +25,8 @@ Transform CLI commands to HTTP endpoints:
   - https://github.com/adnanh/webhook
 Compliment Ansible:
   - Ansible Tower, or
-  - https://github.com/purpleidea/mgmt
+  - https://github.com/purpleidea/mgmt or
+  - https://github.com/dmsimard/ara
 UseCases on Vagrant & Ansible:
   - https://github.com/geerlingguy/ansible-vagrant-examples
 Install, Upgrade & Manage Clusters of OpenShift:
