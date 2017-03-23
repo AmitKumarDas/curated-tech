@@ -1,104 +1,23 @@
-- Tutorial starts ...
+
+### github.com/leucos/ansible-tuto/
 
 ```yaml
-References:
-  - https://www.digitalocean.com/community/tutorials/
+Quick Tutorial:
   - https://github.com/leucos/ansible-tuto/
-Set Up:
-  - Ansible:
-    - Get the usual downloads
-    - SSH Keys:
-      - Create RSA key pair via ssh-keygen
-      - Keys will be at user's .ssh i.e. ~/.ssh folder
-      - Add the contents of ~/.ssh/id_rsa.pub in other hosts
-    - Ansible Hosts:
-      - touch /etc/ansible/hosts:
-        - you can group the hosts 
-        - each host will have an alias & ip address
-        - a host can be on multiple groups
-    - Specific Ansible Host:
-      - When we need to configure each host exclusivley:
-        - mkdir /etc/ansible/host_vars
-        - touch /etc/ansible/host_vars/some_name
-    - Enable SSH using root user:
-      - mkdir /etc/ansible/group_vars
-      - touch /etc/ansible/group_vars/host_group_name:
-          - i.e. name of the host group defined in /etc/ansible/hosts
-        - Contents:
-          - ---
-          - ansible_ssh_user: root
 ```
-
-- Modular Approach:
-
-```
-  - Lots of modules available
-  - Writing a new module is pretty easy:
-    - It doesn't even have to be Python, it just needs to speak JSON
-```
-
-- ansible cli basics:
-
-```bash
-  ansible -m ping all
-  ansible -m ping particular_host
-  ansible -m ping host_group_name
-  ansible -m ping host1:host2
-  ansible -m shell -a 'free -m' host1
-```
-
-- just hosts:
-
-```txt
-  host0.example.org ansible_host=192.168.33.10 ansible_user=root
-  host1.example.org ansible_host=192.168.33.11 ansible_user=root
-  host2.example.org ansible_host=192.168.33.12 ansible_user=root
-```
-
-- grouping hosts basics:
-
-```ini
-  [debian]
-  host[0:2].example.org
-  [ubuntu]
-  host0.example.org
-  [linux:children]
-  ubuntu
-  debian
-```
-
-- playbook basics:
-  - use of apt module
 
 ```yaml
-- hosts: web
-  tasks:
-    - name: Installs apache web server
-      apt: pkg=apache2 state=installed update_cache=true
+Installs:
+  $ ansible --version
+    ansible 2.0.0.2
+      config file = /etc/ansible/ansible.cfg
+      configured module search path = Default w/o overrides  
 ```
-
-- Quick Tips:
 
 ```yaml
-- Modules:
-  - setup:
-    - gathers node's facts e.g. IP, architecture, bios, etc
-- Folders:
-  - /etc/ansible/host_vars
-  - /etc/ansible/group_vars
-- Files:
-  - /etc/ansible/hosts
-  - ~/.ansible.cfg
-- CLI:
-  - ansible-playbook
-  - ansible
-- CLI Options
-  - -i provides the inventory path
-  - --extra-vars or -e
-- Environment Variables:
-  - ANSIBLE_HOSTS
--Special Variables:
-  - ansible_host
-  - ansible_port
-  - ansible_user / ansible_ssh_user
+Setup:
+  - Create VMs via Vagrant
+  - Add your laptop's ssh keys on above VMs:
+    - ansible-playbook -c paramiko -i step-00/hosts step-00/setup.yml --ask-pass --become  
 ```
+
