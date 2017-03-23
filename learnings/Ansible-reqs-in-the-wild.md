@@ -1,5 +1,5 @@
 
-### github.com/leucos/ansible-tuto/
+### Quick references from [ansible-tuto](github.com/leucos/ansible-tuto/)
 
 ```yaml
 Quick Tutorial:
