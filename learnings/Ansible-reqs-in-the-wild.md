@@ -36,15 +36,15 @@ Verify Till Now:
   - ansible -i step-02/hosts -m shell -a 'grep DISTRIB_RELEASE /etc/lsb-release' all
 ```
 
-```yaml
-Inventory [<groupname>:children]:
-  [ubuntu]
-  host0.example.org
+```ini
+;Inventory [<groupname>:children]:
+[ubuntu]
+host0.example.org
 
-  [debian]
-  host[1:2].example.org
+[debian]
+host[1:2].example.org
 
-  [linux:children]
-  ubuntu
-  debian
+[linux:children]
+ubuntu
+debian
 ```
