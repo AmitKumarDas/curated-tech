@@ -37,7 +37,7 @@ Verify Till Now:
 ```
 
 ```ini
-;Inventory [<groupname>:children]:
+;Inventory [<groupname>:children]
 [ubuntu]
 host0.example.org
 
