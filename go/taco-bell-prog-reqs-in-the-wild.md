@@ -1,4 +1,9 @@
 ```yaml
+Pretty Printing:
+  - https://github.com/olekukonko/tablewriter
+CLI over CLI:
+  - Self documenting CLI programs from YAML
+  - https://github.com/ahoy-cli/ahoy
 ML Articles:
   - https://www.infoq.com/presentations/ml-predictability
 Starting with GO: 
