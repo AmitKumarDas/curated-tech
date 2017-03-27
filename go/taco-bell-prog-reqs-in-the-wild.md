@@ -1,4 +1,6 @@
 ```yaml
+Ansible like in golang:
+  - https://github.com/pressly/sup
 Ascii Mathematics:
   - https://github.com/asciimath/asciimathml
 Accidental Complexity vs. Essential Complexity:
