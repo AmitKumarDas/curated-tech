@@ -1,4 +1,6 @@
 ```yaml
+Accidental Complexity vs. Essential Complexity:
+  - "Is it really 'Complex'? Or did we just make it 'Complicated'?"
 Pretty Printing:
   - https://github.com/olekukonko/tablewriter
 CLI over CLI:
