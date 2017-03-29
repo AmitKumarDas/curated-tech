@@ -1,4 +1,6 @@
 ```yaml
+Monitoring with golang:
+  - https://blog.dekstroza.io/monitoring-software-written-in-golang/
 Containers vs. Zones vs. Jails:
   - https://blog.jessfraz.com/post/containers-zones-jails-vms/
 Ansible like in golang:
