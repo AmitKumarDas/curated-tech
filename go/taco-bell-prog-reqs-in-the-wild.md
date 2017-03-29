@@ -14,6 +14,7 @@ CLI over CLI:
   - https://github.com/ahoy-cli/ahoy
 ML Articles:
   - https://www.infoq.com/presentations/ml-predictability
+  - https://www.infoq.com/presentations/score-ml-stock-market
 Starting with GO: 
   - hello world -to- concurrent REST-ish server & self contained binary with std go libs:
     - http://howistart.org/posts/go/1/
