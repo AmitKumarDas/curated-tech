@@ -1,4 +1,6 @@
 ```yaml
+Containers vs. Zones vs. Jails:
+  - https://blog.jessfraz.com/post/containers-zones-jails-vms/
 Ansible like in golang:
   - https://github.com/pressly/sup
 Ascii Mathematics:
