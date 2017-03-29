@@ -1,4 +1,6 @@
 ```yaml
+Profiling with golang:
+  - http://vinceyuan.github.io/profiling-memory-usage-of-a-go-app/
 Monitoring with golang:
   - https://blog.dekstroza.io/monitoring-software-written-in-golang/
 Containers vs. Zones vs. Jails:
