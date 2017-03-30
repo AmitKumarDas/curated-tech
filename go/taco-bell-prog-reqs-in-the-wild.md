@@ -1,4 +1,6 @@
 ```yaml
+Supervisor in golang:
+  - http://immortal.run/about/
 Network IO in golang:
   - https://morsmachine.dk/netpoller
 Profiling with golang:
