@@ -1,5 +1,6 @@
 ```yaml
 Supervisor in golang:
+  - caters to continuous deployment
   - http://immortal.run/about/
 Network IO in golang:
   - https://morsmachine.dk/netpoller
