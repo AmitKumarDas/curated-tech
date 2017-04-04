@@ -12,6 +12,8 @@ me program faster. It should be golang technical implementations.
 
 ```yaml
 Requirements:
+  - Interface, Noop Impl, List Impl:
+    - https://github.com/containerd/containerd/blob/master/plugin/monitor.go
   - Slice Tricks:
     - https://github.com/golang/go/wiki/SliceTricks
   - Million container challenge:
