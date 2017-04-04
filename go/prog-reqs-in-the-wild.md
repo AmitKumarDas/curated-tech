@@ -12,9 +12,11 @@ me program faster. It should be golang technical implementations.
 
 ```yaml
 Requirements:
+  - Slice Tricks:
+    - https://github.com/golang/go/wiki/SliceTricks
   - Million container challenge:
     - https://blog.codeship.com/running-1000-containers-in-docker-swarm/
-  - ANN / ML in go
+  - ANN / ML in go:
     - http://mlexplore.org/2017/03/12/hopfield-networks-in-go/
   - io.Reader to line-by-line reader
     - https://github.com/msoap/byline
