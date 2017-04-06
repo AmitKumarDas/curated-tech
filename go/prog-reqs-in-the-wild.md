@@ -12,6 +12,8 @@ me program faster. It should be golang technical implementations.
 
 ```yaml
 Requirements:
+  - Yaml/GO based task runner:
+    - https://github.com/kcmerrill/alfred/
   - Run curl from yaml:
     - https://github.com/fabiofalci/gohit
   - Command line parser for yaml:
