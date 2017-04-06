@@ -12,6 +12,8 @@ me program faster. It should be golang technical implementations.
 
 ```yaml
 Requirements:
+  - JSON/YAML to Consul KV:
+    - https://github.com/lewispeckover/consulator
   - Yaml/GO based task runner:
     - https://github.com/kcmerrill/alfred/
   - Run curl from yaml:
