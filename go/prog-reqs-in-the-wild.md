@@ -12,6 +12,8 @@ me program faster. It should be golang technical implementations.
 
 ```yaml
 Requirements:
+  - Run curl from yaml:
+    - https://github.com/fabiofalci/gohit
   - Command line parser for yaml:
     - https://github.com/mikefarah/yaml
   - Interface, Noop Impl, List Impl:
