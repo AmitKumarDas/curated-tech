@@ -12,6 +12,8 @@ me program faster. It should be golang technical implementations.
 
 ```yaml
 Requirements:
+  - Command line parser for yaml:
+    - https://github.com/mikefarah/yaml
   - Interface, Noop Impl, List Impl:
     - https://github.com/containerd/containerd/blob/master/plugin/monitor.go
   - Slice Tricks:
