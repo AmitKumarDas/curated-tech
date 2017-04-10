@@ -1,50 +1,50 @@
 ```yaml
-  - JSON/YAML to Consul KV:
-    - https://github.com/lewispeckover/consulator
-  - Yaml/GO based task runner:
-    - https://github.com/kcmerrill/alfred/
-  - Run curl from yaml:
-    - https://github.com/fabiofalci/gohit
-  - Command line parser for yaml:
-    - https://github.com/mikefarah/yaml
-  - Interface, Noop Impl, List Impl:
-    - https://github.com/containerd/containerd/blob/master/plugin/monitor.go
-  - Slice Tricks:
-    - https://github.com/golang/go/wiki/SliceTricks
-  - Million container challenge:
-    - https://blog.codeship.com/running-1000-containers-in-docker-swarm/
-  - ANN / ML in go:
-    - http://mlexplore.org/2017/03/12/hopfield-networks-in-go/
-  - io.Reader to line-by-line reader
-    - https://github.com/msoap/byline
-  - Vagrant vs K8s:
-  - Dev to QA to Prod:
-    - https://blog.branch.io/beta-architecture-scaling-developer-environments-with-kubernetes/
-  - IP Utility & CNI:
-    - https://github.com/containernetworking/cni/
-  - IP Utility:
-    - https://github.com/ziutek/utils/tree/master/netaddr
-  - Get all IP address from CIDR in golang:
-    - https://gist.github.com/kotakanbe/d3059af990252ba89a82
-  - I want a gossip implementation:
-    - https://github.com/weaveworks/mesh
-    - provides:
-      - membership
-      - unicast
-      - broadcast
-      - eventually consistent semantics
-    - works in:
-      - NAT
-      - firewalls
-      - across clouds
-      - across DCs
-      - can hop when there is no direct connection between peers
-    - authentication:
-      - shared secret auth & encryption
-    - scale:
-      - 1 till 100 peers
-    - bootstraping:
-      - easily done by providing a single existing peer
+JSON/YAML to Consul KV:
+  - https://github.com/lewispeckover/consulator
+Yaml/GO based task runner:
+  - https://github.com/kcmerrill/alfred/
+Run curl from yaml:
+  - https://github.com/fabiofalci/gohit
+Command line parser for yaml:
+  - https://github.com/mikefarah/yaml
+Interface, Noop Impl, List Impl:
+  - https://github.com/containerd/containerd/blob/master/plugin/monitor.go
+Slice Tricks:
+  - https://github.com/golang/go/wiki/SliceTricks
+Million container challenge:
+  - https://blog.codeship.com/running-1000-containers-in-docker-swarm/
+ANN / ML in go:
+  - http://mlexplore.org/2017/03/12/hopfield-networks-in-go/
+io.Reader to line-by-line reader
+  - https://github.com/msoap/byline
+Vagrant vs K8s:
+Dev to QA to Prod:
+  - https://blog.branch.io/beta-architecture-scaling-developer-environments-with-kubernetes/
+IP Utility & CNI:
+  - https://github.com/containernetworking/cni/
+IP Utility:
+  - https://github.com/ziutek/utils/tree/master/netaddr
+Get all IP address from CIDR in golang:
+  - https://gist.github.com/kotakanbe/d3059af990252ba89a82
+A gossip implementation:
+  - https://github.com/weaveworks/mesh
+  - provides:
+    - membership
+    - unicast
+    - broadcast
+    - eventually consistent semantics
+  - works in:
+    - NAT
+    - firewalls
+    - across clouds
+    - across DCs
+    - can hop when there is no direct connection between peers
+  - authentication:
+    - shared secret auth & encryption
+  - scale:
+    - 1 till 100 peers
+  - bootstraping:
+    - easily done by providing a single existing peer
 Learnings from nomad/structs/structs:
   - Standard golang types:
     - Solid focus on standard types
