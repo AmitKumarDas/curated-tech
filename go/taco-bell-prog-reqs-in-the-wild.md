@@ -1,5 +1,6 @@
 ```yaml
 Http Requests Middleware:
+  - auth, metrics, prometheus, stats, etc
   - https://github.com/containous/traefik/tree/master/middlewares
 JSON/YAML to Consul KV:
   - https://github.com/lewispeckover/consulator
