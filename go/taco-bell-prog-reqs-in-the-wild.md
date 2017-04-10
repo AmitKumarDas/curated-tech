@@ -1,5 +1,5 @@
 ```yaml
-Dynamic Flags via etcd / K8s, avoid restart, config files:
+Dynamic Flags via etcd / K8s, avoid restart, config files, tuning, chaos testing, load testing:
   - https://github.com/mwitkow/go-flagz
 Kubernetes VM, Third Party Resource:
   - https://github.com/kubevirt/kubevirt
