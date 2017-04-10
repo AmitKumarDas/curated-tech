@@ -1,4 +1,6 @@
 ```yaml
+Http Requests Middleware:
+  - https://github.com/containous/traefik/tree/master/middlewares
 JSON/YAML to Consul KV:
   - https://github.com/lewispeckover/consulator
 Yaml/GO based task runner:
