@@ -1,4 +1,6 @@
 ```yaml
+Custom routines, Thread Safety:
+  - https://github.com/containous/traefik/tree/master/safe
 Http Requests Middleware:
   - auth, metrics, prometheus, stats, etc
   - https://github.com/containous/traefik/tree/master/middlewares
