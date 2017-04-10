@@ -1,4 +1,6 @@
 ```yaml
+Kubernetes Deployments:
+  - https://github.com/apprenda/kismatic
 Chaos Testing Tool for Dockers:
   - https://github.com/gaia-adm/pumba
 Code Generation, CMS & GO:
