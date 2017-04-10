@@ -1,4 +1,6 @@
 ```yaml
+Admin UI, Interact, Manage, Start, Stop Containers:
+  - https://github.com/weaveworks/scope
 Dynamic Flags via etcd / K8s, avoid restart, config files, tuning, chaos testing, load testing:
   - https://github.com/mwitkow/go-flagz
 Kubernetes VM, Third Party Resource:
