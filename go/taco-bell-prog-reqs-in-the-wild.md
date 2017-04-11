@@ -1,4 +1,15 @@
 ```yaml
+Collecting Warnings:
+  - https://github.com/go-warnings/warnings/commit/8a331561fe74dadba6edfc59f3be66c22c3b065d
+Export Metrics:
+  - github.com/armon/go-metrics
+Fuzzy, Random Value Testing:
+  - github.com/google/gofuzz
+Marshall & UnMarshall minus Reflection:
+  - github.com/mailru/easyjson
+Json, Hcl & GoLang Structs
+  - hashicorp/nomad/api/compose_test.go
+  - hashicorp/nomad/api/jobs_testing.go
 Custom routines, Thread Safety:
   - https://github.com/containous/traefik/tree/master/safe
 Http Requests Middleware:
