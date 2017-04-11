@@ -5,57 +5,35 @@ these in stack overflow or Google it. However, this personally curated content h
 focusing without sacrificing my time bound metrics. This should improve my productivity while 
 implementing these or similar requirements.
 
-### Requirement 1
-
-> I learnt the basics stuff in golang. Any cookbook recipes or snippets that helps
-me program faster. It should be golang technical implementations.
+### GoLang Snips
 
 ```yaml
-Requirements:
-  - new vs make:
-    - Code:
-      - fmt.Printf("%T  %v\n", new([10]int), new([10]int))
-      - fmt.Printf("%T  %v\n", make([]int, 10), make([]int, 10))
-    - O/P:
-      - *[10]int  &[0 0 0 0 0 0 0 0 0 0]
-      - []int  [0 0 0 0 0 0 0 0 0 0]
-  - Type printing:
-    - i := 10
-    - s := strconv.Itoa(i)
-    - fmt.Printf("%T, %v\n", s, s)
-    - // string, 10
-  - What do you learn from follwing :
-    - func (d *dumper) Dump(xyz) abc
-    - type dumper struct:
-      - w       io.Writer
-    - func Dumper(w io.Writer) io.WriteCloser:
-      - return &dumper{w: w}
-    - Learnings:
-      - Composition of interface
-      - Private struct
-      - Public initializer
-      - Simple naming convention:
-        - NewDumper vs. Dumper
-  - Templating    
-    - import text/template    
-    - strtmpl string, obj interface{}
-    - tmpl, err := template.New("template").Parse(strtmpl)
-    - err = tmpl.Execute(&buf, obj)
-  - Forced Compilation Check
-    - // ensure kubeletVolumeHost implements VolumeHost interface
-    - var _ volume.VolumeHost = &kubeletVolumeHost{}
-  - Collecting Warnings
-    - https://github.com/go-warnings/warnings/commit/8a331561fe74dadba6edfc59f3be66c22c3b065d
-  - Export Metrics
-    - github.com/armon/go-metrics
-  - Fuzzy Testing
-    - random values
-    - github.com/google/gofuzz
-  - Marshall & UnMarshall minus Reflection
-    - github.com/mailru/easyjson
-  - Json, Hcl & golang Structs - compatibility
-    - hashicorp/nomad/api/compose_test.go
-    - hashicorp/nomad/api/jobs_testing.go
+New vs Make:
+  - Code:
+    - fmt.Printf("%T  %v\n", new([10]int), new([10]int))
+    - fmt.Printf("%T  %v\n", make([]int, 10), make([]int, 10))
+  - O/P:
+    - *[10]int  &[0 0 0 0 0 0 0 0 0 0]
+    - []int  [0 0 0 0 0 0 0 0 0 0]
+Type vs. Value Printing:
+  - i := 10
+  - s := strconv.Itoa(i)
+  - fmt.Printf("%T, %v\n", s, s)
+  - // string, 10
+Composing Interfaces, Private Struct, Public Initializer, Naming of Initializer:
+  - func (d *dumper) Dump(xyz) abc
+  - type dumper struct:
+    - w       io.Writer
+  - func Dumper(w io.Writer) io.WriteCloser:
+    - return &dumper{w: w}
+Templating:
+  - import text/template    
+  - strtmpl string, obj interface{}
+  - tmpl, err := template.New("template").Parse(strtmpl)
+  - err = tmpl.Execute(&buf, obj)
+Forced Compilation Check:
+  - // ensure kubeletVolumeHost implements VolumeHost interface
+  - var _ volume.VolumeHost = &kubeletVolumeHost{}  
 ```
 
 
