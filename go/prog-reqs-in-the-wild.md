@@ -21,23 +21,18 @@ Variable:
 
 ```yaml
 New vs Make:
-  - Code:
-    - fmt.Printf("%T  %v\n", new([10]int), new([10]int))
-    - fmt.Printf("%T  %v\n", make([]int, 10), make([]int, 10))
-  - O/P:
+  - fmt.Printf("%T  %v\n", new([10]int), new([10]int))
     - *[10]int  &[0 0 0 0 0 0 0 0 0 0]
+  - fmt.Printf("%T  %v\n", make([]int, 10), make([]int, 10))   
     - []int  [0 0 0 0 0 0 0 0 0 0]
 Type vs. Value Printing:
   - i := 10
   - s := strconv.Itoa(i)
-  - fmt.Printf("%T, %v\n", s, s)
-  - // string, 10
+  - fmt.Printf("%T, %v\n", s, s) will o/p string, 10
 Composing Interfaces, Private Struct, Public Initializer, Naming of Initializer:
   - func (d *dumper) Dump(xyz) abc
-  - type dumper struct:
-    - w       io.Writer
-  - func Dumper(w io.Writer) io.WriteCloser:
-    - return &dumper{w: w}
+  - type dumper struct composed of w io.Writer
+  - func Dumper(w io.Writer) io.WriteCloser returns &dumper{w: w}
 Templating:
   - import text/template    
   - strtmpl string, obj interface{}
