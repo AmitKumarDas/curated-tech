@@ -5,6 +5,18 @@ these in stack overflow or Google it. However, this personally curated content h
 focusing without sacrificing my time bound metrics. This should improve my productivity while 
 implementing these or similar requirements.
 
+### Shell Snips
+
+```yaml
+Interpolation:
+  - ETCD_NAME=${1:-"default"}
+  - ETCD_LISTEN_IP=${2:-"0.0.0.0"}
+  - ETCD_INITIAL_CLUSTER=${3:-}
+Variable:
+  - etcd_data_dir=/var/lib/etcd
+  - mkdir -p ${etcd_data_dir}
+```
+
 ### GoLang Snips
 
 ```yaml
