@@ -1,4 +1,7 @@
 ```yaml
+HighWaterMark:
+  - to track the maximum value seen for some quantity
+  - refer: K8s code base
 Collecting Warnings:
   - https://github.com/go-warnings/warnings/commit/8a331561fe74dadba6edfc59f3be66c22c3b065d
 Export Metrics:
