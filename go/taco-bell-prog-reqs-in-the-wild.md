@@ -223,4 +223,16 @@ RUN vs CMD:
 LABEL <key>=<value> <key>=<value> <key>=<value> ...:
   - Adds metadata to an image
   - An image's label(s) can be inspected via docker inspect command
+EXPOSE:
+  - This tells Docker to let container listen on the specified network port(s) at runtime
+  - This does not expose the port(s) of container accessible to the host
+ENV:
+  - Can be set on each line
+  - Can be set together
+  - Setting multiple k=v together is preferred as it produces a single cache layer
+  - These values will persist when when a container is run from resulting image
+  - View these using docker inspect command
+  - Change them using docker run --env <key>=<val>
+  - To set for a single command RUN <key>=<value> <command>
+  - Can cause unexpected side effects
 ```
