@@ -31,6 +31,12 @@ OR Operator:
   - Functional Programming
   - Refer - http://linuxcommand.org/lc3_wss0140.php
   - cd $some_directory || error_exit "Cannot change directory! Aborting"
+Execute a Command On Receiving Some Signals:
+  - trap "echo "bye..bye..."; exit" SIGHUP SIGINT SIGTERM
+SIGKILL As The Last Resort:
+  - kill -9
+  - Does not provide any chance for the program to execute cleanup actions
+  - Can lead to locks
 ```
 
 ### GoLang Snips
