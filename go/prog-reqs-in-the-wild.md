@@ -15,11 +15,22 @@ Interpolation:
 Variable:
   - etcd_data_dir=/var/lib/etcd
   - mkdir -p ${etcd_data_dir}
+Error Handling:
+  - http://linuxcommand.org/lc3_wss0140.php
 Which Program/Script:
   - PROGNAME=$(basename $0)
 Line Number an Environment Variable:
   - $LINENO
-  - helpful in
+  - helpful in getting the error prone line number
+If Undefined Then Substitute:
+  - ${1:-"Unknown Error"}
+Interpolation, Nested Interpolation:
+  - echo "${PROGNAME}: ${1:-"Unknown Error"}" 1>&2
+OR Operator:
+  - Avoid IF ELSE e.g. if [ "$?" = "0" ]; then ...
+  - Functional Programming
+  - Refer - http://linuxcommand.org/lc3_wss0140.php
+  - cd $some_directory || error_exit "Cannot change directory! Aborting"
 ```
 
 ### GoLang Snips
