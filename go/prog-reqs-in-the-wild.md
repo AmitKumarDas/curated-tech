@@ -37,6 +37,14 @@ SIGKILL As The Last Resort:
   - kill -9
   - Does not provide any chance for the program to execute cleanup actions
   - Can lead to locks
+Prefer temp file at user's local tmp:
+  - if [ -d "~/tmp" ]; then
+  -  TEMP_DIR=~/tmp
+  - else
+  -  TEMP_DIR=/tmp
+  - fi
+Resistance to RACE attacks:
+  - TEMP_FILE=$TEMP_DIR/printfile.$$.$RANDOM
 ```
 
 ### GoLang Snips
