@@ -203,4 +203,7 @@ Instruction Naming Practices:
   - e.g. FROM, RUN, etc.
 Parser Directives:
   - Special type of comment in the form # directive=value
+  - e.g.
+  - # escape=\
+  - # escape=`
 ```
