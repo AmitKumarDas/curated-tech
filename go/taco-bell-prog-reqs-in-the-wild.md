@@ -242,6 +242,12 @@ ENTRYPOINT:
   - e.g. docker run -i -t --rm -p 80:80 nginx
   - CLI args to docker run <image> will be appended after all elements in an exec form ENTRYPOINT
   - Above will also override all elements specified using CMD
+ENTRYPOINT vs. CMD:
+  - fairly stable default commands are set in ENTRYPOINT
+  - additional defaults that are likely to change in CMD
+  - When you run the container the ENTRYPOINT executable is the ONLY PROCESS RUNNING
+  - Verify via docker run -it --rm --name test top -H
+  - Alternatively verify later via docker exec -it test ps aux
 ```
 
 ### Docker
