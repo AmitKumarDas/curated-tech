@@ -210,4 +210,17 @@ Default Escape Character:
   - \
   - \$foo translates to $foo
   - \${foo} translates to ${foo}
+RUN <command>:
+  - runs a shell with /bin/sh -c on Linux
+  - runs a shell with cmd /S /C -c on Windows
+RUN ["executable", "param1", "param2"]:
+  - runs in exec form
+  - e.g. RUN ["/bin/bash", "-c", "echo hello"]
+RUN vs CMD:
+  - RUN runs a command & commits the result into the image
+  - CMD does not execute anything at build time
+  - CMD is used along with ENTRYPOINT
+LABEL <key>=<value> <key>=<value> <key>=<value> ...:
+  - Adds metadata to an image
+  - An image's label(s) can be inspected via docker inspect command
 ```
