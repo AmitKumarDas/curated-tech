@@ -200,7 +200,7 @@ Running Dockerfile Instructions during Build Process:
   - Result of each instruction is commited to tbe newly built image
 Instruction Naming Practices:
   - They are UPPERCASE by convention
-  - e.g. FROM, COPY, ENV, WORKDIR, ADD, COPY, EXPOSE, LABEL, USER, VOLUME, STOPSIGNAL, ONBUILD, RUN, etc.
+  - FROM, COPY, ENV, WORKDIR, ADD, COPY, EXPOSE, LABEL, USER, VOLUME, STOPSIGNAL, ONBUILD, RUN
 Parser Directives:
   - Special type of comment in the form # directive=value
   - e.g.
@@ -250,4 +250,22 @@ ENTRYPOINT:
 Container's PID 1
   - When the executable is container's PID 1 then it can receive Unix signals
   - Hence, container can receive a SIGTERM from docker stop <container>
+```
+
+### Kubelet
+
+```yaml
+Why kubelet:
+  - Preserve node stability when available compute resources are low
+Proactive Monitoring:
+  - To prevent against total starvation of compute resource
+  - Can terminate/evict one or more pods
+Kubelet Supported Filesystems:
+  - nodefs for volumes, daemon logs, etc
+  - imagefs used by container runtime for storing images & container writable layers
+  - kubelet does not care about any other filesystems
+Eviction Signals:
+  - memory.available, 
+  - nodefs.available, nodefs.inodesFree, 
+  - imagefs.available, imagefs.inodesFree
 ```
