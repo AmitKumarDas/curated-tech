@@ -185,7 +185,7 @@ Monitor your system:
   - https://nicolargo.github.io/glances/
 ```
 
-### Docker
+### Dockerfile
 
 ```yaml
 Build Image using Current Directory as Context:
@@ -200,10 +200,14 @@ Running Dockerfile Instructions during Build Process:
   - Result of each instruction is commited to tbe newly built image
 Instruction Naming Practices:
   - They are UPPERCASE by convention
-  - e.g. FROM, RUN, etc.
+  - e.g. FROM, COPY, ENV, WORKDIR, ADD, COPY, EXPOSE, LABEL, USER, VOLUME, STOPSIGNAL, ONBUILD, RUN, etc.
 Parser Directives:
   - Special type of comment in the form # directive=value
   - e.g.
   - # escape=\
   - # escape=`
+Default Escape Character:
+  - \
+  - \$foo translates to $foo
+  - \${foo} translates to ${foo}
 ```
