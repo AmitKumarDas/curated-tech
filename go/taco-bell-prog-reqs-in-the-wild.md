@@ -184,3 +184,23 @@ Open Source Alternative to Ansible Tower:
 Monitor your system:
   - https://nicolargo.github.io/glances/
 ```
+
+### Docker
+
+```yaml
+Build Image using Current Directory as Context:
+  - docker build .
+Build Directory Best Practices:
+  - Start with an empty directory that will host the Dockerfile
+  - All the other files will form the context to this image building process
+Tagging Image into Multiple Repositories:
+  - docker build -t openebs/jiva:1.2.2 -t openebs/jiva:latest .
+Running Dockerfile Instructions during Build Process:
+  - Each run of instruction is independent
+  - Result of each instruction is commited to tbe newly built image
+Instruction Naming Practices:
+  - They are UPPERCASE by convention
+  - e.g. FROM, RUN, etc.
+Parser Directives:
+  - Special type of comment in the form # directive=value
+```
