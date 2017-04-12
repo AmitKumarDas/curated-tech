@@ -15,7 +15,7 @@ Fuzzy, Random Value Testing:
   - github.com/google/gofuzz
 Marshall & UnMarshall minus Reflection:
   - github.com/mailru/easyjson
-Json, Hcl & GoLang Structs
+Json, Hcl & GoLang Structs:
   - hashicorp/nomad/api/compose_test.go
   - hashicorp/nomad/api/jobs_testing.go
 Custom routines, Thread Safety:
