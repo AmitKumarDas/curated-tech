@@ -235,4 +235,19 @@ ENV:
   - Change them using docker run --env <key>=<val>
   - To set for a single command RUN <key>=<value> <command>
   - Can cause unexpected side effects
+ENTRYPOINT:
+  - Has two forms
+  - ENTRYPOINT ["executable", "param1", "param2"]
+  - ENTRYPOINT command param1 param2
+  - e.g. docker run -i -t --rm -p 80:80 nginx
+  - CLI args to docker run <image> will be appended after all elements in an exec form ENTRYPOINT
+  - Above will also override all elements specified using CMD
+```
+
+### Docker
+
+```yaml
+Container's PID 1
+  - When the executable is container's PID 1 then it can receive Unix signals
+  - Hence, container can receive a SIGTERM from docker stop <container>
 ```
