@@ -1,4 +1,8 @@
 ```yaml
+Simple Dockerized GO Webapp for K8s Demos:
+  - Can refer this as a pattern to implement CI usecase
+  - A pattern to implement one CI usecase at a time
+  - https://github.com/apprenda/kdemo
 Smoke Test a K8s Install Using Docker Images:
   - https://github.com/apprenda/kuberang
 Continuous Deployment of K8s objects:
