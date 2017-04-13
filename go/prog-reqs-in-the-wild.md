@@ -45,6 +45,9 @@ Prefer temp file at user's local tmp:
   - fi
 Resistance to RACE attacks:
   - TEMP_FILE=$TEMP_DIR/printfile.$$.$RANDOM
+Know What the Script Is Doing:
+  - Turn on tracing at the beginning set -x
+  - Turn off tracing at the end set +x
 ```
 
 ### GoLang Snips
