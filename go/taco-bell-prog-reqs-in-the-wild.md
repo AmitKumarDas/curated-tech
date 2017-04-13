@@ -1,4 +1,6 @@
 ```yaml
+Continuous Deployment of K8s objects:
+  - https://github.com/box/kube-applier
 Orchestrate Containers for Development with:
   - Docker Compose
   - https://blog.codeship.com/orchestrate-containers-for-development-with-docker-compose/
