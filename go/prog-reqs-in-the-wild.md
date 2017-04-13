@@ -37,7 +37,7 @@ SIGKILL As The Last Resort:
   - kill -9
   - Does not provide any chance for the program to execute cleanup actions
   - Can lead to locks
-Prefer temp file at user's local tmp:
+Prefer temp file at user s local tmp:
   - if [ -d "~/tmp" ]; then
   -  TEMP_DIR=~/tmp
   - else
