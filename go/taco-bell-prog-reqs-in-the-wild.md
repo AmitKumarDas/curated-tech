@@ -1,4 +1,6 @@
 ```yaml
+Why select & channel go hand-in-hand:
+  - https://blog.quickmediasolutions.com/2015/09/13/non-blocking-channels-in-go.html
 Local Filesystem Abstracted:
   - https://github.com/spf13/afero
 Simple Dockerized GO Webapp for K8s Demos:
