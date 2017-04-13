@@ -1,4 +1,39 @@
 ```yaml
+Interactive CLI:
+  - https://github.com/asciimoo/wuzz
+CLI - Look Good:
+  - https://github.com/renstrom/dedent
+Event & Agent:
+  - https://github.com/muesli/beehive
+HTTP Introspection:
+  - https://github.com/asciimoo/wuzz
+Build dynamic DNS service:
+  - http://mkaczanowski.com/golang-build-dynamic-dns-service-go/
+Slices Internals:
+  - https://blog.golang.org/go-slices-usage-and-internals
+Handling metadata or kv pairs or unknown in CLI:
+  - nomad client & agent startup
+Initializing Telemetry:
+  - Ref nomad agent startup
+Merging two configs & returning a new config:
+  - Ref nomad config
+Chain:
+  - if-elif-else in a better way
+  - https://github.com/aws/aws-sdk-go/blob/master/aws/credentials/chain_provider.go
+Deep Pretty Printer for Go Data Structures:
+  - Aid in Debugging  
+  - https://github.com/davecgh/go-spew/
+Network Programming - Did You Understand This In Your College:
+  - https://jannewmarch.gitbooks.io/network-programming-with-go-golang-/content/
+  - https://blog.packagecloud.io/eng/2017/02/06/monitoring-tuning-linux-networking-stack-sending-data/
+Query language for JSON:
+  - http://jmespath.org/
+  - https://github.com/jmespath/go-jmespath
+Monitoring:
+  - http://www.brendangregg.com/blog/2017-02-05/file-system-flame-graph.html
+  - https://news.ycombinator.com/item?id=13574825
+Low Level OS Interfacing:
+  - golang.org/x/sys/unix
 Security:
   - https://github.com/cloudflare/gokeyless
 Load Testing:
