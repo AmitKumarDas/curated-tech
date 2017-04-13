@@ -1,4 +1,6 @@
 ```yaml
+Smoke Test a K8s Install Using Docker Images:
+  - https://github.com/apprenda/kuberang
 Continuous Deployment of K8s objects:
   - https://github.com/box/kube-applier
 Orchestrate Containers for Development with:
