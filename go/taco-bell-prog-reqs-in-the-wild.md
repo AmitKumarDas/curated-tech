@@ -1,4 +1,6 @@
 ```yaml
+IO customization via std GoLang IO Interfaces:
+  - https://github.com/aws/aws-sdk-go/blob/master/aws/types.go
 Why select & channel go hand-in-hand:
   - https://blog.quickmediasolutions.com/2015/09/13/non-blocking-channels-in-go.html
 Local Filesystem Abstracted:
