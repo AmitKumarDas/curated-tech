@@ -1,4 +1,26 @@
 ```yaml
+Security:
+  - https://github.com/cloudflare/gokeyless
+Load Testing:
+  - https://github.com/tsenart/vegeta
+  - reports, histogram, metrics
+CLI & Ease of Use Reference Library:
+  - https://github.com/wallix/awless
+  - Rules of Supportability
+Networking Library Reference:
+  - https://github.com/meshbird/meshbird  
+Http Inspection Library:
+  - https://github.com/asciimoo/wuzz
+UI Reference Library:
+  - https://github.com/botpress/botpress
+  - Modularization, Composition, Extensibility
+  - Build from some foundation than thinking all over from scratch
+  - This is JavaScript based & no golang based
+QEMU/KVM Provider Library:
+  - https://github.com/coreos/matchbox/tree/master/scripts
+  - How a KVM provider can be scripted in bash
+Tough Nut - Reflect, byte, string & interface:
+  - Ref https://github.com/aws/aws-sdk-go/blob/master/aws/awsutil/string_value.go
 IO customization via std GoLang IO Interfaces:
   - https://github.com/aws/aws-sdk-go/blob/master/aws/types.go
 Why select & channel go hand-in-hand:
