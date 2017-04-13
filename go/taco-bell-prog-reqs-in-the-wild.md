@@ -1,4 +1,6 @@
 ```yaml
+Local Filesystem Abstracted:
+  - https://github.com/spf13/afero
 Simple Dockerized GO Webapp for K8s Demos:
   - Can refer this as a pattern to implement CI usecase
   - A pattern to implement one CI usecase at a time
