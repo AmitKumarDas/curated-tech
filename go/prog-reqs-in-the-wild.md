@@ -85,7 +85,11 @@ Bind port 8080 of container to port 80 on 127.0.0.1 of host machine:
   - docker run -p 127.0.0.1:80:8080 ubuntu bash
 Connect container to a network:
   - docker run -itd --network=my-net busybox
-
+Choose an IP and Network:
+  - docker run -itd --network=my-net --ip=10.10.9.75 busybox
+Add other hosts into a container's /etc/hosts:
+  - docker run --add-host=dockerize:10.20.1.2 --rm -it debian
+  - root@f38c87f2a42d:/# ping dockerize
 ```
 
 ### Dockerfile
