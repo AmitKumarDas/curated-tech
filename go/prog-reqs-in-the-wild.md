@@ -144,4 +144,6 @@ ENTRYPOINT vs. CMD:
   - CMD can be used to set default args for ENTRYPOINT command
   - CMD can be used to run ad-hoc commands in a container
   - CMD will be overridden when running the container with alternative arguments
+VOLUME:
+  - Creates a mountpoint with the specified name
 ```
