@@ -97,6 +97,9 @@ Add other hosts into a container's /etc/hosts:
 ### Dockerfile
 
 ```yaml
+Wrong vs. Right:
+  - Does not work RUN [ "echo", "$HOME" ]
+  - Works RUN [ "sh", "-c", "echo $HOME" ]
 Build Image using Current Directory as Context:
   - docker build .
 Build Directory Best Practices:
