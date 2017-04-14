@@ -76,6 +76,18 @@ Forced Compilation Check:
   - var _ volume.VolumeHost = &kubeletVolumeHost{}  
 ```
 
+### Docker Run
+
+```yaml
+Exposes port 80 of container without publishing port to the host system’s interfaces:
+  - docker run --expose 80 ubuntu bash
+Bind port 8080 of container to port 80 on 127.0.0.1 of host machine:
+  - docker run -p 127.0.0.1:80:8080 ubuntu bash
+Connect container to a network:
+  - docker run -itd --network=my-net busybox
+
+```
+
 ### Dockerfile
 
 ```yaml
