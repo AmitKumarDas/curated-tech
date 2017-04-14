@@ -8,6 +8,8 @@ implementing these in a larger scheme of things.
 ### Shell Snips
 
 ```yaml
+IPv4 Addr for a Network Device Named eth0:
+  - ip -4 addr show scope global dev eth0 | grep inet | awk '{print \$2}' | cut -d / -f 1
 Interpolation:
   - ETCD_NAME=${1:-"default"}
   - ETCD_LISTEN_IP=${2:-"0.0.0.0"}
