@@ -139,4 +139,9 @@ ENTRYPOINT vs. CMD:
   - When you run the container the ENTRYPOINT executable is the ONLY PROCESS RUNNING
   - Verify via docker run -it --rm --name test top -H
   - Alternatively verify later via docker exec -it test ps aux
+ENTRYPOINT vs. CMD:
+  - ENTRYPOINT should be defined when using the container as executable
+  - CMD can be used to set default args for ENTRYPOINT command
+  - CMD can be used to run ad-hoc commands in a container
+  - CMD will be overridden when running the container with alternative arguments
 ```
