@@ -100,6 +100,9 @@ Add other hosts into a container's /etc/hosts:
 Wrong vs. Right:
   - Does not work RUN [ "echo", "$HOME" ]
   - Works RUN [ "sh", "-c", "echo $HOME" ]
+Wrong vs. Right:
+  - Does not work CMD ["echo", "$HOME"]
+  - Works CMD ["sh", "-c", "echo $HOME"]
 Build Image using Current Directory as Context:
   - docker build .
 Build Directory Best Practices:
