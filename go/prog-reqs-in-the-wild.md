@@ -15,7 +15,7 @@ pipelining=True:
   - Reduces the number of SSH operations to execute a module on the remote server
 ```
 
-### Vagrant Snip
+### Vagrant Snips
 
 ```yaml
 Array of Structs:  
@@ -44,6 +44,9 @@ Add SSH Public Key to the Node:
   end
 Turn off shared folders:
   - config.vm.synced_folder ".", "/vagrant", id: "vagrant-root", disabled: true
+CentOS & Networking:
+  - config.vm.network :private_network, ip: 1.1.12.1
+  - config.vm.provision "shell", inline: "nmcli connection reload; systemctl restart network.service"
 ```
 
 ### Shell Snips
