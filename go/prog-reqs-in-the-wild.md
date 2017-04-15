@@ -134,9 +134,8 @@ Forced Compilation Check:
 ### Docker Verbose
 
 ```bash
-# --install-option flag is telling pip to install the ansible package to the /ansible
-# The /ansible directory is in turn a Docker volume that maps to $(pwd)/out,
-# which will contain the vendored bits
+# --install-option flag tells pip to install ansible package to /ansible
+# The /ansible directory is Container volume that maps to Host's $(pwd)/out
 
 docker run --rm -v $(pwd)/out:/ansible apprenda/vendor-ansible \
     pip install --install-option="--prefix=/ansible" ansible==2.1.2.0
@@ -154,17 +153,18 @@ Remove all Containers:
   - sudo docker rm $(sudo docker ps -a -q)
 Using Docker to Store Vendored Packages:
   - github.com/apprenda/kismatic/tree/master/vendor-ansible#using-docker-to-create-vendored-package
-Exposes port 80 of container without publishing port to the host system’s interfaces:
+Expose Port 80 of Container Without Publishing Port to the Host system’s Interfaces:
   - docker run --expose 80 ubuntu bash
-Bind port 8080 of container to port 80 on 127.0.0.1 of host machine:
+Bind Port 8080 of Container to Port 80 on 127.0.0.1 of Host Machine:
   - docker run -p 127.0.0.1:80:8080 ubuntu bash
-Connect container to a network:
+Connect Container to a Network:
   - docker run -itd --network=my-net busybox
 Choose an IP and Network:
   - docker run -itd --network=my-net --ip=10.10.9.75 busybox
-Add other hosts into a container's /etc/hosts:
+Add A Host into a Container s /etc/hosts:
   - docker run --add-host=dockerize:10.20.1.2 --rm -it debian
-  - root@f38c87f2a42d:/# ping dockerize
+  - Login to Above Container:
+    - root@f38c87f2a42d:/# ping dockerize
 ```
 
 ### Dockerfile
