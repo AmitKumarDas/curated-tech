@@ -1,5 +1,6 @@
 ```yaml
 Release to Github Minus TravisCI:
+Make use of GO than Bash or Shell:
   - github.com/apprenda/kismatic/blob/master/release.go
   - github.com/apprenda/kismatic/blob/master/RELEASE.md#release-script-usage
 Interactive CLI:
