@@ -145,12 +145,14 @@ docker run --rm -v $(pwd)/out:/ansible apprenda/vendor-ansible \
 ### Docker Snips
 
 ```yaml
+Remove all Exited Containers:
+  - sudo docker rm $(sudo docker ps -a -q -f "status=exited*")
 Remove all Images:
   - sudo docker rmi $(sudo docker images -q)
 Stop all Containers:
   - sudo docker stop $(sudo docker ps -a -q)
-Remove all Containers:
-  - sudo docker rm $(sudo docker ps -a -q)
+Remove all Containers & its Associated Volumes:
+  - sudo docker rm -v $(sudo docker ps -a -q)
 Using Docker to Store Vendored Packages:
   - github.com/apprenda/kismatic/tree/master/vendor-ansible#using-docker-to-create-vendored-package
 Expose Port 80 of Container Without Publishing Port to the Host system’s Interfaces:
