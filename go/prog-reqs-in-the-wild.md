@@ -146,6 +146,8 @@ docker run --rm -v $(pwd)/out:/ansible apprenda/vendor-ansible \
 ### Docker Snips
 
 ```yaml
+Remove all Images:
+  - sudo docker rmi $(sudo docker images -q)
 Stop all Containers:
   - sudo docker stop $(sudo docker ps -a -q)
 Remove all Containers:
