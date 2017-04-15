@@ -128,7 +128,17 @@ Forced Compilation Check:
   - var _ volume.VolumeHost = &kubeletVolumeHost{}  
 ```
 
-### Docker Run
+### Docker Verbose
+
+```bash
+
+docker run --rm -v $(pwd)/out:/ansible apprenda/vendor-ansible \
+    pip install --install-option="--prefix=/ansible" ansible==2.1.2.0
+
+# --install-option flag is telling pip to install the ansible package to the /ansible
+```
+
+### Docker Snips
 
 ```yaml
 Using Docker to Store Vendored Packages:
