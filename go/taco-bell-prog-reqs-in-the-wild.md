@@ -1,4 +1,6 @@
 ```yaml
+Release to Github Minus TravisCI:
+  - https://github.com/apprenda/kismatic/blob/master/release.go
 Interactive CLI:
   - https://github.com/asciimoo/wuzz
 CLI - Look Good:
