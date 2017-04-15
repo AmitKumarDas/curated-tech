@@ -148,7 +148,13 @@ docker run --rm -v $(pwd)/out:/ansible apprenda/vendor-ansible \
 Docker & Whats Ephemeral Storage:
   - Docker containers use their root disk as ephemeral storage
   - A chunk of disk space from the host filesystem which runs the container
-  - This disk space can’t be shared with other processes, nor easily migrated to a new host.
+  - This disk space can’t be shared with other processes, nor easily mgrated to a new host.
+Docker & Whats Docker Volume:
+  - Allows to run a container with dedicated volume mounted.
+  - This volume comprises another chunk of space from a host machine
+  - This is persistent and independent from container lifecycle
+  - It can be Network Storage, or Shared Filesystem Mount:
+    - Depends on the storage plugin being used
 Remove all Exited Containers:
   - sudo docker rm $(sudo docker ps -a -q -f "status=exited*")
 Remove all Images:
