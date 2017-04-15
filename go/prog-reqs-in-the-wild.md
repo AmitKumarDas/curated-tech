@@ -125,6 +125,8 @@ Forced Compilation Check:
 ### Docker Run
 
 ```yaml
+Using Docker to Store Vendored Packages:
+  - github.com/apprenda/kismatic/tree/master/vendor-ansible#using-docker-to-create-vendored-package
 Exposes port 80 of container without publishing port to the host system’s interfaces:
   - docker run --expose 80 ubuntu bash
 Bind port 8080 of container to port 80 on 127.0.0.1 of host machine:
