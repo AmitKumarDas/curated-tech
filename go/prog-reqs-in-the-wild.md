@@ -131,11 +131,13 @@ Forced Compilation Check:
 ### Docker Verbose
 
 ```bash
+# --install-option flag is telling pip to install the ansible package to the /ansible
+# The /ansible directory is in turn a Docker volume that maps to $(pwd)/out,
+# which will contain the vendored bits
 
 docker run --rm -v $(pwd)/out:/ansible apprenda/vendor-ansible \
     pip install --install-option="--prefix=/ansible" ansible==2.1.2.0
 
-# --install-option flag is telling pip to install the ansible package to the /ansible
 ```
 
 ### Docker Snips
