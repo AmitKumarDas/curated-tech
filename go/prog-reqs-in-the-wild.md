@@ -8,6 +8,9 @@ implementing these in a larger scheme of things.
 ### Ansible Snips
 
 ```yaml
+To use Ansible:
+  - PYTHONPATH must be set to include the lib and lib64 directories
+  - PYTHONPATH=<>/lib/python2.7/site-packages/:<>/lib64/python2.7/site-packages bin/ansible
 ANSIBLE_CONFIG:
   - /etc/ansible/ansible.cfg
   - INI format
