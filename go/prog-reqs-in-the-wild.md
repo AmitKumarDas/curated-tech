@@ -15,33 +15,39 @@ pipelining=True:
   - Reduces the number of SSH operations to execute a module on the remote server
 ```
 
+### Vagrant Verbose
+
+```ruby
+# Array of Structs
+boxes = [
+  {
+    :name => "master01",
+    :mem => "1024"
+  },
+  {
+    :name => "worker01",
+    :mem => "1024"
+  }
+]
+
+# Add SSH Public Key to the Node
+config.vm.provision "shell" do |s|
+  ssh_pub_key = File.readlines("#{Dir.home}/.ssh/kismaticuser.key.pub").first.strip
+  s.inline = <<-SHELL
+    mkdir -p /root/.ssh
+    echo #{ssh_pub_key} >> /home/vagrant/.ssh/authorized_keys
+    echo #{ssh_pub_key} >> /root/.ssh/authorized_keys
+  SHELL
+end
+```
+
 ### Vagrant Snips
 
 ```yaml
-Array of Structs:  
-  boxes = [
-    {
-      :name => "master01",
-      :mem => "1024"
-    },
-    {
-      :name => "worker01",
-      :mem => "1024"
-    }
-  ]
 Vagrant && Insert SSH Key:
   - config.ssh.insert_key = true is default
   - Vagrant automatically inserts a keypair to use for SSH
   - Replaces Vagrant's default insecure key inside the machine if detected.
-Add SSH Public Key to the Node:
-  config.vm.provision "shell" do |s|
-    ssh_pub_key = File.readlines("#{Dir.home}/.ssh/kismaticuser.key.pub").first.strip
-    s.inline = <<-SHELL
-      mkdir -p /root/.ssh
-      echo #{ssh_pub_key} >> /home/vagrant/.ssh/authorized_keys
-      echo #{ssh_pub_key} >> /root/.ssh/authorized_keys
-    SHELL
-  end
 Turn off shared folders:
   - config.vm.synced_folder ".", "/vagrant", id: "vagrant-root", disabled: true
 CentOS & Networking:
