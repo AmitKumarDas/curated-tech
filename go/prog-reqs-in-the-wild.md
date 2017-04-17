@@ -80,6 +80,12 @@ CentOS & Networking:
 ### Shell Snips
 
 ```yaml
+Fixes to Permission related Issues:
+  - Permission Denied:
+  - Command Not Found:
+  - Operation Not Permitted:
+    - Run the command with sudo
+    - chmod + x path/to/bin
 uname -s:
   - Linux
 uname -m:
