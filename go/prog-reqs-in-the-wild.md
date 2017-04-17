@@ -5,6 +5,19 @@ these in stack overflow or Google it. However, this personally curated content h
 focusing without sacrificing my time bound metrics. This should improve my productivity while 
 implementing these in a larger scheme of things.
 
+### K8s Snips
+
+```yaml
+StatefulSet
+  - Assigns persistent DNS names to pods
+  - Allows to re-attach storage volume to another machine where the pod migrated to
+  - A dedicated service that points to each member of pod
+  - This dedicated service is headless
+    - It does not create cluster IP for load balancing
+    - Its purpose is to trigger DNS name creation for PODs that will be launched
+  - PODs are launched strictly one after the other
+```
+
 ### Ansible Snips
 
 ```yaml
