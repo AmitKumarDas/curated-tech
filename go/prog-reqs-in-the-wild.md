@@ -8,7 +8,7 @@ implementing these in a larger scheme of things.
 ### K8s Snips
 
 ```yaml
-StatefulSet
+StatefulSet:
   - Assigns persistent DNS names to pods
   - Allows to re-attach storage volume to another machine where the pod migrated to
   - A headless service that points to each member of pod:
