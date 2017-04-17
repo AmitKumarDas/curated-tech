@@ -11,11 +11,17 @@ implementing these in a larger scheme of things.
 StatefulSet
   - Assigns persistent DNS names to pods
   - Allows to re-attach storage volume to another machine where the pod migrated to
-  - A dedicated service that points to each member of pod
-  - This dedicated service is headless
+  - A headless service that points to each member of pod:
     - It does not create cluster IP for load balancing
+    - i.e. it does not have ClusterIP & NodePort specified
     - Its purpose is to trigger DNS name creation for PODs that will be launched
   - PODs are launched strictly one after the other
+service.alpha.kubernetes.io/tolerate-unready-endpoints "true":
+  - creates the pod endpoint ignoring its state
+  - create the endpoint even if service is not healthy
+  - e.g. MongoDB replica sets want to reach each other even before initialization
+pod.alpha.kubernetes.io/init-containers: 
+  - state the containers that need to be started before the main pod
 ```
 
 ### Ansible Snips
