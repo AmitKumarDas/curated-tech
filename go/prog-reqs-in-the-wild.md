@@ -8,10 +8,6 @@ implementing these in a larger scheme of things.
 ### K8s Snips
 
 ```yaml
-k8s.io/apiserver/pkg/registry:
-  - generic impl of storage
-k8s.io/apiserver/pkg/registry:
-  - generic object store interface
 hostPort:
   - expose a specific port on the host
 StatefulSet:
