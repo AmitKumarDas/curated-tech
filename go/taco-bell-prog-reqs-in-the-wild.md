@@ -1,4 +1,6 @@
 ```yaml
+ELK with nginx:
+  - https://qbox.io/blog/elasticsearch-logstash-kibana-manage-nginx-logs
 Log Pilot/Operator:
   - https://github.com/AliyunContainerService/fluentd-pilot
 KV Abstraction:
