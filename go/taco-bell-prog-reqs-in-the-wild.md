@@ -1,4 +1,6 @@
 ```yaml
+Log Pilot/Operator:
+  - https://github.com/AliyunContainerService/fluentd-pilot
 KV Abstraction:
   - https://github.com/docker/libkv
 Dockerfiles & More Dockerfiles:
