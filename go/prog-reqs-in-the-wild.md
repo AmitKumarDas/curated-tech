@@ -5,6 +5,13 @@ these in stack overflow or Google it. However, this personally curated content h
 focusing without sacrificing my time bound metrics. This should improve my productivity while 
 implementing these in a larger scheme of things.
 
+### CI Snips
+
+```yaml
+CI In the Age of Containers & K8s:
+  - https://github.com/kubernetes/ingress/tree/master/examples
+```
+
 ### K8s Snips
 
 ```yaml
