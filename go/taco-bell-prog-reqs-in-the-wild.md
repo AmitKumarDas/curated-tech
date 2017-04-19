@@ -1,4 +1,6 @@
 ```yaml
+GoLang Logging:
+  - https://github.com/coreos/pkg/tree/master/capnslog
 Etcd Metrics & Prometheus:
   - https://github.com/coreos/etcd/blob/master/etcdserver/metrics.go
 Cluster Discovery:
