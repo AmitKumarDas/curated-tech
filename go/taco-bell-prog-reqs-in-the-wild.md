@@ -1,4 +1,9 @@
 ```yaml
+Cluster Discovery:
+  - Refer discovery package of etcd
+  - An implementation of DNS discovery
+Auth, Role, Users, Permission:
+  - Refer auth package of etcd
 ELK with nginx:
   - https://qbox.io/blog/elasticsearch-logstash-kibana-manage-nginx-logs
 Log Pilot/Operator:
