@@ -1,4 +1,6 @@
 ```yaml
+Etcd Metrics & Prometheus:
+  - https://github.com/coreos/etcd/blob/master/etcdserver/metrics.go
 Cluster Discovery:
   - Refer discovery package of etcd
   - An implementation of DNS discovery
