@@ -10,6 +10,11 @@ implementing these in a larger scheme of things.
 ```yaml
 CI In the Age of Containers & K8s:
   - https://github.com/kubernetes/ingress/tree/master/examples
+More in CI in Age of Containers & K8s:
+  - https://github.com/coreos/alb-ingress-controller/tree/master/examples
+  - https://github.com/coreos/alb-ingress-controller/blob/master/main.go
+  - https://github.com/coreos/alb-ingress-controller/blob/master/Makefile
+  - https://github.com/coreos/alb-ingress-controller/blob/master/Dockerfile
 ```
 
 ### K8s Snips
