@@ -93,7 +93,7 @@ uname -s:
 uname -m:
   - x86_64
 Using uname:
-  - $ curl -L "../releases/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  - $ curl -L "../releases/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 IPv4 Addr for a Network Device Named eth0:
   - ip -4 addr show scope global dev eth0 | grep inet | awk '{print \$2}' | cut -d / -f 1
 Interpolation:
