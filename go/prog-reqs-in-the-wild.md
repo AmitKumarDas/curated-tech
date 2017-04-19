@@ -141,6 +141,8 @@ Know What the Script Is Doing:
 ### GoLang Snips
 
 ```yaml
+Server Beyond an HTTP Serving:
+  - https://github.com/coreos/etcd/blob/master/etcdserver/server.go
 Simplest Main, Flag, Log, Config, Http Serve, Metrics, Initialization:
   - github.com/coreos/alb-ingress-controller/blob/master/main.go
 SDK, Lib Kind of Development:
