@@ -1,4 +1,6 @@
 ```yaml
+SDK, Lib Kind of Development:
+  - https://github.com/coreos/pkg
 GoLang Logging:
   - https://github.com/coreos/pkg/tree/master/capnslog
 Etcd Metrics & Prometheus:
