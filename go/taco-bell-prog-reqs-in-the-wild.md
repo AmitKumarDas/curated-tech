@@ -1,15 +1,4 @@
 ```yaml
-SDK, Lib Kind of Development:
-  - https://github.com/coreos/pkg
-GoLang Logging:
-  - https://github.com/coreos/pkg/tree/master/capnslog
-Etcd Metrics & Prometheus:
-  - https://github.com/coreos/etcd/blob/master/etcdserver/metrics.go
-Cluster Discovery:
-  - Refer discovery package of etcd
-  - An implementation of DNS discovery
-Auth, Role, Users, Permission:
-  - Refer auth package of etcd
 ELK with nginx:
   - https://qbox.io/blog/elasticsearch-logstash-kibana-manage-nginx-logs
 Log Pilot/Operator:
