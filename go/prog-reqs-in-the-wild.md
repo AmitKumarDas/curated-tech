@@ -141,6 +141,8 @@ Know What the Script Is Doing:
 ### GoLang Snips
 
 ```yaml
+State of GoLang Vendoring:
+  - https://github.com/kubernetes/client-go/blob/master/INSTALL.md
 Server Beyond an HTTP Serving:
   - https://github.com/coreos/etcd/blob/master/etcdserver/server.go
 Simplest Main, Flag, Log, Config, Http Serve, Metrics, Initialization:
