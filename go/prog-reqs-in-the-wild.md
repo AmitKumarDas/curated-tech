@@ -141,6 +141,19 @@ Know What the Script Is Doing:
 ### GoLang Snips
 
 ```yaml
+Simplest Main, Flag, Log, Config, Http Serve, Metrics, Initialization:
+  - github.com/coreos/alb-ingress-controller/blob/master/main.go
+SDK, Lib Kind of Development:
+  - https://github.com/coreos/pkg
+GoLang Logging:
+  - https://github.com/coreos/pkg/tree/master/capnslog
+Etcd Metrics & Prometheus:
+  - https://github.com/coreos/etcd/blob/master/etcdserver/metrics.go
+Cluster Discovery:
+  - Refer discovery package of etcd
+  - An implementation of DNS discovery
+Auth, Role, Users, Permission:
+  - Refer auth package of etcd
 New vs Make:
   - fmt.Printf("%T  %v\n", new([10]int), new([10]int))
     - *[10]int  &[0 0 0 0 0 0 0 0 0 0]
