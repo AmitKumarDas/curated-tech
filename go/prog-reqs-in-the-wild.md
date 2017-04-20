@@ -15,6 +15,8 @@ More in CI in Age of Containers & K8s:
   - https://github.com/coreos/alb-ingress-controller/blob/master/main.go
   - https://github.com/coreos/alb-ingress-controller/blob/master/Makefile
   - https://github.com/coreos/alb-ingress-controller/blob/master/Dockerfile
+More:
+  - https://github.com/kubernetes/dns/tree/master/pkg/e2e
 ```
 
 ### K8s Snips
