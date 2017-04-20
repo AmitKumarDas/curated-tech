@@ -156,6 +156,7 @@ Know What the Script Is Doing:
 
 ```yaml
 Config from CLI or from K8s ConfigMap:
+  - Adapts to ConfigMap updates
   - https://github.com/kubernetes/dns/tree/master/pkg/dns/config
 State of GoLang Vendoring:
   - https://github.com/kubernetes/client-go/blob/master/INSTALL.md
