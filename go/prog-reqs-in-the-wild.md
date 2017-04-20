@@ -157,18 +157,25 @@ Know What the Script Is Doing:
 ### GoLang Snips
 
 ```yaml
-Config from CLI or from K8s ConfigMap:
+Resuable Building Blocks:
+  - SDK, Lib Kind of Development:
+  - github.com/kubernetes/kubernetes/tree/master/pkg/util
+  - https://github.com/kubernetes/kubernetes/tree/master/pkg/ssh
+  - https://github.com/coreos/pkg
+IPTables & GoLang:
+  - github.com/suedadam/GoWall
+  - github.com/coreos/go-iptables
+  - github.com/kubernetes/kubernetes/tree/master/pkg/util/iptables
+Config from CLI or Config With Sync from K8s ConfigMap:
   - Adapts to ConfigMap updates
   - https://github.com/kubernetes/dns/tree/master/pkg/dns/config
 State of GoLang Vendoring:
   - https://github.com/kubernetes/client-go/blob/master/INSTALL.md
-Server Beyond an HTTP Serving:
+Server Beyond a HTTP Server:
   - https://github.com/coreos/etcd/blob/master/etcdserver/server.go
 Simplest Main, Flag, Log, Config, Http Serve, Metrics, Initialization:
   - github.com/coreos/alb-ingress-controller/blob/master/main.go
-SDK, Lib Kind of Development:
-  - https://github.com/coreos/pkg
-GoLang Logging:
+A GoLang Logging Utility:
   - https://github.com/coreos/pkg/tree/master/capnslog
 Etcd Metrics & Prometheus:
   - https://github.com/coreos/etcd/blob/master/etcdserver/metrics.go
