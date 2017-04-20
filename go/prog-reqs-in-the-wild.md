@@ -22,6 +22,8 @@ More:
 ### K8s Snips
 
 ```yaml
+All you Wanted to Know about K8s:
+  - https://github.com/hobby-kube/guide
 hostPort:
   - expose a specific port on the host
 StatefulSet:
