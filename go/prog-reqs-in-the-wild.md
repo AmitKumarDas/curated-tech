@@ -155,6 +155,8 @@ Know What the Script Is Doing:
 ### GoLang Snips
 
 ```yaml
+Config from CLI or from K8s ConfigMap:
+  - https://github.com/kubernetes/dns/tree/master/pkg/dns/config
 State of GoLang Vendoring:
   - https://github.com/kubernetes/client-go/blob/master/INSTALL.md
 Server Beyond an HTTP Serving:
