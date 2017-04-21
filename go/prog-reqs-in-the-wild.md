@@ -157,7 +157,9 @@ Know What the Script Is Doing:
 ### GoLang Snips
 
 ```yaml
-Semantic Versioning Lib"
+GoLang DataStructure Pretty Printer:
+  - https://github.com/davecgh/go-spew/
+Semantic Versioning Lib:
   - https://github.com/blang/semver
 Resuable Building Blocks:
   - SDK, Lib Kind of Development:
