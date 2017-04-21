@@ -162,6 +162,7 @@ Resuable Building Blocks:
   - github.com/kubernetes/kubernetes/tree/master/pkg/util
   - https://github.com/kubernetes/kubernetes/tree/master/pkg/ssh
   - https://github.com/coreos/pkg
+  - https://github.com/kubernetes/kops/tree/master/util/pkg
 IPTables & GoLang:
   - github.com/suedadam/GoWall
   - github.com/coreos/go-iptables
