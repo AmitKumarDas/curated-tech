@@ -1,4 +1,7 @@
 ```yaml
+Monitoring K8s Pods:
+  - https://blog.kublr.com/
+  - how-to-utilize-the-heapster-influxdb-grafana-stack-in-kubernetes-for-monitoring-pods
 ELK with nginx:
   - https://qbox.io/blog/elasticsearch-logstash-kibana-manage-nginx-logs
 Log Pilot/Operator:
