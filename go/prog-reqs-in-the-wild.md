@@ -25,6 +25,18 @@ More:
 Kubernetes Services:
   - An abstraction for pods, providing a stable, virtual IP (VIP) address. 
   - As pods may come and go, services allow clients to reliably connect to pod containers using VIP. 
+  - VIP:
+    - Not an actual IP address connected to a network interface 
+    - Its purpose is to forward traffic to one or more pods. 
+    - Up-to-date mapping between the VIP and the pods is the job of kube-proxy
+How VIP forwards the traffic:
+  - via IPTables
+  - kube-proxy adds rules to the IPTables
+  - i.e. TCP traffic to VIP:port should be forwarded ContainerIP:port
+  - sudo iptables-save | grep <servicename>
+Kube-Proxy:
+  - A process that runs on every node, which queries the API server 
+  - Learns about new services in the cluster
 ConfigMap, Environment Variables:
   - https://crondev.com/kubernetes-environment-file/
 All you Wanted to Know about K8s:
