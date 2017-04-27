@@ -25,6 +25,7 @@ More:
 Kubernetes Services:
   - An abstraction for pods, providing a stable, virtual IP (VIP) address. 
   - As pods may come and go, services allow clients to reliably connect to pod containers using VIP. 
+  - Multiple pods running across multiple nodes of the cluster can be exposed as a service.
   - VIP:
     - Not an actual IP address connected to a network interface 
     - Its purpose is to forward traffic to one or more pods. 
