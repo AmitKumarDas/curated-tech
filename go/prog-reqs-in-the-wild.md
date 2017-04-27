@@ -32,6 +32,8 @@ Kubernetes Services:
     - Not an actual IP address connected to a network interface 
     - Its purpose is to forward traffic to one or more pods. 
     - Up-to-date mapping between the VIP and the pods is the job of kube-proxy
+Expose Services in Various Forms:
+  - Internal, External & Load Balanced
 How VIP forwards the traffic:
   - via IPTables
   - kube-proxy adds rules to the IPTables
