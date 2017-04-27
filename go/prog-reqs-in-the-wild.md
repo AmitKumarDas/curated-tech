@@ -22,6 +22,8 @@ More:
 ### K8s Snips
 
 ```yaml
+ConfigMap, Environment Variables:
+  - https://crondev.com/kubernetes-environment-file/
 All you Wanted to Know about K8s:
   - https://github.com/hobby-kube/guide
 hostPort:
