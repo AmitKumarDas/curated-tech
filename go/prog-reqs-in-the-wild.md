@@ -22,6 +22,9 @@ More:
 ### K8s Snips
 
 ```yaml
+Kubernetes Services:
+  - An abstraction for pods, providing a stable, virtual IP (VIP) address. 
+  - As pods may come and go, services allow clients to reliably connect to pod containers using VIP. 
 ConfigMap, Environment Variables:
   - https://crondev.com/kubernetes-environment-file/
 All you Wanted to Know about K8s:
