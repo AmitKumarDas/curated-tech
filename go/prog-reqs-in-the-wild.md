@@ -5,6 +5,14 @@ these in stack overflow or Google it. However, this personally curated content h
 focusing without sacrificing my time bound metrics. This should improve my productivity while 
 implementing these in a larger scheme of things.
 
+
+### Git Snips
+
+```yaml
+Just Enough:
+  - http://zabanaa.github.io/notes/mind-blowing-git-tips.html
+```
+
 ### CI Snips
 
 ```yaml
