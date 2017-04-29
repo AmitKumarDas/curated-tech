@@ -5,6 +5,15 @@ these in stack overflow or Google it. However, this personally curated content h
 focusing without sacrificing my time bound metrics. This should improve my productivity while 
 implementing these in a larger scheme of things.
 
+### UI
+
+```yaml
+Inline CSS at Khan Academy:
+ - http://engineering.khanacademy.org/posts/aphrodite-inline-css.htm
+CSS in JS:
+  - https://medium.freecodecamp.com/
+  - css-in-javascript-the-future-of-component-based-styling
+```
 
 ### Git Snips
 
