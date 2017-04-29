@@ -39,6 +39,8 @@ More:
 ### K8s Snips
 
 ```yaml
+K8s Operator's POV:
+ - https://carlosbecker.com/posts/k8s-sandbox-costs/
 Kubernetes Services:
   - An abstraction for pods, providing a stable, virtual IP (VIP) address. 
   - As pods may come and go, services allow clients to reliably connect to pod containers using VIP. 
