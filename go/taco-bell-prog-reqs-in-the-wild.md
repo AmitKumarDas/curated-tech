@@ -1,4 +1,6 @@
 ```yaml
+Terraform for Bare Metal:
+  - https://coreos.com/blog/matchbox-with-terraform
 Monitoring K8s Pods:
   - https://blog.kublr.com/
   - how-to-utilize-the-heapster-influxdb-grafana-stack-in-kubernetes-for-monitoring-pods
