@@ -379,6 +379,28 @@ VOLUME:
   - Creates a mountpoint with the specified name
 ```
 
+### Design Snips
+
+```yaml
+Typical Composer Interface:
+ - Composes a list of interfaces:
+  - Each interface specializing in their work areas
+ - A composer struct:
+  - has something in COMMON to all of above interfaces
+  - e.g. restclient, httpclient, etc.
+ - Has UTILITY functions like:
+  - Function NewForConfig:
+    - Creates a new instance for the given config
+  - Function NewForConfigOrDie:
+    - Creates a new instance for the given config & panic if error in config
+  - Function New
+  - Function setConfigDefaults
+  - Method RestClient()
+ - References:
+  - https://github.com/kubernetes/client-go/
+  - blob/v2.0.0/kubernetes/typed/core/v1/core_client.go
+```
+
 ### References
 
 - https://github.com/apprenda/kismatic/
