@@ -39,6 +39,12 @@ More:
 ### K8s Snips
 
 ```yaml
+Network Policy Controller:
+ - https://cloudnativelabs.github.io/post/2017-05-1-kube-network-policies/
+Distributed Load Balancer, Firewall & Router:
+ - https://github.com/cloudnativelabs/kube-router
+ - cross node pod to pod connectivity
+ - service discovery & load balancing
 K8s Operator's POV:
  - https://carlosbecker.com/posts/k8s-sandbox-costs/
 Kubernetes Services:
