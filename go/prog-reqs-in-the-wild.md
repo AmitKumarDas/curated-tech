@@ -42,6 +42,10 @@ More:
 Network Policy Controller:
  - https://cloudnativelabs.github.io/post/2017-05-1-kube-network-policies/
 Distributed Load Balancer, Firewall & Router:
+ - Kube Router vs. Kube Proxy
+ - Kube Router vs. Flannel, Calico, Weave, etc
+ - operational simplicity
+ - combines all networking functionality available at the node into one cohesive solution
  - https://github.com/cloudnativelabs/kube-router
  - cross node pod to pod connectivity
  - service discovery & load balancing
