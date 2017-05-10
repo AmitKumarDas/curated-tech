@@ -43,6 +43,9 @@ Version Promotion:
  - A group first appears as v1alpha1 &
  - is then promoted to v1beta1 &
  - finally graduates to v1
+K8s Client-GO & Versioning:
+ - Types are managed at github.com/kubernetes/client-go/blob/v2.0.0/pkg/api
+ - Others are managed at github.com/kubernetes/client-go/blob/v2.0.0/kubernetes/
 Network Policy Controller:
  - https://cloudnativelabs.github.io/post/2017-05-1-kube-network-policies/
 Distributed Load Balancer, Firewall & Router:
