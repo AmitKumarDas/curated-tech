@@ -39,6 +39,10 @@ More:
 ### K8s Snips
 
 ```yaml
+Version Promotion:
+ - A group first appears as v1alpha1 &
+ - is then promoted to v1beta1 &
+ - finally graduates to v1
 Network Policy Controller:
  - https://cloudnativelabs.github.io/post/2017-05-1-kube-network-policies/
 Distributed Load Balancer, Firewall & Router:
