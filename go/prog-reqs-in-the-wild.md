@@ -39,6 +39,8 @@ More:
 ### K8s Snips
 
 ```yaml
+CRI:
+ - http://blog.kubernetes.io/2016/12/container-runtime-interface-cri-in-kubernetes.html
 Version Promotion:
  - A group first appears as v1alpha1 &
  - is then promoted to v1beta1 &
@@ -284,6 +286,10 @@ docker run --rm -v $(pwd)/out:/ansible apprenda/vendor-ansible \
 ### Docker Snips
 
 ```yaml
+Connect Dockers On Multiple Hosts:
+ - https://goldmann.pl/blog/2014/01/21/connecting-docker-containers-on-multiple-hosts/
+DOcker With OpenVSwitch:
+ - http://fbevmware.blogspot.in/2013/12/coupling-docker-and-open-vswitch.html
 Docker & Whats Ephemeral Storage:
   - Docker containers use their root disk as ephemeral storage
   - A chunk of disk space from the host filesystem which runs the container
