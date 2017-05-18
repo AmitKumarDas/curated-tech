@@ -405,23 +405,19 @@ VOLUME:
 ### Design Snips
 
 ```yaml
-Typical Composer Interface:
+Aggregator Interface:
  - Composes a list of interfaces:
-  - Each interface specializing in their work areas
- - A composer struct:
-  - has something in COMMON to all of above interfaces
-  - e.g. restclient, httpclient, etc.
- - Has UTILITY functions like:
-  - Function NewForConfig:
-    - Creates a new instance for the given config
-  - Function NewForConfigOrDie:
-    - Creates a new instance for the given config & panic if error in config
-  - Function New
-  - Function setConfigDefaults
-  - Method RestClient()
- - References:
-  - https://github.com/kubernetes/client-go/
-  - blob/v2.0.0/kubernetes/typed/core/v1/core_client.go
+ - Each interface specializing in their work areas
+Getter Interface:
+ - Has a GetXXX contract that returns Aggregator interface
+A struct for Aggregator Interface:
+ - will implement above aggregator interface
+A struct that embeds Interface:
+ - Interface is refered as a struct property
+ - This enables dynamic injection of this interface
+- Aggregator References:
+ - https://github.com/kubernetes/client-go/
+ - blob/v2.0.0/kubernetes/typed/core/v1/core_client.go
 ```
 
 ### References
