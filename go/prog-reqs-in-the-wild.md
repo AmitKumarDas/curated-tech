@@ -39,6 +39,8 @@ More:
 ### K8s Snips
 
 ```yaml
+Infra-As-Code:
+ - https://github.com/ksonnet
 CRI:
  - http://blog.kubernetes.io/2016/12/container-runtime-interface-cri-in-kubernetes.html
 Version Promotion:
