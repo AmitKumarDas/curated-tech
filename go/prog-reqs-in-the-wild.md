@@ -45,11 +45,13 @@ K8s Users:
   - admin distributing private keys
   - use store e.g. Keystone, Google Accounts
   - file having username & passwords
+  - are for humans
  - Service Accounts / Managed by K8s API:
   - are bound to namespaces
   - created automatically or manually by K8s API
   - are tied to a set of credentials stored as Secrets
   - secrets are mounted into pods
+  - are for processes which run in pod
  - API requests can be tied with:
   - normal users or service accounts or treated as anonymous requests
 K8s Authentication strategies:
@@ -84,8 +86,12 @@ Things to Note about Service Accounts:
 Anonymous Requests:
  - username is system:anonymous
  - group is system:unauthenticated
- - In 1.6 and above:
-  - 
+K8s Authentication in 1.6 and above:
+  - anonymous access is default
+  - anonymous access can be disabled by passing the --anonymous-auth=false
+  - ABAC & RBAC authorizers require explicit authorization of below:
+   - system:anonymous user or
+   - system:unauthenticated group
 Infra-As-Code:
  - https://github.com/ksonnet
 CRI:
