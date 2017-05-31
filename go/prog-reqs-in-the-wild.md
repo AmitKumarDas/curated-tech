@@ -39,6 +39,21 @@ More:
 ### K8s Snips
 
 ```yaml
+K8s Users:
+ - 2 user categories - managed outside K8s or managed by K8s API
+ - Normal Users:
+  - admin distributing private keys
+  - use store e.g. Keystone, Google Accounts
+  - file having username & passwords
+ - Service Accounts / Managed by K8s API:
+  - are bound to namespaces
+  - created automatically or manually by K8s API
+  - are tied to a set of credentials stored as Secrets
+  - secrets are mounted into pods
+ - API requests can be tied with:
+  - normal users or service accounts or treated as anonymous requests
+K8s Authentication:
+ - 
 Infra-As-Code:
  - https://github.com/ksonnet
 CRI:
