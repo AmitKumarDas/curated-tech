@@ -52,8 +52,40 @@ K8s Users:
   - secrets are mounted into pods
  - API requests can be tied with:
   - normal users or service accounts or treated as anonymous requests
-K8s Authentication:
- - 
+K8s Authentication strategies:
+ - client certificates
+ - bearer tokens
+ - authentication proxy
+ - HTTP basic auth
+K8s Certs Authentication:
+ - is enabled by passing --client-ca-file=SOMEFILE option to API server
+K8s Static Bearer Token File based Authentication:
+ - is enabled by passing --token-auth-file=$SOMEFILE
+ - token file is a .csv file with token, username & uid columns
+ - using bearer token in http client:
+  - Authorization header with a value of Bearer actual-token-value
+  - e.g. Authorization: Bearer 31ada4fd-adec-460c-809a-9e56ceb75269
+K8s Static Password File based Authentication:
+ - enabled by passing --basic-auth-file=SOMEFILE
+ - basic auth file:
+  - password, username, uid, "group1, group2"
+ - basic auth from http client
+  - Authorization: Basic BASE64ENCODED(USER:PASSWORD)
+K8s Service Account Token based Authentication:
+ - enabled by passing:
+  - --service-account-key-file
+  - --service-account-lookup
+ - username is system:serviceaccount:(NAMESPACE):(SERVICEACCOUNT)
+ - groups are system:serviceaccounts and system:serviceaccounts:(NAMESPACE)
+Things to Note about Service Accounts:
+ - Service accounts are stored as secrets
+ - Any user with read access to those secrets can authenticate as the service account
+ - Be careful granting permissions to service accounts & read capabilities for secrets
+Anonymous Requests:
+ - username is system:anonymous
+ - group is system:unauthenticated
+ - In 1.6 and above:
+  - 
 Infra-As-Code:
  - https://github.com/ksonnet
 CRI:
