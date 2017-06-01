@@ -39,6 +39,8 @@ More:
 ### K8s Snips
 
 ```yaml
+Streamlined K8s Development:
+ - https://github.com/Azure/draft
 K8s Users:
  - 2 user categories - managed outside K8s or managed by K8s API
  - Normal Users:
