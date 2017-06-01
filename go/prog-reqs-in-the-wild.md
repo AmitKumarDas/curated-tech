@@ -39,6 +39,11 @@ More:
 ### K8s Snips
 
 ```yaml
+Athorization Role, ClusterRole & RoleBinding:
+ - https://kubernetes.io/docs/admin/authorization/rbac/
+ - Understand by looking at existing:
+  - Role & RoleBinding
+  - ClusterRole & ClusterRoleBinding
 Flow:
  - User creates a Pod via the API Server and the API server writes it to etcd.
  - Scheduler notices an “unbound” Pod and decides which node to run that Pod on. 
