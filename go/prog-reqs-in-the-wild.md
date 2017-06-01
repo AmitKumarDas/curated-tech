@@ -39,6 +39,9 @@ More:
 ### K8s Snips
 
 ```yaml
+Watch:
+ - Watch in etcd is critical for how Kubernetes works.
+ - Allows clients to perform subscription for changes to parts of the key namespace.
 Streamlined K8s Development:
  - label: CI
  - https://github.com/Azure/draft
