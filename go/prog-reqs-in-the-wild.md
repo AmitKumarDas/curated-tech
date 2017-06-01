@@ -84,6 +84,11 @@ K8s Users:
   - are for processes which run in pod
  - API requests can be tied with:
   - normal users or service accounts or treated as anonymous requests
+Human access to cluster (e.g. using kubectl):
+ - You are authenticated by the apiserver as a particular User Account 
+ - Processes in containers inside pods can also contact the apiserver. 
+  - When they do, they are authenticated as a particular Service Account 
+  - (e.g. default).
 K8s Authentication strategies:
  - client certificates
  - bearer tokens
