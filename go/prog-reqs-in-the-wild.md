@@ -40,6 +40,7 @@ More:
 
 ```yaml
 Streamlined K8s Development:
+ - label: CI
  - https://github.com/Azure/draft
 K8s Users:
  - 2 user categories - managed outside K8s or managed by K8s API
