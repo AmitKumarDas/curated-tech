@@ -39,6 +39,10 @@ More:
 ### K8s Snips
 
 ```yaml
+Access Kubernetes API:
+ - The easiest way is to configure a proxy
+ - Luckily, kubectl comes with an option to configure it
+  - kubectl proxy --port=8000
 Athorization Role, ClusterRole & RoleBinding:
  - https://kubernetes.io/docs/admin/authorization/rbac/
  - Understand by looking at existing:
