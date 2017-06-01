@@ -39,6 +39,14 @@ More:
 ### K8s Snips
 
 ```yaml
+Flow:
+ - User creates a Pod via the API Server and the API server writes it to etcd.
+ - Scheduler notices an “unbound” Pod and decides which node to run that Pod on. 
+  - It writes that binding back to the API Server.
+ - Kubelet notices a change in the set of Pods that are bound to its node. 
+  - It, in turn, runs the container via the container runtime (i.e. Docker).
+ - Kubelet monitors the status of the Pod via the container runtime. 
+  - As things change, the Kubelet will reflect the current status back to the API Server.
 Watches in etcd:
  - Watch in etcd is critical for how Kubernetes works.
  - Allows clients to perform subscription for changes to parts of the key namespace.
