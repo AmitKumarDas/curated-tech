@@ -39,9 +39,16 @@ More:
 ### K8s Snips
 
 ```yaml
-Watch:
+Watches in etcd:
  - Watch in etcd is critical for how Kubernetes works.
  - Allows clients to perform subscription for changes to parts of the key namespace.
+ - Used as a coordination mechanism between components of the distributed system. 
+ - One component can write to etcd and other componenents can immediately react to that change.
+ - The common pattern is for clients to mirror a subset of the database in memory:
+  - Then react to changes of that database
+ - Watches are used as an efficient mechanism to keep that cache up to date. 
+ - If the watch fails, client can fall back to polling:
+  - At the cost of increased load, network traffic and latency.
 Streamlined K8s Development:
  - label: CI
  - https://github.com/Azure/draft
