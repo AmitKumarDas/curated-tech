@@ -311,6 +311,8 @@ Know What the Script Is Doing:
 ### GoLang Snips
 
 ```yaml
+Advanced Items in Simple ways:
+ - https://blog.bluematador.com/posts/golang-pros-cons-for-devops-part-1-goroutines-panics-errors/
 GoLang DataStructure Pretty Printer:
   - https://github.com/davecgh/go-spew/
 Semantic Versioning Lib:
