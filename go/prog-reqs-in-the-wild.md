@@ -39,6 +39,13 @@ More:
 ### K8s Snips
 
 ```yaml
+Rule Snips:
+ - "rules": [
+  - {"apiGroups": ["*"], "resources": ["*"], "verbs": ["*"]},
+  - {"nonResourceURLs": ["*"], "verbs": ["*"]}
+ - ]
+Thoughts on Rule:
+ - Look at nonResourceURLs
 Kubectl Cheatsheet:
  - https://kubernetes.io/docs/user-guide/kubectl-cheatsheet/
 Access Kubernetes API:
