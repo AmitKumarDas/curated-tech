@@ -39,6 +39,8 @@ More:
 ### K8s Snips
 
 ```yaml
+Get the Basics Right:
+ - https://hackernoon.com/the-curious-case-of-pid-namespaces-1ce86b6bc900
 Rule Snips:
  - "rules": [
   - {"apiGroups": ["*"], "resources": ["*"], "verbs": ["*"]},
