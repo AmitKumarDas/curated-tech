@@ -39,6 +39,9 @@ More:
 ### K8s Snips
 
 ```yaml
+Selector vs. Labels:
+ - selector: "color=green, env=test, service=front"
+ - labels:   map[string]string{"color": "green", "env": "test", "service": "front"}
 Get the Basics Right:
  - https://hackernoon.com/the-curious-case-of-pid-namespaces-1ce86b6bc900
 Rule Snips:
