@@ -36,6 +36,32 @@ More:
   - https://github.com/kubernetes/dns/tree/master/pkg/e2e
 ```
 
+### CURL to K8s API Server
+
+```
+TOKEN="$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)"
+
+curl --cacert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt \
+    -H "Authorization: Bearer $TOKEN" \
+    -H "Content-Type: application/yaml" \
+    -XPOST -d"$(cat controller.yaml)" \
+    "https://172.28.128.3:6443/apis/extensions/v1beta1/namespaces/default/deployments"
+
+curl --cacert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt \
+    -H "Authorization: Bearer $TOKEN" \
+    "https://172.28.128.3:6443/apis/extensions/v1beta1/namespaces/default/deployments"
+
+curl --cacert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt \
+    -H "Authorization: Bearer $TOKEN" \
+    "https://172.28.128.3:6443/api/v1/namespaces/default/services"
+
+curl --cacert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt \
+    -H "Authorization: Bearer $TOKEN" \
+    -H "Content-Type: application/yaml" \
+    -XPOST -d"$(cat service.yaml)" \
+    "https://172.28.128.3:6443/api/v1/namespaces/default/services"
+```
+
 ### K8s Snips
 
 ```yaml
