@@ -65,6 +65,8 @@ curl --cacert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt \
 ### K8s Snips
 
 ```yaml
+K8s on Google Container Engine:
+ - https://github.com/openebs/openebs/blob/master/k8s/hyperconverged/tutorial-configure-openebs-gke.md
 Selector vs. Labels:
  - selector: "color=green, env=test, service=front"
  - labels:   map[string]string{"color": "green", "env": "test", "service": "front"}
