@@ -5,6 +5,13 @@ these in stack overflow or Google it. However, this personally curated content h
 focusing without sacrificing my time bound metrics. This should improve my productivity while 
 implementing these in a larger scheme of things.
 
+### Storage Designs
+
+```yaml
+Reclaim Policy & K8s:
+ - https://github.com/kubernetes/kubernetes/issues/38192
+```
+
 ### UI
 
 ```yaml
