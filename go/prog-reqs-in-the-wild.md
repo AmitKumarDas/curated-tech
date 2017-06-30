@@ -362,6 +362,14 @@ Know What the Script Is Doing:
 ### GoLang Snips
 
 ```yaml
+Nil vs. Empty:
+  - var nilSlice []int
+  - emptySlice1 := make([]int, 0)
+  - emptySlice2 := []int{}
+  - fmt.Println("nilSlice == nil)    // true
+  - fmt.Println("emptySlice1 == nil) // false
+  - fmt.Println("emptySlice2 == nil) // false
+  - As for all three slices len and cap are 0
 Advanced Items in Simple ways:
  - https://blog.bluematador.com/posts/golang-pros-cons-for-devops-part-1-goroutines-panics-errors/
 GoLang DataStructure Pretty Printer:
