@@ -47,7 +47,7 @@ More:
   - https://github.com/kubernetes/dns/tree/master/pkg/e2e
 ```
 
-### CURL to K8s API Server
+### Sample CURLs to K8s API Server
 
 ```
 TOKEN="$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)"
@@ -71,6 +71,11 @@ curl --cacert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt \
     -H "Content-Type: application/yaml" \
     -XPOST -d"$(cat service.yaml)" \
     "https://172.28.128.3:6443/api/v1/namespaces/default/services"
+
+curl -X DELETE \
+  localhost:8001/apis/extensions/v1beta1/namespaces/default/deployments/nginx-deployment \
+  -d '{"kind":"DeleteOptions","apiVersion":"v1","propagationPolicy":"Background"}' \
+  -H "Content-Type: application/json"
 ```
 
 ### K8s Snips
