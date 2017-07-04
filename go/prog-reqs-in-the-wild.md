@@ -47,6 +47,13 @@ More:
   - https://github.com/kubernetes/dns/tree/master/pkg/e2e
 ```
 
+### Security & K8s
+
+```yaml
+Security Context & Pod:
+ - https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
+```
+
 ### Sample CURLs to K8s API Server
 
 ```
