@@ -106,14 +106,29 @@ curl -X DELETE \
   -H "Content-Type: application/json"
 ```
 
+### K8s Labels & Selector
+
+```yaml
+Selector vs. Labels:
+ - selector: "color=green, env=test, service=front"
+ - labels:   map[string]string{"color": "green", "env": "test", "service": "front"}
+Labels & Selector:
+ - a label:
+  - toplogyKey: kubernetes.io/hostname
+ - somewhere else:
+  - nodeSelectorTerms:
+   - matchExpressions:
+    - key: kubernetes.io/hostname
+      operator: In
+      values:
+      - node-1
+```
+
 ### K8s Snips
 
 ```yaml
 K8s on Google Container Engine:
  - https://github.com/openebs/openebs/blob/master/k8s/hyperconverged/tutorial-configure-openebs-gke.md
-Selector vs. Labels:
- - selector: "color=green, env=test, service=front"
- - labels:   map[string]string{"color": "green", "env": "test", "service": "front"}
 Get the Basics Right:
  - https://hackernoon.com/the-curious-case-of-pid-namespaces-1ce86b6bc900
 Rule Snips:
