@@ -15,6 +15,11 @@ Device Manager Proposal:
  - https://github.com/RenaudWasTaken/community/blob/f1ce8db07c68dc114338b94f581849b46facd7ae/contributors/design-proposals/device-plugin.md
 K8s & Local Storage:
  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/local-storage-overview.md
+K8s & Local Storage & Placements:
+ - Since local PVs are only accessible from specific nodes:
+  - scheduler needs to take into account a PV's node constraint when placing pods.
+  - This can be generalized to a storage toplogy constraint:
+   - which can also work with zones, and in the future: racks, clusters, etc.
 ```
 
 ### Storage Testing
