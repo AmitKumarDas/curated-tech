@@ -5,7 +5,7 @@ these in stack overflow or Google it. However, this personally curated content h
 focusing without sacrificing my time bound metrics. This should improve my productivity while 
 implementing these in a larger scheme of things.
 
-### Storage etc Designs
+### Storage Designs
 
 ```yaml
 Reclaim Policy & K8s:
@@ -15,8 +15,22 @@ Device Manager Proposal:
  - https://github.com/RenaudWasTaken/community/blob/f1ce8db07c68dc114338b94f581849b46facd7ae/contributors/design-proposals/device-plugin.md
 K8s & Local Storage:
  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/local-storage-overview.md
-
 ```
+
+### Storage Testing
+
+```yaml
+Local PVs & K8s:
+ - local PVs can only provide semi-persistence
+ - are only suitable for specific use cases that need:
+  - performance, data gravity and can tolerate data loss
+ - If the node or PV fails, then:
+  - either the pod cannot run, or
+  - the pod has to give up on the local PV and find a new one.
+ - Failure scenarios can be handled by:
+  - unbinding the PVC from the local PV, and forcing the pod to reschedule and find a new PV.
+```
+
 
 ### UI
 
