@@ -5,6 +5,23 @@ these in stack overflow or Google it. However, this personally curated content h
 focusing without sacrificing my time bound metrics. This should improve my productivity while 
 implementing these in a larger scheme of things.
 
+### System Essentials
+
+```bash
+# CPUs = Threads per core X cores per socket X sockets
+
+$ lscpu
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                4
+On-line CPU(s) list:   0-3
+Thread(s) per core:    2
+Core(s) per socket:    2
+Socket(s):             1
+...
+```
+
 ### Storage Designs
 
 ```yaml
