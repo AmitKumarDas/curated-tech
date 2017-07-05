@@ -13,6 +13,8 @@ Reclaim Policy & K8s:
 Protobuf, gRPC Challenges:
 Device Manager Proposal:
  - https://github.com/RenaudWasTaken/community/blob/f1ce8db07c68dc114338b94f581849b46facd7ae/contributors/design-proposals/device-plugin.md
+K8s & Local Storage:
+ - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/local-storage-overview.md
 
 ```
 
