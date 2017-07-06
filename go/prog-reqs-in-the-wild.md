@@ -37,6 +37,8 @@ K8s & Local Storage & Placements:
   - scheduler needs to take into account a PV's node constraint when placing pods.
   - This can be generalized to a storage toplogy constraint:
    - which can also work with zones, and in the future: racks, clusters, etc.
+Multi-Tenancy Around Storage:
+ - https://github.com/kubernetes/kubernetes/issues/47326
 ```
 
 ### Storage Testing
