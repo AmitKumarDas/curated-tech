@@ -39,6 +39,8 @@ K8s & Local Storage & Placements:
    - which can also work with zones, and in the future: racks, clusters, etc.
 Multi-Tenancy Around Storage:
  - https://github.com/kubernetes/kubernetes/issues/47326
+Assigning PODs to Nodes:
+ - https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/
 ```
 
 ### Storage Testing
