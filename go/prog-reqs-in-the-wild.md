@@ -25,6 +25,10 @@ Socket(s):             1
 ### Storage Designs
 
 ```yaml
+nodeSelector:
+built-in node labels:
+affinity & anti-affinity:
+ - https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
 Reclaim Policy & K8s:
  - https://github.com/kubernetes/kubernetes/issues/38192
 Protobuf, gRPC Challenges:
