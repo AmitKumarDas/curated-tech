@@ -173,6 +173,8 @@ Labels & Selector:
 ### K8s Snips
 
 ```yaml
+K8s 1.7 Release:
+ - http://www.zdnet.com/article/kubernetes-1-7-released/
 If K8s && DNS:
  - then hostname / fqdn will be <servicename>.<namespace>.svc.cluster.local
 K8s on Google Container Engine:
