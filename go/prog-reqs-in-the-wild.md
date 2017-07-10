@@ -300,6 +300,7 @@ Kube-Proxy:
   - Learns about new services in the cluster
 ConfigMap, Environment Variables:
   - https://crondev.com/kubernetes-environment-file/
+  - Kubernetes Downward API, which lets us pass environment variables into the containers
 All you Wanted to Know about K8s:
   - https://github.com/hobby-kube/guide
 hostPort:
