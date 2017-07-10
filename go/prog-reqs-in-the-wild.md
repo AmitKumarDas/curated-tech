@@ -73,6 +73,8 @@ Inline CSS at Khan Academy:
 CSS in JS:
   - https://medium.freecodecamp.com/
   - css-in-javascript-the-future-of-component-based-styling
+K8s & UI:
+ - https://netsil.com/blog/kubernetes-monitoring-needs-maps/
 ```
 
 ### Git Snips
