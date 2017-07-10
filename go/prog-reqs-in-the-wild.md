@@ -148,6 +148,8 @@ Labels & Selector:
 ### K8s Snips
 
 ```yaml
+If K8s && DNS:
+ - then hostname / fqdn will be <servicename>.<namespace>.svc.cluster.local
 K8s on Google Container Engine:
  - https://github.com/openebs/openebs/blob/master/k8s/hyperconverged/tutorial-configure-openebs-gke.md
 Get the Basics Right:
