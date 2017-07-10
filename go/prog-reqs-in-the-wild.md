@@ -94,6 +94,8 @@ More:
 ```yaml
 Security Context & Pod:
  - https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
+Certificates:
+ - https://blog.giantswarm.io/issuing-certs-for-kubernetes-with-cert-operator-using-vault-and-operatorkit/
 ```
 
 ### Sample CURLs to K8s API Server
