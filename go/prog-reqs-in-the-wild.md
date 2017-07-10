@@ -107,6 +107,20 @@ Certificates:
  - https://blog.giantswarm.io/issuing-certs-for-kubernetes-with-cert-operator-using-vault-and-operatorkit/
 ```
 
+### K8s & Extensions
+
+```yaml
+Kubernetes Extensibility:
+ - Kubernetes 1.7 has a new features: 
+  - API aggregation at runtime
+  - Enables power users to add Kubernetes-style:
+   - pre-built, 
+   - third party or 
+   - user-created application programming interfaces (API)s to their cluster
+ - https://kubernetes.io/docs/concepts/api-extension/apiserver-aggregation/
+```
+
+
 ### Sample CURLs to K8s API Server
 
 ```
