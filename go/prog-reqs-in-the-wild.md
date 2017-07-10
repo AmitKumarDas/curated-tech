@@ -28,6 +28,7 @@ Socket(s):             1
 nodeSelector:
 built-in node labels:
 affinity & anti-affinity:
+inter-pod affinity & inter-pod anti-affinity:
  - https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
 Reclaim Policy & K8s:
  - https://github.com/kubernetes/kubernetes/issues/38192
