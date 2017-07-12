@@ -175,6 +175,8 @@ Labels & Selector:
 ### K8s Snips
 
 ```yaml
+Templating:
+ - https://blog.openshift.com/kubernetes-state-app-templating/
 K8s 1.7 Release:
  - http://www.zdnet.com/article/kubernetes-1-7-released/
 If K8s && DNS:
