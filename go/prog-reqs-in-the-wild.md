@@ -105,6 +105,8 @@ Security Context & Pod:
  - https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
 Certificates:
  - https://blog.giantswarm.io/issuing-certs-for-kubernetes-with-cert-operator-using-vault-and-operatorkit/
+Secure & Simple Stuff:
+ - https://github.com/Boostport/kubernetes-vault
 ```
 
 ### K8s & Extensions
