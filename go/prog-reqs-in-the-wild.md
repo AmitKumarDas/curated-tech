@@ -75,7 +75,7 @@ CSS in JS:
   - css-in-javascript-the-future-of-component-based-styling
 K8s & UI:
  - https://netsil.com/blog/kubernetes-monitoring-needs-maps/
-Amking CLI Cool:
+Making CLI Cool:
  - https://github.com/cloudnativelabs/kube-shell
 ```
 
