@@ -109,6 +109,8 @@ Certificates:
  - https://blog.giantswarm.io/issuing-certs-for-kubernetes-with-cert-operator-using-vault-and-operatorkit/
 Secure & Simple Stuff:
  - https://github.com/Boostport/kubernetes-vault
+Cloud Services & Security:
+ - https://developer.atlassian.com/blog/2017/07/kubetoken/
 ```
 
 ### K8s & Extensions
