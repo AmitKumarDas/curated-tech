@@ -62,6 +62,8 @@ Local PVs & K8s:
   - the pod has to give up on the local PV and find a new one.
  - Failure scenarios can be handled by:
   - unbinding the PVC from the local PV, and forcing the pod to reschedule and find a new PV.
+ Debugging / Tracing:
+  - https://sysdig.com/blog/container-isolation-gone-wrong/
 ```
 
 
