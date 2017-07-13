@@ -470,6 +470,8 @@ Know What the Script Is Doing:
 ### GoLang Snips
 
 ```yaml
+Best of Designs from GoLang Gurus:
+ - https://blog.golang.org/index
 Lock Free:
  - https://texlution.com/post/golang-lock-free-values-with-atomic-value/
 Nil vs. Empty:
