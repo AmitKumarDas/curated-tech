@@ -67,6 +67,8 @@ Local PVs & K8s:
  Debugging / Tracing:
   - https://sysdig.com/blog/container-isolation-gone-wrong/
   - https://sysdig.com/blog/monitoring-docker-kubernetes-wayblazer/
+  - https://github.com/iovisor/bcc
+  - https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/
 ```
 
 
