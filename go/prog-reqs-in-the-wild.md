@@ -48,6 +48,8 @@ Assigning PODs to Nodes:
  - https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/
 Taints, Tolerations & Daemon Set:
  - https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#taints-and-tolerations-beta-feature
+Cloud Services && Monitoring:
+ - https://sysdig.com/blog/introducing-sysdig-teams/
 ```
 
 ### Storage Testing
