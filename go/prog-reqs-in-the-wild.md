@@ -64,6 +64,7 @@ Local PVs & K8s:
   - unbinding the PVC from the local PV, and forcing the pod to reschedule and find a new PV.
  Debugging / Tracing:
   - https://sysdig.com/blog/container-isolation-gone-wrong/
+  - https://sysdig.com/blog/monitoring-docker-kubernetes-wayblazer/
 ```
 
 
