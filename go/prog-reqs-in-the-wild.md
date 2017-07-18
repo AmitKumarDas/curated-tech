@@ -22,7 +22,7 @@ Socket(s):             1
 ...
 ```
 
-### Storage Designs
+### Designs
 
 ```yaml
 nodeSelector:
@@ -50,6 +50,8 @@ Taints, Tolerations & Daemon Set:
  - https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#taints-and-tolerations-beta-feature
 Cloud Services && Monitoring:
  - https://sysdig.com/blog/introducing-sysdig-teams/
+On top of etcd, IP, leasing:
+ - https://github.com/lclarkmichalek/etcdhcp
 ```
 
 ### Storage Testing
