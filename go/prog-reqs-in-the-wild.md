@@ -480,6 +480,7 @@ Know What the Script Is Doing:
 
 ```yaml
 Nil Checks:
+ - ref - https://golang.org/ref/spec#The_zero_value
  - When storage is allocated for a variable, either through a declaration or a call of new, or 
  - when a new value is created, either through a composite literal or a call of make, and 
  - no explicit initialization is provided, 
