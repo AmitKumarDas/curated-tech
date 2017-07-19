@@ -189,6 +189,8 @@ Labels & Selector:
 ### K8s Snips
 
 ```yaml
+Metrics Code Snips:
+ - https://github.com/kubernetes/kubernetes/pull/49117/commits/7e76c17e9ae3789cfa04c3ab8f927393232b6a91
 Templating:
  - https://blog.openshift.com/kubernetes-state-app-templating/
 K8s 1.7 Release:
