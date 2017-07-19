@@ -52,6 +52,8 @@ Cloud Services && Monitoring:
  - https://sysdig.com/blog/introducing-sysdig-teams/
 On top of etcd, IP, leasing:
  - https://github.com/lclarkmichalek/etcdhcp
+K8s & Watch & Security:
+ - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/bulk_watch.md
 ```
 
 ### Storage Testing
