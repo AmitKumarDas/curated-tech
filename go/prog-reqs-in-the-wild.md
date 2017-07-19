@@ -95,6 +95,8 @@ Making CLI Cool:
 ```yaml
 Just Enough:
   - http://zabanaa.github.io/notes/mind-blowing-git-tips.html
+Rename Branch:
+ - https://multiplestates.wordpress.com/2015/02/05/rename-a-local-and-remote-branch-in-git/
 ```
 
 ### CI Snips
