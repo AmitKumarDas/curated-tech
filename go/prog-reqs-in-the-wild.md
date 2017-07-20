@@ -54,6 +54,23 @@ On top of etcd, IP, leasing:
  - https://github.com/lclarkmichalek/etcdhcp
 K8s & Watch & Security & Versioning:
  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/bulk_watch.md
+Security Context & Pod:
+ - https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
+Certificates:
+ - https://blog.giantswarm.io/issuing-certs-for-kubernetes-with-cert-operator-using-vault-and-operatorkit/
+Secure & Simple Stuff:
+ - https://github.com/Boostport/kubernetes-vault
+Cloud Services & Security or CLI & Security:
+ - Temporary Certificates
+ - https://developer.atlassian.com/blog/2017/07/kubetoken/
+Kubernetes Extensibility:
+ - Kubernetes 1.7 has a new features: 
+  - API aggregation at runtime
+  - Enables power users to add Kubernetes-style:
+   - pre-built, 
+   - third party or 
+   - user-created application programming interfaces (API)s to their cluster
+ - https://kubernetes.io/docs/concepts/api-extension/apiserver-aggregation/
 ```
 
 ### Storage Testing
@@ -113,37 +130,9 @@ More:
   - https://github.com/kubernetes/dns/tree/master/pkg/e2e
 ```
 
-### Security & K8s
-
-```yaml
-Security Context & Pod:
- - https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
-Certificates:
- - https://blog.giantswarm.io/issuing-certs-for-kubernetes-with-cert-operator-using-vault-and-operatorkit/
-Secure & Simple Stuff:
- - https://github.com/Boostport/kubernetes-vault
-Cloud Services & Security or CLI & Security:
- - Temporary Certificates
- - https://developer.atlassian.com/blog/2017/07/kubetoken/
-```
-
-### K8s & Extensions
-
-```yaml
-Kubernetes Extensibility:
- - Kubernetes 1.7 has a new features: 
-  - API aggregation at runtime
-  - Enables power users to add Kubernetes-style:
-   - pre-built, 
-   - third party or 
-   - user-created application programming interfaces (API)s to their cluster
- - https://kubernetes.io/docs/concepts/api-extension/apiserver-aggregation/
-```
-
-
 ### Sample CURLs to K8s API Server
 
-```
+```bash
 TOKEN="$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)"
 
 curl --cacert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt \
@@ -172,7 +161,7 @@ curl -X DELETE \
   -H "Content-Type: application/json"
 ```
 
-### K8s Labels & Selector
+### K8s Snips
 
 ```yaml
 Selector vs. Labels:
@@ -188,11 +177,6 @@ Labels & Selector:
       operator: In
       values:
       - node-1
-```
-
-### K8s Snips
-
-```yaml
 Metrics Code Snips:
  - https://github.com/kubernetes/kubernetes/pull/49117/commits/7e76c17e9ae3789cfa04c3ab8f927393232b6a91
 Templating:
