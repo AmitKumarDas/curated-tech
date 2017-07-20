@@ -25,11 +25,20 @@ Socket(s):             1
 ### Designs
 
 ```yaml
-nodeSelector:
-built-in node labels:
-affinity & anti-affinity:
-inter-pod affinity & inter-pod anti-affinity:
+Placement, Scheduling, Spread, Priority:
+Heterogeneous vs. Homogenous Zones:
+Node Selector:
+Built-in node labels:
+Affinity & Anti-affinity:
+Inter pod affinity & inter-pod anti-affinity:
  - https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+ - https://kubernetes.io/docs/admin/multiple-zones/
+ - Jargons:
+  - SelectorSpreadPriority
+  - PersistentVolumeLabel
+  - VolumeZonePredicate
+  - MULTIZONE
+ 
 Reclaim Policy & K8s:
  - https://github.com/kubernetes/kubernetes/issues/38192
 Protobuf, gRPC Challenges:
