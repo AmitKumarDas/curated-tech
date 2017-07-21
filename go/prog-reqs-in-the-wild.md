@@ -35,6 +35,7 @@ Critical Add-On Pods
  - https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
  - https://kubernetes.io/docs/admin/multiple-zones/
  - https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/
+ - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/taint-toleration-dedicated.md
  - Jargons:
   - SelectorSpreadPriority
   - PersistentVolumeLabel
