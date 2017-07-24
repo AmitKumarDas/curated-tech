@@ -32,6 +32,7 @@ Built-in node labels:
 Affinity & Anti-affinity:
 Inter pod affinity & inter-pod anti-affinity:
 Critical Add-On Pods
+ - https://github.com/kubernetes/kubernetes/issues/28928
  - https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
  - https://kubernetes.io/docs/admin/multiple-zones/
  - https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/
