@@ -28,12 +28,14 @@ Socket(s):             1
 Data Pipelines Using Docker & K8s:
  - https://github.com/pachyderm/pachyderm
 Placement, Scheduling, Spread, Priority:
+Controlled Rescheduling:
 Heterogeneous vs. Homogenous Zones:
 Node Selector:
 Built-in node labels:
 Affinity & Anti-affinity:
 Inter pod affinity & inter-pod anti-affinity:
-Critical Add-On Pods: 
+Critical Add-On Pods:
+ - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/rescheduling.md
  - https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
  - https://kubernetes.io/docs/admin/multiple-zones/
  - https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/
