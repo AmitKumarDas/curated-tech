@@ -47,6 +47,7 @@ Critical Add-On Pods:
   - Disruption Budget ~ tied to ~ Quota
   - DisruptionBudgetStatus
   - Circumventing the disruption budget protections == Not Good Citizens
+  - PreferAvoidPods, NodeStatus, RequriedDuringScheduling Node Anti-Affinity, NodeAffinity
  - Issue Links:
   - https://github.com/kubernetes/kubernetes/issues/28928
 Reclaim Policy & K8s:
