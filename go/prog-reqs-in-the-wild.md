@@ -33,8 +33,7 @@ Node Selector:
 Built-in node labels:
 Affinity & Anti-affinity:
 Inter pod affinity & inter-pod anti-affinity:
-Critical Add-On Pods
- - https://github.com/kubernetes/kubernetes/issues/28928
+Critical Add-On Pods: 
  - https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
  - https://kubernetes.io/docs/admin/multiple-zones/
  - https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/
@@ -44,7 +43,8 @@ Critical Add-On Pods
   - PersistentVolumeLabel
   - VolumeZonePredicate
   - MULTIZONE
- 
+ - Issue Links:
+  - https://github.com/kubernetes/kubernetes/issues/28928
 Reclaim Policy & K8s:
  - https://github.com/kubernetes/kubernetes/issues/38192
 Protobuf, gRPC Challenges:
