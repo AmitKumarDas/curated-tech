@@ -41,10 +41,10 @@ Critical Add-On Pods:
  - https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/
  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/taint-toleration-dedicated.md
  - Jargons:
-  - SelectorSpreadPriority
-  - PersistentVolumeLabel
-  - VolumeZonePredicate
-  - MULTIZONE
+  - SelectorSpreadPriority, PersistentVolumeLabel, VolumeZonePredicate, MULTIZONE
+  - Priority is intimately related to quota, 
+   - in the sense that resource quotas must be allocated on a per-priority-level basis 
+   - X amount of RAM at priority A, Y amount of RAM at priority B, etc.
  - Issue Links:
   - https://github.com/kubernetes/kubernetes/issues/28928
 Reclaim Policy & K8s:
