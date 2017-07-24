@@ -45,6 +45,7 @@ Critical Add-On Pods:
   - Priority ~ tied to ~ Quota
   - DisruptionBudgetSpec
   - Disruption Budget ~ tied to ~ Quota
+  - DisruptionBudgetStatus
  - Issue Links:
   - https://github.com/kubernetes/kubernetes/issues/28928
 Reclaim Policy & K8s:
