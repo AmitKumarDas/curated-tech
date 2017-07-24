@@ -46,6 +46,7 @@ Critical Add-On Pods:
   - DisruptionBudgetSpec
   - Disruption Budget ~ tied to ~ Quota
   - DisruptionBudgetStatus
+  - Circumventing the disruption budget protections == Not Good Citizens
  - Issue Links:
   - https://github.com/kubernetes/kubernetes/issues/28928
 Reclaim Policy & K8s:
