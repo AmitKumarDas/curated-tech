@@ -48,6 +48,7 @@ Critical Add-On Pods:
   - DisruptionBudgetStatus
   - Circumventing the disruption budget protections == Not Good Citizens
   - PreferAvoidPods, NodeStatus, RequriedDuringScheduling Node Anti-Affinity, NodeAffinity
+  - Avoid Race Condition == Eviction and Binding be part of a Single Transaction
  - Issue Links:
   - https://github.com/kubernetes/kubernetes/issues/28928
 Reclaim Policy & K8s:
