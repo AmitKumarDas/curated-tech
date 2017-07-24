@@ -42,8 +42,9 @@ Critical Add-On Pods:
  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/taint-toleration-dedicated.md
  - Jargons:
   - SelectorSpreadPriority, PersistentVolumeLabel, VolumeZonePredicate, MULTIZONE
-  - Priority ~ Quota
+  - Priority ~ tied to ~ Quota
   - DisruptionBudgetSpec
+  - Disruption Budget ~ tied to ~ Quota
  - Issue Links:
   - https://github.com/kubernetes/kubernetes/issues/28928
 Reclaim Policy & K8s:
