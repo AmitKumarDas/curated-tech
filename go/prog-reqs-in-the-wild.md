@@ -45,10 +45,13 @@ Critical Add-On Pods:
   - Priority ~ tied to ~ Quota
   - DisruptionBudgetSpec
   - Disruption Budget ~ tied to ~ Quota
-  - DisruptionBudgetStatus
-  - Circumventing the disruption budget protections == Not Good Citizens
-  - PreferAvoidPods, NodeStatus, RequriedDuringScheduling Node Anti-Affinity, NodeAffinity
+   - DisruptionBudgetStatus
+   - NOTE: Circumventing the disruption budget protections == Not Good Citizens
+  - PreferAvoidPods, NodeStatus, RequiredDuringScheduling Node Anti-Affinity / NodeAffinity
   - Avoid Race Condition == Eviction and Binding be part of a Single Transaction
+  - Rescheduler == objective function for better layout of Pods
+   - objective function == scheduler's predicate and priority functions
+   - objective function going worse e.g. whenever any Pod goes PENDING for a long time
  - Issue Links:
   - https://github.com/kubernetes/kubernetes/issues/28928
 Reclaim Policy & K8s:
