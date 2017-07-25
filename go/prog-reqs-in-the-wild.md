@@ -28,13 +28,7 @@ Socket(s):             1
 Data Pipelines Using Docker & K8s:
  - https://github.com/pachyderm/pachyderm
 Placement, Scheduling, Rescheduling, Spread, Priority, Controlled:
- - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/rescheduling.md
- - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/rescheduler.md
- - https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
- - https://kubernetes.io/docs/admin/multiple-zones/
- - https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/
- - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/taint-toleration-dedicated.md
- - Jargons:
+ - NOTES:
   - Heterogeneous vs. Homogenous Zones
   - Inter-pod affinity & inter-pod anti-affinity
   - Critical Add-On Pods
@@ -49,8 +43,15 @@ Placement, Scheduling, Rescheduling, Spread, Priority, Controlled:
   - Rescheduler == objective function for better layout of Pods:
    - objective function == scheduler's predicate and priority functions
    - objective function going worse e.g. whenever any Pod goes PENDING for a long time
- - Issue Links:
+  - Movements a rescheduler might trigger == Coalescing and Spreading
+ - Reference Links:
   - https://github.com/kubernetes/kubernetes/issues/28928
+  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/rescheduling.md
+  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/rescheduler.md
+  - https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+  - https://kubernetes.io/docs/admin/multiple-zones/
+  - https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/
+  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/taint-toleration-dedicated.md
 Reclaim Policy & K8s:
  - https://github.com/kubernetes/kubernetes/issues/38192
 Protobuf, gRPC Challenges:
