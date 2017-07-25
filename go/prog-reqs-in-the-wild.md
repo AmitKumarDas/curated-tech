@@ -31,6 +31,8 @@ Polling to Pod Lifecycle Event Watcher:
  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/pod-lifecycle-event-generator.md
 Placement, Scheduling, Rescheduling, Spread, Priority, Controlled:
  - NOTES:
+  - PriorityClassName:
+   - System Priority Class Names == system pods that must not be preempted
   - Heterogeneous vs. Homogenous Zones
   - Inter-pod affinity & inter-pod anti-affinity
   - Critical Add-On Pods
