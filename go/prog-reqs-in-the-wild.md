@@ -32,11 +32,19 @@ Polling to Pod Lifecycle Event Watcher:
 Placement, Scheduling, Rescheduling, Spread, Priority, Controlled:
  - NOTES:
   - Preemption Logic:
-   - Priority (& Quota, is Quota understood by K8s ?)
-   - QoS Classes
+   - 1. Priority ( tied to Quota, Is Quota understood by K8s ?)
+   - 2. QoS Classes
   - QoS Classes:
-   - Guaranteed, Burstable, Best Effort in decreasing order of priority w.r.t pre-emption
-  - PriorityClassName:
+   - Based on Memory & CPU resources
+   - Types:
+    - Guaranteed, Burstable, Best Effort 
+    - Best-Effort == Lowest Priority == First to get killed
+    - Guaranteed == Top Priority == killed if they exceed their limits / system under memory pressure
+    - Burstable -----------------------------------------------------------------------------
+   - CPU Guarantees:
+    - Pods will not be killed 
+    - they will be temporarily throttled
+  - Priority:
    - System Priority Class Names == system pods that must not be preempted
   - Heterogeneous vs. Homogenous Zones
   - Inter-pod affinity & inter-pod anti-affinity
