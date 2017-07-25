@@ -44,6 +44,7 @@ Placement, Scheduling, Rescheduling, Spread, Priority, Controlled:
    - objective function == scheduler's predicate and priority functions
    - objective function going worse e.g. whenever any Pod goes PENDING for a long time
   - Movements a rescheduler might trigger == Coalescing and Spreading
+  - Rescheduling ~ subject to ~ disruption SLOs
  - Reference Links:
   - https://github.com/kubernetes/kubernetes/issues/28928
   - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/rescheduling.md
