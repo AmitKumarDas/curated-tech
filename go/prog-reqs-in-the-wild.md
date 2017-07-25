@@ -27,6 +27,8 @@ Socket(s):             1
 ```yaml
 Data Pipelines Using Docker & K8s:
  - https://github.com/pachyderm/pachyderm
+Polling to Pod Lifecycle Event Watcher:
+ - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/pod-lifecycle-event-generator.md
 Placement, Scheduling, Rescheduling, Spread, Priority, Controlled:
  - NOTES:
   - Heterogeneous vs. Homogenous Zones
