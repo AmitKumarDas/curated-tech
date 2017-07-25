@@ -27,29 +27,26 @@ Socket(s):             1
 ```yaml
 Data Pipelines Using Docker & K8s:
  - https://github.com/pachyderm/pachyderm
-Placement, Scheduling, Spread, Priority:
-Controlled Rescheduling:
-Heterogeneous vs. Homogenous Zones:
-Node Selector:
-Built-in node labels:
-Affinity & Anti-affinity:
-Inter pod affinity & inter-pod anti-affinity:
-Critical Add-On Pods:
+Placement, Scheduling, Rescheduling, Spread, Priority, Controlled:
  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/rescheduling.md
+ - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/rescheduler.md
  - https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
  - https://kubernetes.io/docs/admin/multiple-zones/
  - https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/
  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/taint-toleration-dedicated.md
  - Jargons:
+  - Heterogeneous vs. Homogenous Zones
+  - Inter-pod affinity & inter-pod anti-affinity
+  - Critical Add-On Pods
   - SelectorSpreadPriority, PersistentVolumeLabel, VolumeZonePredicate, MULTIZONE
   - Priority ~ tied to ~ Quota
   - DisruptionBudgetSpec
-  - Disruption Budget ~ tied to ~ Quota
+  - Disruption Budget ~ tied to ~ Quota:
    - DisruptionBudgetStatus
    - NOTE: Circumventing the disruption budget protections == Not Good Citizens
   - PreferAvoidPods, NodeStatus, RequiredDuringScheduling Node Anti-Affinity / NodeAffinity
   - Avoid Race Condition == Eviction and Binding be part of a Single Transaction
-  - Rescheduler == objective function for better layout of Pods
+  - Rescheduler == objective function for better layout of Pods:
    - objective function == scheduler's predicate and priority functions
    - objective function going worse e.g. whenever any Pod goes PENDING for a long time
  - Issue Links:
