@@ -31,6 +31,11 @@ Polling to Pod Lifecycle Event Watcher:
  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/pod-lifecycle-event-generator.md
 Placement, Scheduling, Rescheduling, Spread, Priority, Controlled:
  - NOTES:
+  - Preemption Logic:
+   - Priority (& Quota, is Quota understood by K8s ?)
+   - QoS Classes
+  - QoS Classes:
+   - Guaranteed, Burstable, Best Effort in decreasing order of priority w.r.t pre-emption
   - PriorityClassName:
    - System Priority Class Names == system pods that must not be preempted
   - Heterogeneous vs. Homogenous Zones
@@ -50,6 +55,8 @@ Placement, Scheduling, Rescheduling, Spread, Priority, Controlled:
   - Movements a rescheduler might trigger == Coalescing and Spreading
   - Rescheduling ~ subject to ~ disruption SLOs
  - Reference Links:
+  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/pod-priority-api.md
+  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/resource-qos.md
   - https://github.com/kubernetes/kubernetes/issues/28928
   - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/rescheduling.md
   - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/rescheduler.md
