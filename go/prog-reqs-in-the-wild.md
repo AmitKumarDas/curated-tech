@@ -481,6 +481,8 @@ Know What the Script Is Doing:
 ### Go GoLang Snips
 
 ```yaml
+When in DOUBT about Go:
+ - https://github.com/golang/go/wiki/whygo
 Nil Checks:
  - ref - https://golang.org/ref/spec#The_zero_value
  - When storage is allocated for a variable, either through a declaration or a call of new, or 
