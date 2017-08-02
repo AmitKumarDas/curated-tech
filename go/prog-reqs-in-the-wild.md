@@ -176,6 +176,8 @@ curl -X DELETE \
 ### K8s Snips
 
 ```yaml
+Manage K8s:
+ - https://github.com/kris-nova/kubicorn
 Selector vs. Labels:
  - selector: "color=green, env=test, service=front"
  - labels:   map[string]string{"color": "green", "env": "test", "service": "front"}
