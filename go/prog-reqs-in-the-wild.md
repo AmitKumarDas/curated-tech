@@ -31,6 +31,7 @@ Polling to Pod Lifecycle Event Watcher:
  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/pod-lifecycle-event-generator.md
 Placement, Scheduling, Rescheduling, Spread, Priority, Controlled:
  - Reference Links:
+  - https://github.com/kubernetes/kubernetes/issues/41584
   - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/podaffinity.md
   - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/node-allocatable.md
   - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/pod-priority-api.md
