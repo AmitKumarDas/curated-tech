@@ -25,8 +25,10 @@ Socket(s):             1
 ### Designs Around K8s
 
 ```yaml
-Write Minimal K8s Code:
+
+Learn To Write Minimal K8s Code:
  - https://github.com/kubernetes/kubernetes/blob/master/plugin/pkg/admission/defaulttolerationseconds/admission.go
+ - https://github.com/kubernetes/kubernetes/tree/master/plugin/pkg/admission
 K8s Node MOnitoring:
  - https://kubernetes.io/docs/concepts/architecture/nodes/
 Additional runtime requirements for a Pod:
