@@ -25,7 +25,9 @@ Socket(s):             1
 ### Designs Around K8s
 
 ```yaml
-Additional runtime requriements for a Pod
+K8s Node MOnitoring:
+ - https://kubernetes.io/docs/concepts/architecture/nodes/
+Additional runtime requirements for a Pod:
  - https://github.com/kubernetes-incubator/service-catalog/pull/1094/files#diff-b4ff134a727ba336b42671611bc2e6d1
 Data Pipelines Using Docker & K8s:
  - https://github.com/pachyderm/pachyderm
