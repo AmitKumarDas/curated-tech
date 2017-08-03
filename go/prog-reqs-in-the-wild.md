@@ -35,6 +35,7 @@ Polling to Pod Lifecycle Event Watcher:
  - https://github.com/kubernetes/community/blob/master/contributors/design-proposals/pod-lifecycle-event-generator.md
 Placement, Scheduling, Rescheduling, Spread, Priority, Controlled:
  - Reference Links:
+  - https://kubernetes.io/docs/admin/admission-controllers/ & Navigate to Pod Node Selector
   - https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#per-pod-configurable-eviction-behavior-when-there-are-node-problems-alpha-feature
   - https://stackoverflow.com/questions/41644755/whats-the-purpose-of-kubernetes-daemonset-when-replication-controllers-have-nod
   - https://github.com/kubernetes/kubernetes/issues/11470
