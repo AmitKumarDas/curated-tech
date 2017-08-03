@@ -22,9 +22,11 @@ Socket(s):             1
 ...
 ```
 
-### Designs
+### Designs Around K8s
 
 ```yaml
+Additional runtime requriements for a Pod
+ - https://github.com/kubernetes-incubator/service-catalog/pull/1094/files#diff-b4ff134a727ba336b42671611bc2e6d1
 Data Pipelines Using Docker & K8s:
  - https://github.com/pachyderm/pachyderm
 Polling to Pod Lifecycle Event Watcher:
@@ -176,7 +178,7 @@ curl -X DELETE \
   -H "Content-Type: application/json"
 ```
 
-### K8s Snips
+### K8s Beginners
 
 ```yaml
 Manage K8s:
