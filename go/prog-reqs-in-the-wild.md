@@ -25,7 +25,8 @@ Socket(s):             1
 ### Designs Around K8s
 
 ```yaml
-
+Third Party Resources vs Custom Resource Definition:
+ - https://github.com/metral/memhog-operator
 Learn To Write Minimal K8s Code:
  - https://github.com/kubernetes/kubernetes/blob/master/plugin/pkg/admission/defaulttolerationseconds/admission.go
  - https://github.com/kubernetes/kubernetes/tree/master/plugin/pkg/admission
