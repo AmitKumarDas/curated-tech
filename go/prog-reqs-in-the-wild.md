@@ -25,6 +25,8 @@ Socket(s):             1
 ### Designs Around K8s
 
 ```yaml
+Test K8s Programatically:
+ - https://blog.heptio.com/straighten-out-your-kubernetes-client-go-dependencies-heptioprotip-8baeed46fe7d
 Third Party Resources vs Custom Resource Definition:
  - https://github.com/metral/memhog-operator
 Learn To Write Minimal K8s Code:
