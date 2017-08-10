@@ -25,6 +25,16 @@ Socket(s):             1
 ### Designs Around K8s
 
 ```yaml
+Hunt for re-usable code / test-code that is simple k8s/e2e:
+https://github.com/kubernetes/kubernetes/blob/master/test/e2e/e2e.go:
+ - Read through the cool Function Names
+ - Check configuration parameters (via flags) and then run tests using Ginkgo runner
+ - If a "report directory" is specified, Unit test reports will be generated in this directory
+ - Parse a pod.yaml & create a K8s Pod programmatically
+ - Check if AWS or GCE
+ - Gather Metrics
+ - Disable SKIPPED tests
+ - Dump the pod LOGS on your terminal
 Test K8s Programatically:
  - https://blog.heptio.com/straighten-out-your-kubernetes-client-go-dependencies-heptioprotip-8baeed46fe7d
 Third Party Resources vs Custom Resource Definition:
