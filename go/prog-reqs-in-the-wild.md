@@ -499,6 +499,10 @@ Know What the Script Is Doing:
 ### Go GoLang Snips
 
 ```yaml
+So where do you point your GOPATH? 
+ - A common preference:
+  - GOPATH=$HOME
+  - Since $HOME/bin is already on your PATH
 Simple Yet Effective Code Organization:
  - https://github.com/boltdb/bolt
  - https://talks.golang.org/2014/organizeio.slide
