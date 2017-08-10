@@ -501,6 +501,7 @@ Know What the Script Is Doing:
 ```yaml
 Simple Yet Effective Code Organization:
  - https://github.com/boltdb/bolt
+ - https://talks.golang.org/2014/organizeio.slide
 Closures & Handlers go hand-in-hand:
  - https://gist.github.com/tsenart/5fc18c659814c078378d
 When in DOUBT about Go:
