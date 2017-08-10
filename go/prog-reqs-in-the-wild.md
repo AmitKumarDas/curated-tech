@@ -499,6 +499,8 @@ Know What the Script Is Doing:
 ### Go GoLang Snips
 
 ```yaml
+Simple Yet Effective Code Organization:
+ - https://github.com/boltdb/bolt
 Closures & Handlers go hand-in-hand:
  - https://gist.github.com/tsenart/5fc18c659814c078378d
 When in DOUBT about Go:
