@@ -499,6 +499,8 @@ Know What the Script Is Doing:
 ### Go GoLang Snips
 
 ```yaml
+Closures & Handlers go hand-in-hand:
+ - https://gist.github.com/tsenart/5fc18c659814c078378d
 When in DOUBT about Go:
  - https://github.com/golang/go/wiki/whygo
 Nil Checks:
