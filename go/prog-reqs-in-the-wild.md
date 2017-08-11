@@ -26,6 +26,10 @@ Socket(s):             1
 
 ```yaml
 Hunt for re-usable code / test-code that is simple k8s/e2e:
+ https://github.com/kubernetes/kubernetes/blob/master/test/e2e/kubectl/kubectl.go
+  - Run kubectl
+  - Read YAML & emit bytes
+  - Retry kubectl
  https://github.com/kubernetes/kubernetes/blob/master/test/e2e/e2e.go:
   - 3rd Party Libs:
    - Run tests using Ginkgo runner
