@@ -52,6 +52,8 @@ Hunt for re-usable code / test-code that is simple k8s/e2e:
    - SIGKILL
  https://github.com/kubernetes/kubernetes/blob/master/test/e2e/apimachinery/garbage_collector.go
   - Parallelism via Cron Jobs
+ https://github.com/kubernetes/kubernetes/blob/master/test/e2e/apimachinery/table_conversion.go
+  - Test the display table on terminal
 Test K8s Programatically:
  - https://blog.heptio.com/straighten-out-your-kubernetes-client-go-dependencies-heptioprotip-8baeed46fe7d
 Third Party Resources vs Custom Resource Definition:
