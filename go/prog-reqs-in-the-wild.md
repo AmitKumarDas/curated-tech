@@ -54,6 +54,13 @@ Hunt for re-usable code / test-code that is simple k8s/e2e:
   - Parallelism via Cron Jobs
  https://github.com/kubernetes/kubernetes/blob/master/test/e2e/apimachinery/table_conversion.go
   - Test the display table on terminal
+ https://github.com/kubernetes/kubernetes/blob/master/test/e2e/chaosmonkey/chaosmonkey.go
+  - Semaphore, Ready, Stop, Done, Channel, Wait
+  - Ready for disruption to start
+  - Singal that disruption is done
+  - Wait for all tests to return
+  - Do not wait if tests panic
+  - Register a set of tests that should run during the disruption
 Test K8s Programatically:
  - https://blog.heptio.com/straighten-out-your-kubernetes-client-go-dependencies-heptioprotip-8baeed46fe7d
 Third Party Resources vs Custom Resource Definition:
@@ -61,7 +68,7 @@ Third Party Resources vs Custom Resource Definition:
 Learn To Write Minimal K8s Code:
  - https://github.com/kubernetes/kubernetes/blob/master/plugin/pkg/admission/defaulttolerationseconds/admission.go
  - https://github.com/kubernetes/kubernetes/tree/master/plugin/pkg/admission
-K8s Node MOnitoring:
+K8s Node Monitoring:
  - https://kubernetes.io/docs/concepts/architecture/nodes/
 Additional runtime requirements for a Pod:
  - https://github.com/kubernetes-incubator/service-catalog/pull/1094/files#diff-b4ff134a727ba336b42671611bc2e6d1
