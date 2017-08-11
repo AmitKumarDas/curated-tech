@@ -26,22 +26,32 @@ Socket(s):             1
 
 ```yaml
 Hunt for re-usable code / test-code that is simple k8s/e2e:
-https://github.com/kubernetes/kubernetes/blob/master/test/e2e/e2e.go:
- - 3rd Party Libs:
-  - Run tests using Ginkgo runner
-  - If a "report directory" is specified, Unit test reports will be generated in this directory
- - Config:
-  - Check configuration parameters (via flags)
- - POD related:
-  - PARSE a pod.yaml & create a K8s Pod programmatically
-  - Wait for POD to be READY based on a TIMEOUT
-  - Create & TEAR Down using Go's defer func() {}
- - Cloud Provider Abstraction:
-  - Check if AWS or GCE
- - Inference:
-  - Gather Metrics
-  - Disable SKIPPED tests
-  - Dump the pod LOGS on your terminal 
+ https://github.com/kubernetes/kubernetes/blob/master/test/e2e/e2e.go:
+  - 3rd Party Libs:
+   - Run tests using Ginkgo runner
+   - If a "report directory" is specified, Unit test reports will be generated in this directory
+  - Config:
+   - Check configuration parameters (via flags)
+  - POD related:
+   - PARSE a pod.yaml & create a K8s Pod programmatically
+   - Wait for POD to be READY based on a TIMEOUT
+   - Create & TEAR Down using Go's defer func() {}
+  - Cloud Provider Abstraction:
+   - Check if AWS or GCE
+  - Inference:
+   - Metrics Grabber
+   - Write JSON formatted metrics into a file
+   - Human Readable Print
+   - Dump the pod LOGS on your terminal
+  - Non Functional
+   - Disable SKIPPED tests  
+ https://github.com/kubernetes/kubernetes/blob/master/test/e2e/apimachinery/etcd_failure.go
+  - SSH Access
+  - Disruptive:
+   - Network Partition
+   - SIGKILL
+ https://github.com/kubernetes/kubernetes/blob/master/test/e2e/apimachinery/garbage_collector.go
+  - Parallelism via Cron Jobs
 Test K8s Programatically:
  - https://blog.heptio.com/straighten-out-your-kubernetes-client-go-dependencies-heptioprotip-8baeed46fe7d
 Third Party Resources vs Custom Resource Definition:
