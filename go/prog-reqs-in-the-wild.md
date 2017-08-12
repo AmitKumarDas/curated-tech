@@ -178,6 +178,8 @@ Making CLI Cool:
 ### Git Snips
 
 ```yaml
+Development Workflow:
+ - https://github.com/istio/istio/blob/master/devel/README.md
 Just Enough:
   - http://zabanaa.github.io/notes/mind-blowing-git-tips.html
 Rename Branch:
