@@ -25,6 +25,8 @@ Socket(s):             1
 ### Designs Around K8s
 
 ```yaml
+Auto Scale:
+ - https://github.com/kubernetes/autoscaler
 Hunt for re-usable code / test-code that is simple k8s/e2e:
  https://github.com/kubernetes/kubernetes/blob/master/test/e2e/kubectl/kubectl.go
   - Run kubectl
