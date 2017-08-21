@@ -543,6 +543,8 @@ Know What the Script Is Doing:
 ### Go GoLang Snips
 
 ```yaml
+os exec utility:
+ - https://github.com/kubernetes/test-infra/blob/master/kubetest/util.go
 So where do you point your GOPATH? 
  - A common preference:
   - GOPATH=$HOME
