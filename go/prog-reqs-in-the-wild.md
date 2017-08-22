@@ -25,6 +25,8 @@ Socket(s):             1
 ### Designs Around K8s
 
 ```yaml
+Chaos Monkey For K8s:
+ - https://github.com/asobti/kube-monkey
 Auto Scale:
  - https://github.com/kubernetes/autoscaler
 Hunt for re-usable code / test-code that is simple k8s/e2e:
