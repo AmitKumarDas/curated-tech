@@ -25,6 +25,8 @@ Socket(s):             1
 ### Designs Around K8s
 
 ```yaml
+Realtime Linting for K8s:
+ - https://github.com/uswitch/klint
 Chaos Monkey For K8s:
  - https://github.com/asobti/kube-monkey
 Auto Scale:
