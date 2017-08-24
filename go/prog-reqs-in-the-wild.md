@@ -177,6 +177,7 @@ K8s & UI:
  - https://netsil.com/blog/kubernetes-monitoring-needs-maps/
 Making CLI Cool:
  - https://github.com/cloudnativelabs/kube-shell
+ - https://github.com/c-bata/kube-prompt
 ```
 
 ### Git Snips
