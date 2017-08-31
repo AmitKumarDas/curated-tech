@@ -25,6 +25,8 @@ Socket(s):             1
 ### Designs Around K8s
 
 ```yaml
+Disruptions in K8s:
+ - https://kubernetes.io/docs/concepts/workloads/pods/disruptions/
 RBAC in K8s:
  - https://blog.heptio.com/security-matters-rbac-in-kubernetes-e369b483c8d8
 Services & Gory Details of VIPs:
