@@ -25,6 +25,8 @@ Socket(s):             1
 ### Designs Around K8s
 
 ```yaml
+RBAC in K8s:
+ - https://blog.heptio.com/security-matters-rbac-in-kubernetes-e369b483c8d8
 Services & Gory Details of VIPs:
  - As of Kubernetes v1.0, Services are a “layer 4” (TCP/UDP over IP) construct
  - In Kubernetes v1.1 the Ingress API was added (beta) to represent “layer 7” (HTTP) services.
