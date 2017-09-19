@@ -25,6 +25,8 @@ Socket(s):             1
 ### Designs Around K8s
 
 ```yaml
+MultiTenancy in K8s:
+ - https://www.reddit.com/r/kubernetes/comments/70lovh/is_k8s_still_not_ready_for_multitenancy/
 Disruptions in K8s:
  - https://kubernetes.io/docs/concepts/workloads/pods/disruptions/
 RBAC in K8s:
