@@ -26,8 +26,8 @@ Socket(s):             1
 
 ```yaml
 Constainer Storage Interface:
- - https://github.com/codedellemc/gocsi
- - https://github.com/codedellemc/csi-blockdevices
+ - utility - https://github.com/codedellemc/gocsi
+ - plugin - https://github.com/codedellemc/csi-blockdevices
 MultiTenancy in K8s:
  - https://www.reddit.com/r/kubernetes/comments/70lovh/is_k8s_still_not_ready_for_multitenancy/
 Disruptions in K8s:
