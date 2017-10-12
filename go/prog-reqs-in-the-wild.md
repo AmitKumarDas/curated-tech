@@ -25,6 +25,8 @@ Socket(s):             1
 ### Designs & Implementations
 
 ```yaml
+minikube + e2e:
+  - https://github.com/frankgreco/client-go-crd-bug
 Constainer Storage Interface:
  - utility - https://github.com/codedellemc/gocsi
  - plugin - https://github.com/codedellemc/csi-blockdevices
