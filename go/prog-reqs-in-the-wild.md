@@ -25,6 +25,8 @@ Socket(s):             1
 ### Designs & Implementations
 
 ```yaml
+K8s CRD Impl:
+  - https://github.com/appscode/stash
 minikube + e2e:
   - https://github.com/frankgreco/client-go-crd-bug
 Constainer Storage Interface:
