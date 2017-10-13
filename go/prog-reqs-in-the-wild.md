@@ -562,7 +562,29 @@ Know What the Script Is Doing:
   - Turn off tracing at the end set +x
 ```
 
-### Go GoLang Snips
+### Go Snips
+
+- Extreme use / abuse of string !! Look at Data property !!
+
+```go
+policyConfigMap := v1.ConfigMap{
+		ObjectMeta: metav1.ObjectMeta{Namespace: metav1.NamespaceSystem, Name: configPolicyName},
+		Data: map[string]string{
+			options.SchedulerPolicyConfigMapKey: `{
+			"kind" : "Policy",
+			"apiVersion" : "v1",
+			"predicates" : [
+				{"name" : "PredicateOne"},
+				{"name" : "PredicateTwo"}
+			],
+			"priorities" : [
+				{"name" : "PriorityOne", "weight" : 1},
+				{"name" : "PriorityTwo", "weight" : 5}
+			]
+			}`,
+		},
+	}
+```
 
 ```yaml
 os exec utility:
